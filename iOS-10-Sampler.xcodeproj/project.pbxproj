@@ -12,6 +12,7 @@
 		8A736F181D7A893A00A58684 /* AudioFadeInOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A736F171D7A893A00A58684 /* AudioFadeInOut.storyboard */; };
 		8A736F1A1D7A8D3B00A58684 /* ImageFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A736F191D7A8D3B00A58684 /* ImageFiltersViewController.swift */; };
 		8A736F1C1D7A8D4C00A58684 /* ImageFilters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A736F1B1D7A8D4C00A58684 /* ImageFilters.storyboard */; };
+		8A736F221D7A9A8300A58684 /* CIFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A736F211D7A9A8300A58684 /* CIFilterExtension.swift */; };
 		8AB430591D7A6B4900A3BD98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430581D7A6B4900A3BD98 /* AppDelegate.swift */; };
 		8AB4305B1D7A6B4900A3BD98 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4305A1D7A6B4900A3BD98 /* RootViewController.swift */; };
 		8AB430601D7A6B4900A3BD98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB4305F1D7A6B4900A3BD98 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		8A736F171D7A893A00A58684 /* AudioFadeInOut.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudioFadeInOut.storyboard; sourceTree = "<group>"; };
 		8A736F191D7A8D3B00A58684 /* ImageFiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFiltersViewController.swift; sourceTree = "<group>"; };
 		8A736F1B1D7A8D4C00A58684 /* ImageFilters.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageFilters.storyboard; sourceTree = "<group>"; };
+		8A736F211D7A9A8300A58684 /* CIFilterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIFilterExtension.swift; sourceTree = "<group>"; };
 		8AB430551D7A6B4900A3BD98 /* iOS-10-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-10-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB430581D7A6B4900A3BD98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AB4305A1D7A6B4900A3BD98 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				8A736F191D7A8D3B00A58684 /* ImageFiltersViewController.swift */,
+				8A736F211D7A9A8300A58684 /* CIFilterExtension.swift */,
 				8A736F1B1D7A8D4C00A58684 /* ImageFilters.storyboard */,
 			);
 			name = "New Image Filters";
@@ -341,6 +344,7 @@
 				8AB4308C1D7A701100A3BD98 /* FooViewController.swift in Sources */,
 				8A736F161D7A892D00A58684 /* AudioFadeInOutViewController.swift in Sources */,
 				8A736F1A1D7A8D3B00A58684 /* ImageFiltersViewController.swift in Sources */,
+				8A736F221D7A9A8300A58684 /* CIFilterExtension.swift in Sources */,
 				8AB430891D7A6DF300A3BD98 /* SampleDataSource.swift in Sources */,
 				8AB430901D7A703200A3BD98 /* BarViewController.swift in Sources */,
 				8AB430591D7A6B4900A3BD98 /* AppDelegate.swift in Sources */,

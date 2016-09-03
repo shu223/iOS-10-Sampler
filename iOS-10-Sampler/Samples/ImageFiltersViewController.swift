@@ -15,16 +15,16 @@ class ImageFiltersViewController: UIViewController, UIPickerViewDataSource, UIPi
     @IBOutlet weak private var picker: UIPickerView!
     @IBOutlet weak private var indicator: UIActivityIndicatorView!
 
-    private var items: [String]!
+    private var filters: [String]!
     private var orgImage: UIImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         orgImage = imageView.image
-        items = CIFilter.names(available_iOS: 10, category: kCICategoryBuiltIn)
-        items.insert("Original", at: 0)
-        print("filters:\(items)\n")
+        filters = CIFilter.names(available_iOS: 10, category: kCICategoryBuiltIn)
+        filters.insert("Original", at: 0)
+        print("filters:\(filters)\n")
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,14 +85,14 @@ class ImageFiltersViewController: UIViewController, UIPickerViewDataSource, UIPi
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return items.count
+        return filters.count
     }
     
     // =========================================================================
     // MARK: - UIPickerViewDelegate
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return items[row]
+        return filters[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -104,7 +104,7 @@ class ImageFiltersViewController: UIViewController, UIPickerViewDataSource, UIPi
         indicator.startAnimating()
         
         DispatchQueue.global(qos: .default).async {
-            self.applyFilter(name: self.items[row], handler: { (image) in
+            self.applyFilter(name: self.filters[row], handler: { (image) in
                 DispatchQueue.main.async(execute: {
                     self.imageView.image = image
                     self.indicator.stopAnimating()
@@ -113,36 +113,4 @@ class ImageFiltersViewController: UIViewController, UIPickerViewDataSource, UIPi
         }
     }
 
-}
-
-extension CIFilter {
-    func categories() -> [String] {
-        guard let categories = attributes[kCIAttributeFilterCategories] as? [String] else {fatalError()}
-        return categories
-    }
-    
-    func available_iOS() -> Int {
-        guard let versionStr = attributes[kCIAttributeFilterAvailable_iOS] as? String else {return 0}
-        guard let versionInt = Int(versionStr) else {return 0}
-        return versionInt
-    }
-
-    static func names(available_iOS: Int, category: String?, exceptCategories: [String]? = nil) -> [String] {
-        let names = CIFilter.filterNames(inCategory: category).filter { (name) -> Bool in
-            guard let filter = CIFilter(name: name) else {fatalError()}
-            
-            if let exceptCategories = exceptCategories {
-                for aCategory in filter.categories() where exceptCategories.contains(aCategory) == true {
-                    return false
-                }
-            }
-            
-            if filter.available_iOS() == available_iOS {
-                return true
-            } else {
-                return false
-            }
-        }
-        return names
-    }
 }
