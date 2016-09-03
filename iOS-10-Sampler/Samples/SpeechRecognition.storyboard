@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v3o-YW-iCf">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Speech Recognition View Controller-->
+        <scene sceneID="jsx-m1-s6B">
+            <objects>
+                <viewController id="v3o-YW-iCf" customClass="SpeechRecognitionViewController" customModule="iOS_10_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n6H-uw-j8B"/>
+                        <viewControllerLayoutGuide type="bottom" id="zoI-Hs-40m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Arw-Mu-YxT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g9B-PH-HM1">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.12941177189350128" green="0.12941177189350128" blue="0.12941177189350128" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciY-qS-XNc">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pe8-mO-3zy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start Recording!">
+                                    <color key="titleColor" red="0.16648837924003601" green="0.52587974071502686" blue="0.75460344552993774" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordBtnTapped" destination="v3o-YW-iCf" eventType="touchUpInside" id="akL-tA-226"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uo1-Db-kKU">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="9eP-WF-yBZ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="v3o-YW-iCf" id="Y8A-vH-cmR"/>
+                                    <outlet property="delegate" destination="v3o-YW-iCf" id="9hA-3U-Llt"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g9B-PH-HM1" firstAttribute="leading" secondItem="Arw-Mu-YxT" secondAttribute="leadingMargin" id="BGX-i0-XSd"/>
+                            <constraint firstItem="ciY-qS-XNc" firstAttribute="top" secondItem="g9B-PH-HM1" secondAttribute="bottom" constant="8" id="QDS-oY-9Em"/>
+                            <constraint firstAttribute="trailing" secondItem="uo1-Db-kKU" secondAttribute="trailing" id="WUQ-ZJ-ric"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ciY-qS-XNc" secondAttribute="trailing" id="YZP-uS-nNw"/>
+                            <constraint firstItem="g9B-PH-HM1" firstAttribute="trailing" secondItem="Arw-Mu-YxT" secondAttribute="trailingMargin" id="d54-26-FnN"/>
+                            <constraint firstItem="g9B-PH-HM1" firstAttribute="top" secondItem="n6H-uw-j8B" secondAttribute="bottom" id="fHZ-LA-hat"/>
+                            <constraint firstItem="ciY-qS-XNc" firstAttribute="top" secondItem="g9B-PH-HM1" secondAttribute="bottom" constant="8" id="kWC-we-x9F"/>
+                            <constraint firstItem="ciY-qS-XNc" firstAttribute="top" secondItem="g9B-PH-HM1" secondAttribute="bottom" constant="8" id="kXP-x5-nas"/>
+                            <constraint firstItem="zoI-Hs-40m" firstAttribute="top" secondItem="uo1-Db-kKU" secondAttribute="bottom" id="qr5-8F-oCo"/>
+                            <constraint firstItem="uo1-Db-kKU" firstAttribute="top" secondItem="ciY-qS-XNc" secondAttribute="bottom" constant="8" id="smb-ae-c2T"/>
+                            <constraint firstItem="uo1-Db-kKU" firstAttribute="leading" secondItem="Arw-Mu-YxT" secondAttribute="leading" id="tnb-qT-3HY"/>
+                            <constraint firstItem="ciY-qS-XNc" firstAttribute="leading" secondItem="Arw-Mu-YxT" secondAttribute="leadingMargin" id="ucr-yS-Rc6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="picker" destination="uo1-Db-kKU" id="rOF-J7-H5G"/>
+                        <outlet property="recordBtn" destination="ciY-qS-XNc" id="2wU-1n-36d"/>
+                        <outlet property="textView" destination="g9B-PH-HM1" id="s9h-sr-crA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rVR-sW-2fz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="187"/>
+        </scene>
+    </scenes>
+</document>

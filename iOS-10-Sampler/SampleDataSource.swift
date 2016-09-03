@@ -29,6 +29,11 @@ struct SampleDataSource {
             classPrefix: "MetalCNNBasic"
         ),
         Sample(
+            title: "Speech Recognition",
+            detail: "Speech Recognition demo using Speech Framework. All available language can be selected.",
+            classPrefix: "SpeechRecognition"
+        ),
+        Sample(
             title: "Attributed Speech",
             detail: "Attributed Speech demo using attributedSpeechString of AVSpeechUtterance.",
             classPrefix: "AttributedSpeech"
