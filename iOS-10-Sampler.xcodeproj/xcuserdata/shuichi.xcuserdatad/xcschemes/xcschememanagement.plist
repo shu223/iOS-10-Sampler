@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>SamplerStickerPack.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>iOS-10-Sampler.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>8A1CC38B1D7AC22E00562709</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8AB430541D7A6B4900A3BD98</key>
 		<dict>
 			<key>primary</key>

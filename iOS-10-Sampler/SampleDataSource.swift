@@ -44,6 +44,11 @@ struct SampleDataSource {
             classPrefix: "AudioFadeInOut"
         ),
         Sample(
+            title: "Sticker Pack",
+            detail: "Example of Sticker Pack for iMessage",
+            classPrefix: "StickerPack"
+        ),
+        Sample(
             title: "Foo",
             detail: "FooFooFooFooFooFooFooFooFooFooFooFoo",
             classPrefix: "Foo"

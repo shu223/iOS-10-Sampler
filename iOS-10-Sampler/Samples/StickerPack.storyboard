@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zpb-Ch-97y">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sticker Pack View Controller-->
+        <scene sceneID="mjj-Qg-Cq6">
+            <objects>
+                <viewController id="zpb-Ch-97y" customClass="StickerPackViewController" customModule="iOS_10_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ETQ-sx-pYT"/>
+                        <viewControllerLayoutGuide type="bottom" id="zJe-TL-zef"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wdf-yE-i69">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa1-a6-hPq">
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Open iMessage"/>
+                                <connections>
+                                    <action selector="openBtnTappedWithSender:" destination="zpb-Ch-97y" eventType="touchUpInside" id="NT9-ty-Pnb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fa1-a6-hPq" firstAttribute="centerX" secondItem="Wdf-yE-i69" secondAttribute="centerX" id="Die-Ip-ydD"/>
+                            <constraint firstItem="fa1-a6-hPq" firstAttribute="centerY" secondItem="Wdf-yE-i69" secondAttribute="centerY" id="OV4-8E-dwY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXi-Gc-ovD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223" y="178"/>
+        </scene>
+    </scenes>
+</document>

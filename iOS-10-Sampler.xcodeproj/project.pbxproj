@@ -22,6 +22,10 @@
 		8A1CC37F1D7AB10D00562709 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC37B1D7AB10D00562709 /* DrawView.swift */; };
 		8A1CC3811D7AB10D00562709 /* SlimMPSCNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC37D1D7AB10D00562709 /* SlimMPSCNN.swift */; };
 		8A1CC3891D7ABCE400562709 /* MNISTDeepCNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC3881D7ABCE400562709 /* MNISTDeepCNN.swift */; };
+		8A1CC38F1D7AC22E00562709 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A1CC38E1D7AC22E00562709 /* Stickers.xcassets */; };
+		8A1CC3931D7AC22E00562709 /* SamplerStickerPack.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8A1CC38C1D7AC22E00562709 /* SamplerStickerPack.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8A1CC3991D7AC43C00562709 /* StickerPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC3981D7AC43C00562709 /* StickerPackViewController.swift */; };
+		8A1CC39B1D7AC44A00562709 /* StickerPack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1CC39A1D7AC44A00562709 /* StickerPack.storyboard */; };
 		8A736F161D7A892D00A58684 /* AudioFadeInOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A736F151D7A892D00A58684 /* AudioFadeInOutViewController.swift */; };
 		8A736F181D7A893A00A58684 /* AudioFadeInOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A736F171D7A893A00A58684 /* AudioFadeInOut.storyboard */; };
 		8A736F1A1D7A8D3B00A58684 /* ImageFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A736F191D7A8D3B00A58684 /* ImageFiltersViewController.swift */; };
@@ -44,6 +48,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8A1CC3911D7AC22E00562709 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AB4304D1D7A6B4900A3BD98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A1CC38B1D7AC22E00562709;
+			remoteInfo = SamplerStickerPack;
+		};
 		8AB4306A1D7A6B4A00A3BD98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8AB4304D1D7A6B4900A3BD98 /* Project object */;
@@ -59,6 +70,20 @@
 			remoteInfo = "iOS-10-Sampler";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8A1CC3971D7AC22E00562709 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8A1CC3931D7AC22E00562709 /* SamplerStickerPack.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8A1A04CF1D7A742A0040F613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +103,11 @@
 		8A1CC37D1D7AB10D00562709 /* SlimMPSCNN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlimMPSCNN.swift; sourceTree = "<group>"; };
 		8A1CC3851D7AB15B00562709 /* iOS10Sampler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS10Sampler-Bridging-Header.h"; sourceTree = "<group>"; };
 		8A1CC3881D7ABCE400562709 /* MNISTDeepCNN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNISTDeepCNN.swift; sourceTree = "<group>"; };
+		8A1CC38C1D7AC22E00562709 /* SamplerStickerPack.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SamplerStickerPack.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1CC38E1D7AC22E00562709 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		8A1CC3901D7AC22E00562709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A1CC3981D7AC43C00562709 /* StickerPackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerPackViewController.swift; sourceTree = "<group>"; };
+		8A1CC39A1D7AC44A00562709 /* StickerPack.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StickerPack.storyboard; sourceTree = "<group>"; };
 		8A736F151D7A892D00A58684 /* AudioFadeInOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFadeInOutViewController.swift; sourceTree = "<group>"; };
 		8A736F171D7A893A00A58684 /* AudioFadeInOut.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudioFadeInOut.storyboard; sourceTree = "<group>"; };
 		8A736F191D7A8D3B00A58684 /* ImageFiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFiltersViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +206,24 @@
 			path = MetalCNNBasicApple;
 			sourceTree = "<group>";
 		};
+		8A1CC38D1D7AC22E00562709 /* SamplerStickerPack */ = {
+			isa = PBXGroup;
+			children = (
+				8A1CC38E1D7AC22E00562709 /* Stickers.xcassets */,
+				8A1CC3901D7AC22E00562709 /* Info.plist */,
+			);
+			path = SamplerStickerPack;
+			sourceTree = "<group>";
+		};
+		8A1CC39C1D7AC4F900562709 /* StickerPack */ = {
+			isa = PBXGroup;
+			children = (
+				8A1CC3981D7AC43C00562709 /* StickerPackViewController.swift */,
+				8A1CC39A1D7AC44A00562709 /* StickerPack.storyboard */,
+			);
+			name = StickerPack;
+			sourceTree = "<group>";
+		};
 		8A736F1D1D7A8F4B00A58684 /* New Image Filters */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +276,7 @@
 				8AB430571D7A6B4900A3BD98 /* iOS-10-Sampler */,
 				8AB4306C1D7A6B4A00A3BD98 /* iOS-10-SamplerTests */,
 				8AB430771D7A6B4A00A3BD98 /* iOS-10-SamplerUITests */,
+				8A1CC38D1D7AC22E00562709 /* SamplerStickerPack */,
 				8AB430561D7A6B4900A3BD98 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -238,6 +287,7 @@
 				8AB430551D7A6B4900A3BD98 /* iOS-10-Sampler.app */,
 				8AB430691D7A6B4A00A3BD98 /* iOS-10-SamplerTests.xctest */,
 				8AB430741D7A6B4A00A3BD98 /* iOS-10-SamplerUITests.xctest */,
+				8A1CC38C1D7AC22E00562709 /* SamplerStickerPack.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,6 +335,7 @@
 				8A825D551D7AA505008D74EA /* AttributedSpeech */,
 				8A736F1D1D7A8F4B00A58684 /* New Image Filters */,
 				8A736F1E1D7A8F5600A58684 /* Audio Fade-in/out */,
+				8A1CC39C1D7AC4F900562709 /* StickerPack */,
 				8A736F1F1D7A8F6600A58684 /* Foo */,
 				8A736F201D7A8F6D00A58684 /* Bar */,
 			);
@@ -294,6 +345,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8A1CC38B1D7AC22E00562709 /* SamplerStickerPack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A1CC3941D7AC22E00562709 /* Build configuration list for PBXNativeTarget "SamplerStickerPack" */;
+			buildPhases = (
+				8A1CC38A1D7AC22E00562709 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SamplerStickerPack;
+			productName = SamplerStickerPack;
+			productReference = 8A1CC38C1D7AC22E00562709 /* SamplerStickerPack.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
 		8AB430541D7A6B4900A3BD98 /* iOS-10-Sampler */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8AB4307D1D7A6B4A00A3BD98 /* Build configuration list for PBXNativeTarget "iOS-10-Sampler" */;
@@ -301,10 +367,12 @@
 				8AB430511D7A6B4900A3BD98 /* Sources */,
 				8AB430521D7A6B4900A3BD98 /* Frameworks */,
 				8AB430531D7A6B4900A3BD98 /* Resources */,
+				8A1CC3971D7AC22E00562709 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8A1CC3921D7AC22E00562709 /* PBXTargetDependency */,
 			);
 			name = "iOS-10-Sampler";
 			productName = "iOS-10-Sampler";
@@ -357,6 +425,11 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Shuichi Tsutsumi";
 				TargetAttributes = {
+					8A1CC38B1D7AC22E00562709 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9Z86A4AWDE;
+						ProvisioningStyle = Automatic;
+					};
 					8AB430541D7A6B4900A3BD98 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9Z86A4AWDE;
@@ -392,11 +465,20 @@
 				8AB430541D7A6B4900A3BD98 /* iOS-10-Sampler */,
 				8AB430681D7A6B4A00A3BD98 /* iOS-10-SamplerTests */,
 				8AB430731D7A6B4A00A3BD98 /* iOS-10-SamplerUITests */,
+				8A1CC38B1D7AC22E00562709 /* SamplerStickerPack */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8A1CC38A1D7AC22E00562709 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A1CC38F1D7AC22E00562709 /* Stickers.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8AB430531D7A6B4900A3BD98 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -404,6 +486,7 @@
 				8A1CC3641D7AAFCC00562709 /* MetalCNNBasic.storyboard in Resources */,
 				8A736F1C1D7A8D4C00A58684 /* ImageFilters.storyboard in Resources */,
 				8A1CC3701D7AB06900562709 /* bias_conv1.dat in Resources */,
+				8A1CC39B1D7AC44A00562709 /* StickerPack.storyboard in Resources */,
 				8A1CC3771D7AB06900562709 /* weights_fc2.dat in Resources */,
 				8AB430631D7A6B4900A3BD98 /* LaunchScreen.storyboard in Resources */,
 				8A825D541D7AA4F3008D74EA /* AttributedSpeech.storyboard in Resources */,
@@ -455,6 +538,7 @@
 				8A1CC37F1D7AB10D00562709 /* DrawView.swift in Sources */,
 				8A736F221D7A9A8300A58684 /* CIFilterExtension.swift in Sources */,
 				8AB430891D7A6DF300A3BD98 /* SampleDataSource.swift in Sources */,
+				8A1CC3991D7AC43C00562709 /* StickerPackViewController.swift in Sources */,
 				8AB430901D7A703200A3BD98 /* BarViewController.swift in Sources */,
 				8AB430591D7A6B4900A3BD98 /* AppDelegate.swift in Sources */,
 			);
@@ -479,6 +563,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8A1CC3921D7AC22E00562709 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A1CC38B1D7AC22E00562709 /* SamplerStickerPack */;
+			targetProxy = 8A1CC3911D7AC22E00562709 /* PBXContainerItemProxy */;
+		};
 		8AB4306B1D7A6B4A00A3BD98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8AB430541D7A6B4900A3BD98 /* iOS-10-Sampler */;
@@ -511,6 +600,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8A1CC3951D7AC22E00562709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				DEVELOPMENT_TEAM = 9Z86A4AWDE;
+				INFOPLIST_FILE = SamplerStickerPack/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "Shuichi-Tsutsumi.iOS-10-Sampler.SamplerStickerPack";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8A1CC3961D7AC22E00562709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				DEVELOPMENT_TEAM = 9Z86A4AWDE;
+				INFOPLIST_FILE = SamplerStickerPack/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "Shuichi-Tsutsumi.iOS-10-Sampler.SamplerStickerPack";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		8AB4307B1D7A6B4A00A3BD98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -691,6 +804,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8A1CC3941D7AC22E00562709 /* Build configuration list for PBXNativeTarget "SamplerStickerPack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A1CC3951D7AC22E00562709 /* Debug */,
+				8A1CC3961D7AC22E00562709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		8AB430501D7A6B4900A3BD98 /* Build configuration list for PBXProject "iOS-10-Sampler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
