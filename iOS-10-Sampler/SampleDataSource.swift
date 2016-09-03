@@ -24,6 +24,11 @@ struct Sample {
 struct SampleDataSource {
     let samples = [
         Sample(
+            title: "New filters",
+            detail: "New filters of CIImage.",
+            classPrefix: "ImageFilters"
+        ),
+        Sample(
             title: "Audio Fade-in/out",
             detail: "Audio fade-in/out demo.",
             classPrefix: "AudioFadeInOut"

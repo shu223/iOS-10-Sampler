@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gb4-IV-8If">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Filters View Controller-->
+        <scene sceneID="jRw-2T-gHH">
+            <objects>
+                <viewController id="gb4-IV-8If" customClass="ImageFiltersViewController" customModule="iOS_10_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rGI-li-L9h"/>
+                        <viewControllerLayoutGuide type="bottom" id="zzW-mf-aGF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1T1-Zy-mJr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sierra" translatesAutoresizingMaskIntoConstraints="NO" id="GXQ-qg-6fn">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYR-LI-hh7">
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="TuL-0k-5Iz"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="gb4-IV-8If" id="V6t-F4-FeW"/>
+                                    <outlet property="delegate" destination="gb4-IV-8If" id="aig-cW-bDg"/>
+                                </connections>
+                            </pickerView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="2eR-gZ-eGz"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AYR-LI-hh7" firstAttribute="leading" secondItem="1T1-Zy-mJr" secondAttribute="leading" id="1ta-XX-yjY"/>
+                            <constraint firstItem="GXQ-qg-6fn" firstAttribute="leading" secondItem="1T1-Zy-mJr" secondAttribute="leading" id="LMC-5c-uXw"/>
+                            <constraint firstItem="GXQ-qg-6fn" firstAttribute="top" secondItem="1T1-Zy-mJr" secondAttribute="top" id="QbK-lc-en6"/>
+                            <constraint firstAttribute="trailing" secondItem="AYR-LI-hh7" secondAttribute="trailing" id="SXw-jR-o5f"/>
+                            <constraint firstItem="zzW-mf-aGF" firstAttribute="top" secondItem="GXQ-qg-6fn" secondAttribute="bottom" id="TRO-aI-XpY"/>
+                            <constraint firstAttribute="trailing" secondItem="GXQ-qg-6fn" secondAttribute="trailing" id="UtE-ZK-cMa"/>
+                            <constraint firstItem="2eR-gZ-eGz" firstAttribute="centerX" secondItem="1T1-Zy-mJr" secondAttribute="centerX" id="ao5-yj-Bfb"/>
+                            <constraint firstItem="2eR-gZ-eGz" firstAttribute="centerY" secondItem="1T1-Zy-mJr" secondAttribute="centerY" id="gaZ-ef-dKt"/>
+                            <constraint firstItem="zzW-mf-aGF" firstAttribute="top" secondItem="AYR-LI-hh7" secondAttribute="bottom" id="vG4-Ap-YLH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="GXQ-qg-6fn" id="x9a-T4-hTb"/>
+                        <outlet property="indicator" destination="2eR-gZ-eGz" id="JoS-0m-2tf"/>
+                        <outlet property="picker" destination="AYR-LI-hh7" id="jHi-12-ujx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eg2-jV-ryB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="1"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sierra" width="622" height="622"/>
+    </resources>
+</document>
