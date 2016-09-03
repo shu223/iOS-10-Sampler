@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wxI-iM-JEK">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MetalCNN Basic View Controller-->
+        <scene sceneID="3ok-Vg-w9x">
+            <objects>
+                <viewController id="wxI-iM-JEK" customClass="MetalCNNBasicViewController" customModule="iOS_10_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kYx-Id-cbb"/>
+                        <viewControllerLayoutGuide type="bottom" id="OKK-mK-pNP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Biu-pq-bY4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJg-7n-G62">
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="42"/>
+                                <color key="textColor" red="0.12941177189350128" green="0.12941177189350128" blue="0.12941177189350128" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u5Z-zm-NrN" customClass="DrawView" customModule="iOS_10_Sampler" customModuleProvider="target">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="DfG-fI-dgS"/>
+                                    <constraint firstAttribute="width" constant="240" id="Orn-v5-I8g"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAD-Hq-0MJ">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="tintColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="DETECT"/>
+                                <connections>
+                                    <action selector="detectBtnTappedWithSender:" destination="wxI-iM-JEK" eventType="touchUpInside" id="DUv-NZ-FHp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sz9-56-W93">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="tintColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearBtnTappedWithSender:" destination="wxI-iM-JEK" eventType="touchUpInside" id="4V2-8F-AO8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u5Z-zm-NrN" firstAttribute="centerY" secondItem="Biu-pq-bY4" secondAttribute="centerY" id="89T-Ig-47o"/>
+                            <constraint firstItem="dJg-7n-G62" firstAttribute="top" secondItem="u5Z-zm-NrN" secondAttribute="bottom" constant="16" id="BYa-Ia-RLW"/>
+                            <constraint firstItem="TAD-Hq-0MJ" firstAttribute="centerX" secondItem="Biu-pq-bY4" secondAttribute="centerX" id="ELs-oq-Zvz"/>
+                            <constraint firstItem="u5Z-zm-NrN" firstAttribute="top" secondItem="TAD-Hq-0MJ" secondAttribute="bottom" constant="8" id="Jge-Mw-NaQ"/>
+                            <constraint firstItem="u5Z-zm-NrN" firstAttribute="centerX" secondItem="Biu-pq-bY4" secondAttribute="centerX" id="UJl-Pb-o7U"/>
+                            <constraint firstItem="dJg-7n-G62" firstAttribute="centerX" secondItem="Biu-pq-bY4" secondAttribute="centerX" id="Utn-Gt-ss2"/>
+                            <constraint firstItem="sz9-56-W93" firstAttribute="top" secondItem="dJg-7n-G62" secondAttribute="bottom" constant="16" id="WLV-Q0-6m6"/>
+                            <constraint firstItem="sz9-56-W93" firstAttribute="centerX" secondItem="Biu-pq-bY4" secondAttribute="centerX" id="iEj-Xc-3cu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="digitView" destination="u5Z-zm-NrN" id="L99-Lt-FA4"/>
+                        <outlet property="predictionLabel" destination="dJg-7n-G62" id="ahQ-qh-yUf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGI-hK-kS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="68"/>
+        </scene>
+    </scenes>
+</document>
