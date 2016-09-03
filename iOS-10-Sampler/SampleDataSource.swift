@@ -24,6 +24,11 @@ struct Sample {
 struct SampleDataSource {
     let samples = [
         Sample(
+            title: "Audio Fade-in/out",
+            detail: "Audio fade-in/out demo.",
+            classPrefix: "AudioFadeInOut"
+        ),
+        Sample(
             title: "Foo",
             detail: "FooFooFooFooFooFooFooFooFooFooFooFoo",
             classPrefix: "Foo"

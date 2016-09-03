@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8A1A04D01D7A742A0040F613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A04CE1D7A742A0040F613 /* Main.storyboard */; };
+		8A736F161D7A892D00A58684 /* AudioFadeInOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A736F151D7A892D00A58684 /* AudioFadeInOutViewController.swift */; };
+		8A736F181D7A893A00A58684 /* AudioFadeInOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A736F171D7A893A00A58684 /* AudioFadeInOut.storyboard */; };
 		8AB430591D7A6B4900A3BD98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430581D7A6B4900A3BD98 /* AppDelegate.swift */; };
 		8AB4305B1D7A6B4900A3BD98 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4305A1D7A6B4900A3BD98 /* RootViewController.swift */; };
 		8AB430601D7A6B4900A3BD98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB4305F1D7A6B4900A3BD98 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		8A1A04CF1D7A742A0040F613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A736F151D7A892D00A58684 /* AudioFadeInOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFadeInOutViewController.swift; sourceTree = "<group>"; };
+		8A736F171D7A893A00A58684 /* AudioFadeInOut.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudioFadeInOut.storyboard; sourceTree = "<group>"; };
 		8AB430551D7A6B4900A3BD98 /* iOS-10-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-10-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB430581D7A6B4900A3BD98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AB4305A1D7A6B4900A3BD98 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 		8AB4308A1D7A6ED400A3BD98 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
+				8A736F151D7A892D00A58684 /* AudioFadeInOutViewController.swift */,
+				8A736F171D7A893A00A58684 /* AudioFadeInOut.storyboard */,
 				8AB4308B1D7A701100A3BD98 /* FooViewController.swift */,
 				8AB4308D1D7A701B00A3BD98 /* Foo.storyboard */,
 				8AB4308F1D7A703200A3BD98 /* BarViewController.swift */,
@@ -266,6 +272,7 @@
 				8AB4308E1D7A701B00A3BD98 /* Foo.storyboard in Resources */,
 				8AB430921D7A704100A3BD98 /* Bar.storyboard in Resources */,
 				8AB430601D7A6B4900A3BD98 /* Assets.xcassets in Resources */,
+				8A736F181D7A893A00A58684 /* AudioFadeInOut.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +300,7 @@
 				8AB430871D7A6DA700A3BD98 /* RootViewCell.swift in Sources */,
 				8AB4305B1D7A6B4900A3BD98 /* RootViewController.swift in Sources */,
 				8AB4308C1D7A701100A3BD98 /* FooViewController.swift in Sources */,
+				8A736F161D7A892D00A58684 /* AudioFadeInOutViewController.swift in Sources */,
 				8AB430891D7A6DF300A3BD98 /* SampleDataSource.swift in Sources */,
 				8AB430901D7A703200A3BD98 /* BarViewController.swift in Sources */,
 				8AB430591D7A6B4900A3BD98 /* AppDelegate.swift in Sources */,
