@@ -20,7 +20,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa1-a6-hPq">
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Open iMessage"/>
+                                <state key="normal" title="Open Messages app"/>
                                 <connections>
                                     <action selector="openBtnTappedWithSender:" destination="zpb-Ch-97y" eventType="touchUpInside" id="NT9-ty-Pnb"/>
                                 </connections>

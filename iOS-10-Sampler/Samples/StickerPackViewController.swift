@@ -17,7 +17,6 @@ class StickerPackViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
 
     @IBAction func openBtnTapped(sender: UIButton) {
         let url = URL(string: "sms:")!
