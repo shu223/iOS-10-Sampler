@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A1A04D01D7A742A0040F613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A04CE1D7A742A0040F613 /* Main.storyboard */; };
 		8AB430591D7A6B4900A3BD98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430581D7A6B4900A3BD98 /* AppDelegate.swift */; };
-		8AB4305B1D7A6B4900A3BD98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4305A1D7A6B4900A3BD98 /* ViewController.swift */; };
-		8AB4305E1D7A6B4900A3BD98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB4305C1D7A6B4900A3BD98 /* Main.storyboard */; };
+		8AB4305B1D7A6B4900A3BD98 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4305A1D7A6B4900A3BD98 /* RootViewController.swift */; };
 		8AB430601D7A6B4900A3BD98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB4305F1D7A6B4900A3BD98 /* Assets.xcassets */; };
 		8AB430631D7A6B4900A3BD98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB430611D7A6B4900A3BD98 /* LaunchScreen.storyboard */; };
 		8AB4306E1D7A6B4A00A3BD98 /* iOS_10_SamplerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4306D1D7A6B4A00A3BD98 /* iOS_10_SamplerTests.swift */; };
 		8AB430791D7A6B4A00A3BD98 /* iOS_10_SamplerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430781D7A6B4A00A3BD98 /* iOS_10_SamplerUITests.swift */; };
+		8AB430871D7A6DA700A3BD98 /* RootViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430861D7A6DA700A3BD98 /* RootViewCell.swift */; };
+		8AB430891D7A6DF300A3BD98 /* SampleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430881D7A6DF300A3BD98 /* SampleDataSource.swift */; };
+		8AB4308C1D7A701100A3BD98 /* FooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4308B1D7A701100A3BD98 /* FooViewController.swift */; };
+		8AB4308E1D7A701B00A3BD98 /* Foo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB4308D1D7A701B00A3BD98 /* Foo.storyboard */; };
+		8AB430901D7A703200A3BD98 /* BarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4308F1D7A703200A3BD98 /* BarViewController.swift */; };
+		8AB430921D7A704100A3BD98 /* Bar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB430911D7A704100A3BD98 /* Bar.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A1A04CF1D7A742A0040F613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AB430551D7A6B4900A3BD98 /* iOS-10-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-10-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB430581D7A6B4900A3BD98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8AB4305A1D7A6B4900A3BD98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8AB4305D1D7A6B4900A3BD98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8AB4305A1D7A6B4900A3BD98 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		8AB4305F1D7A6B4900A3BD98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AB430621D7A6B4900A3BD98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AB430641D7A6B4900A3BD98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +53,12 @@
 		8AB430741D7A6B4A00A3BD98 /* iOS-10-SamplerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-10-SamplerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB430781D7A6B4A00A3BD98 /* iOS_10_SamplerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_10_SamplerUITests.swift; sourceTree = "<group>"; };
 		8AB4307A1D7A6B4A00A3BD98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AB430861D7A6DA700A3BD98 /* RootViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewCell.swift; sourceTree = "<group>"; };
+		8AB430881D7A6DF300A3BD98 /* SampleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleDataSource.swift; sourceTree = "<group>"; };
+		8AB4308B1D7A701100A3BD98 /* FooViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooViewController.swift; sourceTree = "<group>"; };
+		8AB4308D1D7A701B00A3BD98 /* Foo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Foo.storyboard; sourceTree = "<group>"; };
+		8AB4308F1D7A703200A3BD98 /* BarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarViewController.swift; sourceTree = "<group>"; };
+		8AB430911D7A704100A3BD98 /* Bar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bar.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +109,15 @@
 		8AB430571D7A6B4900A3BD98 /* iOS-10-Sampler */ = {
 			isa = PBXGroup;
 			children = (
-				8AB430581D7A6B4900A3BD98 /* AppDelegate.swift */,
-				8AB4305A1D7A6B4900A3BD98 /* ViewController.swift */,
-				8AB4305C1D7A6B4900A3BD98 /* Main.storyboard */,
+				8AB430641D7A6B4900A3BD98 /* Info.plist */,
 				8AB4305F1D7A6B4900A3BD98 /* Assets.xcassets */,
 				8AB430611D7A6B4900A3BD98 /* LaunchScreen.storyboard */,
-				8AB430641D7A6B4900A3BD98 /* Info.plist */,
+				8A1A04CE1D7A742A0040F613 /* Main.storyboard */,
+				8AB430581D7A6B4900A3BD98 /* AppDelegate.swift */,
+				8AB4305A1D7A6B4900A3BD98 /* RootViewController.swift */,
+				8AB430861D7A6DA700A3BD98 /* RootViewCell.swift */,
+				8AB430881D7A6DF300A3BD98 /* SampleDataSource.swift */,
+				8AB4308A1D7A6ED400A3BD98 /* Samples */,
 			);
 			path = "iOS-10-Sampler";
 			sourceTree = "<group>";
@@ -123,6 +138,17 @@
 				8AB4307A1D7A6B4A00A3BD98 /* Info.plist */,
 			);
 			path = "iOS-10-SamplerUITests";
+			sourceTree = "<group>";
+		};
+		8AB4308A1D7A6ED400A3BD98 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4308B1D7A701100A3BD98 /* FooViewController.swift */,
+				8AB4308D1D7A701B00A3BD98 /* Foo.storyboard */,
+				8AB4308F1D7A703200A3BD98 /* BarViewController.swift */,
+				8AB430911D7A704100A3BD98 /* Bar.storyboard */,
+			);
+			path = Samples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +262,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AB430631D7A6B4900A3BD98 /* LaunchScreen.storyboard in Resources */,
+				8A1A04D01D7A742A0040F613 /* Main.storyboard in Resources */,
+				8AB4308E1D7A701B00A3BD98 /* Foo.storyboard in Resources */,
+				8AB430921D7A704100A3BD98 /* Bar.storyboard in Resources */,
 				8AB430601D7A6B4900A3BD98 /* Assets.xcassets in Resources */,
-				8AB4305E1D7A6B4900A3BD98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AB4305B1D7A6B4900A3BD98 /* ViewController.swift in Sources */,
+				8AB430871D7A6DA700A3BD98 /* RootViewCell.swift in Sources */,
+				8AB4305B1D7A6B4900A3BD98 /* RootViewController.swift in Sources */,
+				8AB4308C1D7A701100A3BD98 /* FooViewController.swift in Sources */,
+				8AB430891D7A6DF300A3BD98 /* SampleDataSource.swift in Sources */,
+				8AB430901D7A703200A3BD98 /* BarViewController.swift in Sources */,
 				8AB430591D7A6B4900A3BD98 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,10 +331,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8AB4305C1D7A6B4900A3BD98 /* Main.storyboard */ = {
+		8A1A04CE1D7A742A0040F613 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8AB4305D1D7A6B4900A3BD98 /* Base */,
+				8A1A04CF1D7A742A0040F613 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -512,6 +544,7 @@
 				8AB4307F1D7A6B4A00A3BD98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8AB430801D7A6B4A00A3BD98 /* Build configuration list for PBXNativeTarget "iOS-10-SamplerTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +553,7 @@
 				8AB430821D7A6B4A00A3BD98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8AB430831D7A6B4A00A3BD98 /* Build configuration list for PBXNativeTarget "iOS-10-SamplerUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +562,7 @@
 				8AB430851D7A6B4A00A3BD98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
