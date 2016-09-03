@@ -22,9 +22,12 @@ class ImageFiltersViewController: UIViewController, UIPickerViewDataSource, UIPi
         super.viewDidLoad()
         
         orgImage = imageView.image
-        filters = CIFilter.names(available_iOS: 10, category: kCICategoryBuiltIn)
-        filters.insert("Original", at: 0)
+        filters = CIFilter.names(
+            available_iOS: 10,
+            category: kCICategoryBuiltIn,
+            exceptCategories: [kCICategoryGradient])
         print("filters:\(filters)\n")
+        filters.insert("Original", at: 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +38,7 @@ class ImageFiltersViewController: UIViewController, UIPickerViewDataSource, UIPi
         let inputImage = CIImage(image: self.orgImage)!
         guard let filter = CIFilter(name: name) else {fatalError()}
         let attributes = filter.attributes
+        print("attributes:\(attributes)")
         
         if attributes[kCIInputImageKey] == nil {
             print("\(name) has no inputImage property.")
@@ -45,9 +49,24 @@ class ImageFiltersViewController: UIViewController, UIPickerViewDataSource, UIPi
         filter.setValue(inputImage, forKey: kCIInputImageKey)
         filter.setDefaults()
         
-        // for CIShadedMaterial
-        if attributes["inputShadingImage"] != nil {
-            filter.setValue(inputImage, forKey: "inputShadingImage")
+
+        // for CINinePartStretched & CINinePartTiled
+        let inputSize = inputImage.extent.size
+        let effectW = inputSize.width / 4
+        let effectH = inputSize.height / 4
+        if attributes["inputBreakpoint0"] != nil {
+            // Lower left corner of image
+            let breakPoint = CIVector(cgPoint: CGPoint(x: effectW, y: effectH))
+            filter.setValue(breakPoint, forKey: "inputBreakpoint0")
+        }
+        if attributes["inputBreakpoint1"] != nil {
+            // Upper right corner of image
+            let breakPoint = CIVector(cgPoint: CGPoint(x: inputSize.width - effectW, y: inputSize.height - effectH))
+            filter.setValue(breakPoint, forKey: "inputBreakpoint1")
+        }
+        if attributes["inputGrowAmount"] != nil {
+            let amount = CIVector(cgPoint: CGPoint(x: inputSize.width * 2, y: inputSize.height * 2))
+            filter.setValue(amount, forKey: "inputGrowAmount")
         }
         
         // Apply filter
@@ -57,13 +76,12 @@ class ImageFiltersViewController: UIViewController, UIPickerViewDataSource, UIPi
             return
         }
         
+        let size = self.imageView.frame.size
         var extent = outputImage.extent
-        // let scale = UIScreen.mainScreen().scale
         let scale: CGFloat!
         
         // some outputImage have infinite extents. e.g. CIDroste
         if extent.isInfinite {
-            let size = self.imageView.frame.size
             scale = UIScreen.main.scale
             extent = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         } else {
