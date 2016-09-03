@@ -9,7 +9,7 @@
 [![Twitter](https://img.shields.io/badge/twitter-@shu223-blue.svg?style=flat)](http://twitter.com/shu223)
 
 
-Code examples for the new features of iOS 10.
+Code examples for new APIs of iOS 10.
 
 
 ##How to build

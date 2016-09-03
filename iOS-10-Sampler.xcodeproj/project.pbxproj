@@ -13,6 +13,8 @@
 		8A736F1A1D7A8D3B00A58684 /* ImageFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A736F191D7A8D3B00A58684 /* ImageFiltersViewController.swift */; };
 		8A736F1C1D7A8D4C00A58684 /* ImageFilters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A736F1B1D7A8D4C00A58684 /* ImageFilters.storyboard */; };
 		8A736F221D7A9A8300A58684 /* CIFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A736F211D7A9A8300A58684 /* CIFilterExtension.swift */; };
+		8A825D521D7AA4E6008D74EA /* AttributedSpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A825D511D7AA4E6008D74EA /* AttributedSpeechViewController.swift */; };
+		8A825D541D7AA4F3008D74EA /* AttributedSpeech.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A825D531D7AA4F3008D74EA /* AttributedSpeech.storyboard */; };
 		8AB430591D7A6B4900A3BD98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430581D7A6B4900A3BD98 /* AppDelegate.swift */; };
 		8AB4305B1D7A6B4900A3BD98 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4305A1D7A6B4900A3BD98 /* RootViewController.swift */; };
 		8AB430601D7A6B4900A3BD98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB4305F1D7A6B4900A3BD98 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		8A736F191D7A8D3B00A58684 /* ImageFiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFiltersViewController.swift; sourceTree = "<group>"; };
 		8A736F1B1D7A8D4C00A58684 /* ImageFilters.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageFilters.storyboard; sourceTree = "<group>"; };
 		8A736F211D7A9A8300A58684 /* CIFilterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIFilterExtension.swift; sourceTree = "<group>"; };
+		8A825D511D7AA4E6008D74EA /* AttributedSpeechViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedSpeechViewController.swift; sourceTree = "<group>"; };
+		8A825D531D7AA4F3008D74EA /* AttributedSpeech.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AttributedSpeech.storyboard; sourceTree = "<group>"; };
 		8AB430551D7A6B4900A3BD98 /* iOS-10-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-10-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB430581D7A6B4900A3BD98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AB4305A1D7A6B4900A3BD98 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,15 @@
 			name = Bar;
 			sourceTree = "<group>";
 		};
+		8A825D551D7AA505008D74EA /* AttributedSpeech */ = {
+			isa = PBXGroup;
+			children = (
+				8A825D511D7AA4E6008D74EA /* AttributedSpeechViewController.swift */,
+				8A825D531D7AA4F3008D74EA /* AttributedSpeech.storyboard */,
+			);
+			name = AttributedSpeech;
+			sourceTree = "<group>";
+		};
 		8AB4304C1D7A6B4900A3BD98 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +203,7 @@
 		8AB4308A1D7A6ED400A3BD98 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
+				8A825D551D7AA505008D74EA /* AttributedSpeech */,
 				8A736F1D1D7A8F4B00A58684 /* New Image Filters */,
 				8A736F1E1D7A8F5600A58684 /* Audio Fade-in/out */,
 				8A736F1F1D7A8F6600A58684 /* Foo */,
@@ -310,6 +324,7 @@
 			files = (
 				8A736F1C1D7A8D4C00A58684 /* ImageFilters.storyboard in Resources */,
 				8AB430631D7A6B4900A3BD98 /* LaunchScreen.storyboard in Resources */,
+				8A825D541D7AA4F3008D74EA /* AttributedSpeech.storyboard in Resources */,
 				8A1A04D01D7A742A0040F613 /* Main.storyboard in Resources */,
 				8AB4308E1D7A701B00A3BD98 /* Foo.storyboard in Resources */,
 				8AB430921D7A704100A3BD98 /* Bar.storyboard in Resources */,
@@ -339,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A825D521D7AA4E6008D74EA /* AttributedSpeechViewController.swift in Sources */,
 				8AB430871D7A6DA700A3BD98 /* RootViewCell.swift in Sources */,
 				8AB4305B1D7A6B4900A3BD98 /* RootViewController.swift in Sources */,
 				8AB4308C1D7A701100A3BD98 /* FooViewController.swift in Sources */,

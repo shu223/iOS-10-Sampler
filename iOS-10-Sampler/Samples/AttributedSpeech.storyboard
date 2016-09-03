@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dby-Pq-RFa">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Attributed Speech View Controller-->
+        <scene sceneID="IeV-MH-X3j">
+            <objects>
+                <viewController id="dby-Pq-RFa" customClass="AttributedSpeechViewController" customModule="iOS_10_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wC8-le-hn0"/>
+                        <viewControllerLayoutGuide type="bottom" id="u7c-Ny-OEl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LVa-UG-knz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAC-8x-azi">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="6JG-5f-val"/>
+                                    <constraint firstAttribute="height" constant="64" id="bkP-lc-cu3"/>
+                                </constraints>
+                                <state key="normal" image="audio"/>
+                                <connections>
+                                    <action selector="speechBtnTappedWithSender:" destination="dby-Pq-RFa" eventType="touchUpInside" id="dvO-kq-hKp"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k5U-VP-65y">
+                                <connections>
+                                    <action selector="switchChangedWithSender:" destination="dby-Pq-RFa" eventType="valueChanged" id="CRE-Qp-96i"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nh-pd-mxb">
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Nh-pd-mxb" firstAttribute="leading" secondItem="LVa-UG-knz" secondAttribute="leadingMargin" id="4C1-xy-VJQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Nh-pd-mxb" secondAttribute="trailing" id="7IG-re-if4"/>
+                            <constraint firstItem="GAC-8x-azi" firstAttribute="centerX" secondItem="LVa-UG-knz" secondAttribute="centerX" id="RLb-Zj-F9Y"/>
+                            <constraint firstItem="k5U-VP-65y" firstAttribute="centerX" secondItem="LVa-UG-knz" secondAttribute="centerX" id="dTk-GO-fWP"/>
+                            <constraint firstItem="k5U-VP-65y" firstAttribute="top" secondItem="4Nh-pd-mxb" secondAttribute="bottom" constant="8" id="fMG-5e-vXl"/>
+                            <constraint firstItem="GAC-8x-azi" firstAttribute="top" secondItem="k5U-VP-65y" secondAttribute="bottom" constant="32" id="rZ6-QZ-rsu"/>
+                            <constraint firstItem="GAC-8x-azi" firstAttribute="centerY" secondItem="LVa-UG-knz" secondAttribute="centerY" constant="30" id="u5U-xg-bjt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="4Nh-pd-mxb" id="OAa-rR-m0O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8IU-sw-XAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="132"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="audio" width="128" height="128"/>
+    </resources>
+</document>
