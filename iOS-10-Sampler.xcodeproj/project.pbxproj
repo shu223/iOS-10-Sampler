@@ -90,6 +90,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A736F1E1D7A8F5600A58684 /* Audio Fade-in/out */ = {
+			isa = PBXGroup;
+			children = (
+				8A736F151D7A892D00A58684 /* AudioFadeInOutViewController.swift */,
+				8A736F171D7A893A00A58684 /* AudioFadeInOut.storyboard */,
+			);
+			name = "Audio Fade-in/out";
+			sourceTree = "<group>";
+		};
+		8A736F1F1D7A8F6600A58684 /* Foo */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4308B1D7A701100A3BD98 /* FooViewController.swift */,
+				8AB4308D1D7A701B00A3BD98 /* Foo.storyboard */,
+			);
+			name = Foo;
+			sourceTree = "<group>";
+		};
+		8A736F201D7A8F6D00A58684 /* Bar */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4308F1D7A703200A3BD98 /* BarViewController.swift */,
+				8AB430911D7A704100A3BD98 /* Bar.storyboard */,
+			);
+			name = Bar;
+			sourceTree = "<group>";
+		};
 		8AB4304C1D7A6B4900A3BD98 = {
 			isa = PBXGroup;
 			children = (
@@ -147,12 +174,9 @@
 		8AB4308A1D7A6ED400A3BD98 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
-				8A736F151D7A892D00A58684 /* AudioFadeInOutViewController.swift */,
-				8A736F171D7A893A00A58684 /* AudioFadeInOut.storyboard */,
-				8AB4308B1D7A701100A3BD98 /* FooViewController.swift */,
-				8AB4308D1D7A701B00A3BD98 /* Foo.storyboard */,
-				8AB4308F1D7A703200A3BD98 /* BarViewController.swift */,
-				8AB430911D7A704100A3BD98 /* Bar.storyboard */,
+				8A736F1E1D7A8F5600A58684 /* Audio Fade-in/out */,
+				8A736F1F1D7A8F6600A58684 /* Foo */,
+				8A736F201D7A8F6D00A58684 /* Bar */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
