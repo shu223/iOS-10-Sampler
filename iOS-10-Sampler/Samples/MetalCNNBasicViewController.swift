@@ -15,21 +15,23 @@ class MetalCNNBasicViewController: UIViewController {
     var device: MTLDevice!
     
     // Networks we have
-    var network: MNIST_Deep_ConvNN!
-//    var runningNet: MNIST_Full_LayerNN? = nil
+    var network: MNISTDeepCNN!
     
     // MNIST dataset image parameters
     let mnistInputWidth  = 28
     let mnistInputHeight = 28
-    let mnistInputNumPixels = 784
     
     @IBOutlet weak var digitView: DrawView!
     @IBOutlet weak var predictionLabel: UILabel!
+    @IBOutlet weak var clearBtn: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        clearBtn.isHidden = true
+        predictionLabel.text = nil
+
         // Load default device.
         device = MTLCreateSystemDefaultDevice()
         
@@ -43,15 +45,15 @@ class MetalCNNBasicViewController: UIViewController {
         commandQueue = device!.newCommandQueue()
         
         // initialize the networks we shall use to detect digits
-        network  = MNIST_Deep_ConvNN(withCommandQueue: commandQueue)
+        network  = MNISTDeepCNN(withCommandQueue: commandQueue)
     }
     
     @IBAction func clearBtnTapped(sender: UIButton) {
         // clear the digitview
         digitView.lines = []
         digitView.setNeedsDisplay()
-        predictionLabel.isHidden = true
-        
+        predictionLabel.text = nil
+        clearBtn.isHidden = true
     }
     
     @IBAction func detectBtnTapped(sender: UIButton) {
@@ -74,7 +76,6 @@ class MetalCNNBasicViewController: UIViewController {
         
         // show the prediction
         predictionLabel.text = "\(label)"
-        predictionLabel.isHidden = false
+        clearBtn.isHidden = false
     }
-
 }

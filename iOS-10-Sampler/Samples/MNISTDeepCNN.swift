@@ -1,23 +1,24 @@
+//
+//  MNISTDeepCNN.swift
+//  iOS-10-Sampler
+//
+//  Created by Shuichi Tsutsumi on 9/3/16.
+//  Copyright © 2016 Shuichi Tsutsumi. All rights reserved.
+//
+//
 /*
-    Copyright (C) 2016 Apple Inc. All Rights Reserved.
-    See LICENSE.txt for this sample’s licensing information
-    
-    Abstract:
     This is the deep layer network where we define and encode the correct layers on a command buffer as needed
-*/
+    This is based on MNISTSingleLayer.swift and MNISTDeepCNN.swift provided by Apple
+ */
 
 import MetalPerformanceShaders
+import Accelerate
 
-/**
- 
-    This class has our entire network with all layers to getting the final label
- 
-    Resources:
-    * [Instructions](https://www.tensorflow.org/versions/r0.8/tutorials/mnist/pros/index.html#deep-mnist-for-experts) to run this network on TensorFlow.
- 
- */
-class MNIST_Deep_ConvNN: MNIST_Full_LayerNN{
+
+class MNISTDeepCNN {
     // MPSImageDescriptors for different layers outputs to be put in
+    let sid = MPSImageDescriptor(channelFormat: MPSImageFeatureChannelFormat.unorm8, width: 28, height: 28, featureChannels: 1)
+    let did = MPSImageDescriptor(channelFormat: MPSImageFeatureChannelFormat.float16, width: 1, height: 1, featureChannels: 10)
     let c1id  = MPSImageDescriptor(channelFormat: MPSImageFeatureChannelFormat.float16, width: 28, height: 28, featureChannels: 32)
     let p1id  = MPSImageDescriptor(channelFormat: MPSImageFeatureChannelFormat.float16, width: 14, height: 14, featureChannels: 32)
     let c2id  = MPSImageDescriptor(channelFormat: MPSImageFeatureChannelFormat.float16, width: 14, height: 14, featureChannels: 64)
@@ -25,21 +26,26 @@ class MNIST_Deep_ConvNN: MNIST_Full_LayerNN{
     let fc1id = MPSImageDescriptor(channelFormat: MPSImageFeatureChannelFormat.float16, width: 1 , height: 1 , featureChannels: 1024)
     
     // MPSImages and layers declared
+    var srcImage, dstImage : MPSImage
     var c1Image, c2Image, p1Image, p2Image, fc1Image: MPSImage
     var conv1, conv2: MPSCNNConvolution
     var fc1, fc2: MPSCNNFullyConnected
     var pool: MPSCNNPoolingMax
     var relu: MPSCNNNeuronReLU
+
+    //    var layer: MPSCNNFullyConnected
+    var softmax : MPSCNNSoftMax
+    var commandQueue : MTLCommandQueue
+    var device : MTLDevice
     
-    override init(withCommandQueue commandQueueIn: MTLCommandQueue!) {
-        // use device for a little while to initialize
-        let device = commandQueueIn.device
+    init(withCommandQueue commandQueueIn: MTLCommandQueue!) {
+        commandQueue = commandQueueIn
+        device = commandQueueIn.device
         
         pool = MPSCNNPoolingMax(device: device, kernelWidth: 2, kernelHeight: 2, strideInPixelsX: 2, strideInPixelsY: 2)
         pool.offset = MPSOffset(x: 1, y: 1, z: 0);
         pool.edgeMode = MPSImageEdgeMode.clamp
         relu = MPSCNNNeuronReLU(device: device, a: 0)
-        
         
         
         // Initialize MPSImage from descriptors
@@ -85,30 +91,35 @@ class MNIST_Deep_ConvNN: MNIST_Full_LayerNN{
                                        device: device,
                                        kernelParamsBinaryName: "fc2")
         
-        super.init(withCommandQueue: commandQueueIn)
+        // Initialize MPSImage from descriptors
+        srcImage = MPSImage(device: device, imageDescriptor: sid)
+        dstImage = MPSImage(device: device, imageDescriptor: did)
+
+        // prepare softmax layer to be applied at the end to get a clear label
+        softmax = MPSCNNSoftMax(device: device)
     }
-
-
+    
+    
     /**
-        This function encodes all the layers of the network into given commandBuffer, it calls subroutines for each piece of the network
+     This function encodes all the layers of the network into given commandBuffer, it calls subroutines for each piece of the network
      
-        - Parameters:
-            - inputImage: Image coming in on which the network will run
-            - imageNum: If the test set is being used we will get a value between 0 and 9999 for which of the 10,000 images is being evaluated
-            - correctLabel: The correct label for the inputImage while testing
+     - Parameters:
+     - inputImage: Image coming in on which the network will run
+     - imageNum: If the test set is being used we will get a value between 0 and 9999 for which of the 10,000 images is being evaluated
+     - correctLabel: The correct label for the inputImage while testing
      
-        - Returns:
-            Guess of the network as to what the digit is as UInt
+     - Returns:
+     Guess of the network as to what the digit is as UInt
      */
-    override func forward(inputImage: MPSImage? = nil, imageNum: Int = 9999, correctLabel: UInt = 10) -> UInt{
+    func forward(inputImage: MPSImage? = nil, imageNum: Int = 9999, correctLabel: UInt = 10) -> UInt{
         var label = UInt(99)
-
+        
         // to deliver optimal performance we leave some resources used in MPSCNN to be released at next call of autoreleasepool,
         // so the user can decide the appropriate time to release this
         autoreleasepool{
             // Get command buffer to use in MetalPerformanceShaders.
             let commandBuffer = commandQueue.commandBuffer()
-
+            
             // output will be stored in this image
             let finalLayer = MPSImage(device: commandBuffer.device, imageDescriptor: did)
             
@@ -143,5 +154,49 @@ class MNIST_Deep_ConvNN: MNIST_Full_LayerNN{
             
         }
         return label
+    }
+
+    /**
+     This function reads the output probabilities from finalLayer to CPU, sorts them and gets the label with heighest probability
+     
+     - Parameters:
+     - finalLayer: output image of the network this has probabilities of each digit
+     
+     - Returns:
+     Guess of the network as to what the digit is as UInt
+     */
+    func getLabel(finalLayer: MPSImage) -> UInt {
+        // even though we have 10 labels outputed the MTLTexture format used is RGBAFloat16 thus 3 slices will have 3*4 = 12 outputs
+        var result_half_array = [UInt16](repeating: 6, count: 12)
+        var result_float_array = [Float](repeating: 0.3, count: 10)
+        for i in 0...2 {
+            finalLayer.texture.getBytes(&(result_half_array[4*i]),
+                                        bytesPerRow: MemoryLayout<UInt16>.size*1*4,
+                                        bytesPerImage: MemoryLayout<UInt16>.size*1*1*4,
+                                        from: MTLRegion(origin: MTLOrigin(x: 0, y: 0, z: 0),
+                                                        size: MTLSize(width: 1, height: 1, depth: 1)),
+                                        mipmapLevel: 0,
+                                        slice: i)
+        }
+        
+        // we use vImage to convert our data to float16, Metal GPUs use float16 and swift float is 32-bit
+        var fullResultVImagebuf = vImage_Buffer(data: &result_float_array, height: 1, width: 10, rowBytes: 10*4)
+        var halfResultVImagebuf = vImage_Buffer(data: &result_half_array , height: 1, width: 10, rowBytes: 10*2)
+        
+        if vImageConvert_Planar16FtoPlanarF(&halfResultVImagebuf, &fullResultVImagebuf, 0) != kvImageNoError {
+            print("Error in vImage")
+        }
+        
+        // poll all labels for probability and choose the one with max probability to return
+        var max:Float = 0
+        var mostProbableDigit = 10
+        for i in 0...9 {
+            if(max < result_float_array[i]){
+                max = result_float_array[i]
+                mostProbableDigit = i
+            }
+        }
+        
+        return UInt(mostProbableDigit)
     }
 }
