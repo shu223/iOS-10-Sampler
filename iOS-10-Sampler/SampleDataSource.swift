@@ -24,6 +24,11 @@ struct Sample {
 struct SampleDataSource {
     let samples = [
         Sample(
+            title: "UserNotification",
+            detail: "Local notification with an image using UserNotifications framework.",
+            classPrefix: "UserNotification"
+        ),
+        Sample(
             title: "MPSCNN Basic",
             detail: "Hand-writing digit detection using convolutional neural networks by Metal Performance Shaders.",
             classPrefix: "MetalCNNBasic"
