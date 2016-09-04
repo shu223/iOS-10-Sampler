@@ -141,9 +141,6 @@ class MNISTDeepCNN {
             // add a completion handler to get the correct label the moment GPU is done and compare it to the correct output or return it
             commandBuffer.addCompletedHandler { commandBuffer in
                 label = self.getLabel(finalLayer: finalLayer)
-                if(correctLabel == label){
-                    __atomic_increment()
-                }
             }
             
             // commit commandbuffer to run on GPU and wait for completion

@@ -18,7 +18,6 @@
 		8A1CC3751D7AB06900562709 /* weights_conv2.dat in Resources */ = {isa = PBXBuildFile; fileRef = 8A1CC36D1D7AB06900562709 /* weights_conv2.dat */; };
 		8A1CC3761D7AB06900562709 /* weights_fc1.dat in Resources */ = {isa = PBXBuildFile; fileRef = 8A1CC36E1D7AB06900562709 /* weights_fc1.dat */; };
 		8A1CC3771D7AB06900562709 /* weights_fc2.dat in Resources */ = {isa = PBXBuildFile; fileRef = 8A1CC36F1D7AB06900562709 /* weights_fc2.dat */; };
-		8A1CC37E1D7AB10D00562709 /* atomics.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC37A1D7AB10D00562709 /* atomics.m */; };
 		8A1CC37F1D7AB10D00562709 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC37B1D7AB10D00562709 /* DrawView.swift */; };
 		8A1CC3811D7AB10D00562709 /* SlimMPSCNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC37D1D7AB10D00562709 /* SlimMPSCNN.swift */; };
 		8A1CC3891D7ABCE400562709 /* MNISTDeepCNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC3881D7ABCE400562709 /* MNISTDeepCNN.swift */; };
@@ -103,8 +102,6 @@
 		8A1CC36D1D7AB06900562709 /* weights_conv2.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = weights_conv2.dat; sourceTree = "<group>"; };
 		8A1CC36E1D7AB06900562709 /* weights_fc1.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = weights_fc1.dat; sourceTree = "<group>"; };
 		8A1CC36F1D7AB06900562709 /* weights_fc2.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = weights_fc2.dat; sourceTree = "<group>"; };
-		8A1CC3791D7AB10D00562709 /* atomics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomics.h; sourceTree = "<group>"; };
-		8A1CC37A1D7AB10D00562709 /* atomics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = atomics.m; sourceTree = "<group>"; };
 		8A1CC37B1D7AB10D00562709 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 		8A1CC37D1D7AB10D00562709 /* SlimMPSCNN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlimMPSCNN.swift; sourceTree = "<group>"; };
 		8A1CC3851D7AB15B00562709 /* iOS10Sampler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS10Sampler-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -211,8 +208,6 @@
 		8A1CC3781D7AB10D00562709 /* Apple */ = {
 			isa = PBXGroup;
 			children = (
-				8A1CC3791D7AB10D00562709 /* atomics.h */,
-				8A1CC37A1D7AB10D00562709 /* atomics.m */,
 				8A1CC37B1D7AB10D00562709 /* DrawView.swift */,
 				8A1CC37D1D7AB10D00562709 /* SlimMPSCNN.swift */,
 			);
@@ -584,7 +579,6 @@
 				8AABF1511D7B53FF004A1FE1 /* SpeechRecognitionViewController.swift in Sources */,
 				8A1CC3621D7AAFBC00562709 /* MetalCNNBasicViewController.swift in Sources */,
 				8AB4305B1D7A6B4900A3BD98 /* RootViewController.swift in Sources */,
-				8A1CC37E1D7AB10D00562709 /* atomics.m in Sources */,
 				8AB4308C1D7A701100A3BD98 /* FooViewController.swift in Sources */,
 				8A736F161D7A892D00A58684 /* AudioFadeInOutViewController.swift in Sources */,
 				8A736F1A1D7A8D3B00A58684 /* ImageFiltersViewController.swift in Sources */,
