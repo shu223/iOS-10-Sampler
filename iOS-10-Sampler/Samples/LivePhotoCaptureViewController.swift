@@ -13,19 +13,20 @@ import Photos
 
 class LivePhotoCaptureViewController: UIViewController {
 
+    private let session = AVCaptureSession()
+    private let sessionQueue = DispatchQueue(label: "session queue", attributes: [], target: nil)
+    private var isSessionRunning = false
+
     private enum SessionSetupResult {
         case success
         case notAuthorized
         case configurationFailed
     }
+    private var setupResult: SessionSetupResult = .success
 
-    private let session = AVCaptureSession()
+    private var videoDeviceInput: AVCaptureDeviceInput!
     private let photoOutput = AVCapturePhotoOutput()
     private var inProgressPhotoCaptureDelegates = [Int64 : LivePhotoCaptureDelegate]()
-    private var isSessionRunning = false
-    private let sessionQueue = DispatchQueue(label: "session queue", attributes: [], target: nil)
-    private var setupResult: SessionSetupResult = .success
-    private var videoDeviceInput: AVCaptureDeviceInput!
     private var inProgressLivePhotoCapturesCount = 0
 
     @IBOutlet private weak var previewView: PreviewView!

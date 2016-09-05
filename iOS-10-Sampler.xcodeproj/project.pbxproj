@@ -393,6 +393,7 @@
 		8AB4308A1D7A6ED400A3BD98 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
+				8A5AE0BA1D7D51000095209E /* LivePhotoCapture */,
 				8A49EF491D7BF4F9003EE90B /* UserNotification */,
 				8AABF1541D7B545E004A1FE1 /* SpeechRecognition */,
 				8A1CC3651D7AAFD200562709 /* MetalCNNBasic */,
@@ -402,7 +403,6 @@
 				8A1CC39C1D7AC4F900562709 /* StickerPack */,
 				8A736F1F1D7A8F6600A58684 /* Foo */,
 				8A736F201D7A8F6D00A58684 /* Bar */,
-				8A5AE0BA1D7D51000095209E /* LivePhotoCapture */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
