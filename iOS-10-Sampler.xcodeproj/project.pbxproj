@@ -254,9 +254,9 @@
 			isa = PBXGroup;
 			children = (
 				8A5AE0B61D7D50D90095209E /* LivePhotoCaptureViewController.swift */,
-				8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */,
 				8A5AE0BB1D7D58AB0095209E /* LivePhotoCaptureDelegate.swift */,
 				8A5AE0BD1D7D61C70095209E /* PreviewView.swift */,
+				8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */,
 			);
 			name = LivePhotoCapture;
 			sourceTree = "<group>";

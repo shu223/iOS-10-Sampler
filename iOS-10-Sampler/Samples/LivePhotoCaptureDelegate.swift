@@ -5,28 +5,44 @@
 //  Created by Shuichi Tsutsumi on 9/5/16.
 //  Copyright © 2016 Shuichi Tsutsumi. All rights reserved.
 //
+//  [Referene] This sample is based on the Apple's sample "AVCam-iOS".
 
 import AVFoundation
 import Photos
 
 class LivePhotoCaptureDelegate: NSObject, AVCapturePhotoCaptureDelegate {
+    
     private(set) var requestedPhotoSettings: AVCapturePhotoSettings
-
-    private let willCapturePhotoAnimation: () -> ()
-    
     private let capturingLivePhoto: (Bool) -> ()
-    
     private let completed: (LivePhotoCaptureDelegate) -> ()
-    
     private var photoData: Data? = nil
-    
     private var livePhotoCompanionMovieURL: URL? = nil
     
-    init(with requestedPhotoSettings: AVCapturePhotoSettings, willCapturePhotoAnimation: @escaping () -> (), capturingLivePhoto: @escaping (Bool) -> (), completed: @escaping (LivePhotoCaptureDelegate) -> ()) {
+    init(with requestedPhotoSettings: AVCapturePhotoSettings, capturingLivePhoto: @escaping (Bool) -> (), completed: @escaping (LivePhotoCaptureDelegate) -> ()) {
         self.requestedPhotoSettings = requestedPhotoSettings
-        self.willCapturePhotoAnimation = willCapturePhotoAnimation
         self.capturingLivePhoto = capturingLivePhoto
         self.completed = completed
+    }
+    
+    private func save(photoData: Data) {
+        PHPhotoLibrary.shared().performChanges({ [unowned self] in
+            let creationRequest = PHAssetCreationRequest.forAsset()
+            creationRequest.addResource(with: .photo, data: photoData, options: nil)
+            
+            if let livePhotoCompanionMovieURL = self.livePhotoCompanionMovieURL {
+                let livePhotoCompanionMovieFileResourceOptions = PHAssetResourceCreationOptions()
+                livePhotoCompanionMovieFileResourceOptions.shouldMoveFile = true
+                creationRequest.addResource(with: .pairedVideo, fileURL: livePhotoCompanionMovieURL, options: livePhotoCompanionMovieFileResourceOptions)
+            }
+            
+            }, completionHandler: { [unowned self] success, error in
+                if let error = error {
+                    print("Error occurered while saving photo to photo library: \(error)")
+                }
+                
+                self.didFinish()
+            }
+        )
     }
     
     private func didFinish() {
@@ -44,14 +60,13 @@ class LivePhotoCaptureDelegate: NSObject, AVCapturePhotoCaptureDelegate {
         completed(self)
     }
     
+    // =========================================================================
+    // MARK: - AVCapturePhotoCaptureDelegate
+    
     func capture(_ captureOutput: AVCapturePhotoOutput, willBeginCaptureForResolvedSettings resolvedSettings: AVCaptureResolvedPhotoSettings) {
         if resolvedSettings.livePhotoMovieDimensions.width > 0 && resolvedSettings.livePhotoMovieDimensions.height > 0 {
             capturingLivePhoto(true)
         }
-    }
-    
-    func capture(_ captureOutput: AVCapturePhotoOutput, willCapturePhotoForResolvedSettings resolvedSettings: AVCaptureResolvedPhotoSettings) {
-        willCapturePhotoAnimation()
     }
     
     func capture(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer photoSampleBuffer: CMSampleBuffer?, previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
@@ -92,24 +107,7 @@ class LivePhotoCaptureDelegate: NSObject, AVCapturePhotoCaptureDelegate {
         
         PHPhotoLibrary.requestAuthorization { [unowned self] status in
             if status == .authorized {
-                PHPhotoLibrary.shared().performChanges({ [unowned self] in
-                    let creationRequest = PHAssetCreationRequest.forAsset()
-                    creationRequest.addResource(with: .photo, data: photoData, options: nil)
-                    
-                    if let livePhotoCompanionMovieURL = self.livePhotoCompanionMovieURL {
-                        let livePhotoCompanionMovieFileResourceOptions = PHAssetResourceCreationOptions()
-                        livePhotoCompanionMovieFileResourceOptions.shouldMoveFile = true
-                        creationRequest.addResource(with: .pairedVideo, fileURL: livePhotoCompanionMovieURL, options: livePhotoCompanionMovieFileResourceOptions)
-                    }
-                    
-                    }, completionHandler: { [unowned self] success, error in
-                        if let error = error {
-                            print("Error occurered while saving photo to photo library: \(error)")
-                        }
-                        
-                        self.didFinish()
-                    }
-                )
+                self.save(photoData: photoData)
             }
             else {
                 self.didFinish()
