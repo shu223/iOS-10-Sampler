@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZQk-vf-fdE">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Live Photo Capture View Controller-->
+        <scene sceneID="PPg-wX-XAC">
+            <objects>
+                <viewController id="ZQk-vf-fdE" customClass="LivePhotoCaptureViewController" customModule="iOS_10_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nrv-sQ-ezH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wpf-AE-hdM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sn5-Jp-kj2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tz2-nf-E8R" userLabel="Preview" customClass="PreviewView" customModule="iOS_10_Sampler" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FY-Qk-MPU" userLabel="Still">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5o9-po-CAj"/>
+                                    <constraint firstAttribute="width" constant="80" id="OpM-QA-w2S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Photo">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="capturePhoto:" destination="ZQk-vf-fdE" eventType="touchUpInside" id="bKb-Xq-QAe"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlJ-L1-EFt">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="3a6-Dt-SY8"/>
+                                    <constraint firstAttribute="height" constant="25" id="EB0-vg-dZ4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lv-hs-pPr" userLabel="Resume">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                <state key="normal" title="Tap to resume">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label hidden="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Unavailable" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TD-G8-Rwj" userLabel="Camera Unavailable">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tz2-nf-E8R" firstAttribute="top" secondItem="Sn5-Jp-kj2" secondAttribute="top" id="0V5-4j-6fn"/>
+                            <constraint firstItem="5TD-G8-Rwj" firstAttribute="centerX" secondItem="Sn5-Jp-kj2" secondAttribute="centerX" id="3b7-2f-f8Q"/>
+                            <constraint firstItem="Wpf-AE-hdM" firstAttribute="top" secondItem="tz2-nf-E8R" secondAttribute="bottom" id="Emm-qT-cBg"/>
+                            <constraint firstItem="5TD-G8-Rwj" firstAttribute="centerY" secondItem="Sn5-Jp-kj2" secondAttribute="centerY" id="FD7-SG-Enx"/>
+                            <constraint firstItem="3FY-Qk-MPU" firstAttribute="centerX" secondItem="Sn5-Jp-kj2" secondAttribute="centerX" id="Ncq-ha-AZr"/>
+                            <constraint firstItem="0lv-hs-pPr" firstAttribute="centerX" secondItem="Sn5-Jp-kj2" secondAttribute="centerX" id="Wy0-ba-Hem"/>
+                            <constraint firstItem="DlJ-L1-EFt" firstAttribute="centerX" secondItem="Sn5-Jp-kj2" secondAttribute="centerX" id="ZwN-fO-EBW"/>
+                            <constraint firstItem="DlJ-L1-EFt" firstAttribute="top" secondItem="Sn5-Jp-kj2" secondAttribute="topMargin" constant="52" id="cM2-a3-1Fq"/>
+                            <constraint firstItem="Wpf-AE-hdM" firstAttribute="top" secondItem="3FY-Qk-MPU" secondAttribute="bottom" constant="20" id="hBU-HT-nMg"/>
+                            <constraint firstAttribute="trailing" secondItem="tz2-nf-E8R" secondAttribute="trailing" id="mfJ-Lg-08u"/>
+                            <constraint firstItem="0lv-hs-pPr" firstAttribute="centerY" secondItem="Sn5-Jp-kj2" secondAttribute="centerY" id="xvf-KX-RON"/>
+                            <constraint firstItem="tz2-nf-E8R" firstAttribute="leading" secondItem="Sn5-Jp-kj2" secondAttribute="leading" id="znl-yq-Mzs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraUnavailableLabel" destination="5TD-G8-Rwj" id="3dW-GJ-Ugq"/>
+                        <outlet property="capturingLivePhotoLabel" destination="DlJ-L1-EFt" id="FuI-2H-5XG"/>
+                        <outlet property="photoButton" destination="3FY-Qk-MPU" id="JQZ-Oh-CME"/>
+                        <outlet property="previewView" destination="tz2-nf-E8R" id="fhl-xj-fgi"/>
+                        <outlet property="resumeButton" destination="0lv-hs-pPr" id="CiR-RJ-shB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGF-Wj-Gwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="63"/>
+        </scene>
+    </scenes>
+</document>
