@@ -50,6 +50,11 @@
 		8AB4308E1D7A701B00A3BD98 /* Foo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB4308D1D7A701B00A3BD98 /* Foo.storyboard */; };
 		8AB430901D7A703200A3BD98 /* BarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4308F1D7A703200A3BD98 /* BarViewController.swift */; };
 		8AB430921D7A704100A3BD98 /* Bar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB430911D7A704100A3BD98 /* Bar.storyboard */; };
+		8C3A5F501D7EF7BE00B7A480 /* Message+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A5F4C1D7EF7BE00B7A480 /* Message+CoreDataClass.swift */; };
+		8C3A5F511D7EF7BE00B7A480 /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A5F4D1D7EF7BE00B7A480 /* Message+CoreDataProperties.swift */; };
+		8C3A5F521D7EF7BE00B7A480 /* PersistentContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A5F4E1D7EF7BE00B7A480 /* PersistentContainerViewController.swift */; };
+		8C67369C1D7EFD1E00BAAE02 /* PersistentContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C67369B1D7EFD1E00BAAE02 /* PersistentContainer.storyboard */; };
+		8C67369F1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C67369D1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +147,11 @@
 		8AB4308D1D7A701B00A3BD98 /* Foo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Foo.storyboard; sourceTree = "<group>"; };
 		8AB4308F1D7A703200A3BD98 /* BarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarViewController.swift; sourceTree = "<group>"; };
 		8AB430911D7A704100A3BD98 /* Bar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bar.storyboard; sourceTree = "<group>"; };
+		8C3A5F4C1D7EF7BE00B7A480 /* Message+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8C3A5F4D1D7EF7BE00B7A480 /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8C3A5F4E1D7EF7BE00B7A480 /* PersistentContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentContainerViewController.swift; sourceTree = "<group>"; };
+		8C67369B1D7EFD1E00BAAE02 /* PersistentContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PersistentContainer.storyboard; sourceTree = "<group>"; };
+		8C67369E1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS10Sampler.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,10 +391,23 @@
 				8A736F1D1D7A8F4B00A58684 /* New Image Filters */,
 				8A736F1E1D7A8F5600A58684 /* Audio Fade-in/out */,
 				8A1CC39C1D7AC4F900562709 /* StickerPack */,
+				8C3A5F531D7EF7C300B7A480 /* PersistentContainer */,
 				8A736F1F1D7A8F6600A58684 /* Foo */,
 				8A736F201D7A8F6D00A58684 /* Bar */,
 			);
 			path = Samples;
+			sourceTree = "<group>";
+		};
+		8C3A5F531D7EF7C300B7A480 /* PersistentContainer */ = {
+			isa = PBXGroup;
+			children = (
+				8C67369D1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodeld */,
+				8C3A5F4C1D7EF7BE00B7A480 /* Message+CoreDataClass.swift */,
+				8C3A5F4D1D7EF7BE00B7A480 /* Message+CoreDataProperties.swift */,
+				8C67369B1D7EFD1E00BAAE02 /* PersistentContainer.storyboard */,
+				8C3A5F4E1D7EF7BE00B7A480 /* PersistentContainerViewController.swift */,
+			);
+			name = PersistentContainer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -532,6 +555,7 @@
 				8A736F1C1D7A8D4C00A58684 /* ImageFilters.storyboard in Resources */,
 				8A1CC3701D7AB06900562709 /* bias_conv1.dat in Resources */,
 				8A1CC39B1D7AC44A00562709 /* StickerPack.storyboard in Resources */,
+				8C67369C1D7EFD1E00BAAE02 /* PersistentContainer.storyboard in Resources */,
 				8A1CC3771D7AB06900562709 /* weights_fc2.dat in Resources */,
 				8AB430631D7A6B4900A3BD98 /* LaunchScreen.storyboard in Resources */,
 				8A825D541D7AA4F3008D74EA /* AttributedSpeech.storyboard in Resources */,
@@ -583,13 +607,17 @@
 				8A736F161D7A892D00A58684 /* AudioFadeInOutViewController.swift in Sources */,
 				8A736F1A1D7A8D3B00A58684 /* ImageFiltersViewController.swift in Sources */,
 				8A1CC3891D7ABCE400562709 /* MNISTDeepCNN.swift in Sources */,
+				8C3A5F501D7EF7BE00B7A480 /* Message+CoreDataClass.swift in Sources */,
 				8A1CC3811D7AB10D00562709 /* SlimMPSCNN.swift in Sources */,
+				8C67369F1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodeld in Sources */,
 				8A1CC37F1D7AB10D00562709 /* DrawView.swift in Sources */,
 				8A736F221D7A9A8300A58684 /* CIFilterExtension.swift in Sources */,
 				8AB430891D7A6DF300A3BD98 /* SampleDataSource.swift in Sources */,
 				8A1CC3991D7AC43C00562709 /* StickerPackViewController.swift in Sources */,
 				8AB430901D7A703200A3BD98 /* BarViewController.swift in Sources */,
 				8A49EF461D7BF4D8003EE90B /* UserNotificationViewController.swift in Sources */,
+				8C3A5F521D7EF7BE00B7A480 /* PersistentContainerViewController.swift in Sources */,
+				8C3A5F511D7EF7BE00B7A480 /* Message+CoreDataProperties.swift in Sources */,
 				8AB430591D7A6B4900A3BD98 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -900,6 +928,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8C67369D1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8C67369E1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodel */,
+			);
+			currentVersion = 8C67369E1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodel */;
+			path = iOS10Sampler.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8AB4304D1D7A6B4900A3BD98 /* Project object */;
 }
