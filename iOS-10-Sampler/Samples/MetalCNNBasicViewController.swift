@@ -42,7 +42,7 @@ class MetalCNNBasicViewController: UIViewController {
         }
         
         // Create new command queue.
-        commandQueue = device!.newCommandQueue()
+        commandQueue = device!.makeCommandQueue()
         
         // initialize the networks we shall use to detect digits
         network  = MNISTDeepCNN(withCommandQueue: commandQueue)
@@ -64,7 +64,7 @@ class MetalCNNBasicViewController: UIViewController {
         assert(network != nil)
         
         // putting input into MTLTexture in the MPSImage
-        network.srcImage.texture.replace(MTLRegion( origin: MTLOrigin(x: 0, y: 0, z: 0),
+        network.srcImage.texture.replace(region: MTLRegion( origin: MTLOrigin(x: 0, y: 0, z: 0),
                                                         size: MTLSize(width: mnistInputWidth, height: mnistInputHeight, depth: 1)),
                                              mipmapLevel: 0,
                                              slice: 0,

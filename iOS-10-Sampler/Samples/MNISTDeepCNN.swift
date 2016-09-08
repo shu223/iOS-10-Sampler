@@ -118,7 +118,7 @@ class MNISTDeepCNN {
         // so the user can decide the appropriate time to release this
         autoreleasepool{
             // Get command buffer to use in MetalPerformanceShaders.
-            let commandBuffer = commandQueue.commandBuffer()
+            let commandBuffer = commandQueue.makeCommandBuffer()
             
             // output will be stored in this image
             let finalLayer = MPSImage(device: commandBuffer.device, imageDescriptor: did)
