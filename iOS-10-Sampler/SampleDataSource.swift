@@ -63,6 +63,10 @@ struct SampleDataSource {
             detail: "Example of Sticker Pack for iMessage",
             classPrefix: "StickerPack"
         ),
+        Sample(title: "Core Data Stack",
+               detail: "Simple Core Data stack using NSPersistentContainer",
+               classPrefix: "PersistentContainer"
+        ),
         Sample(
             title: "Foo",
             detail: "FooFooFooFooFooFooFooFooFooFooFooFoo",
