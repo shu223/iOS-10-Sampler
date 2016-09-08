@@ -21,11 +21,7 @@ let persistentContainer: NSPersistentContainer = {
 
 class PersitentContainerViewController: UITableViewController {
     
-    var messages: [Message] = [] {
-        didSet {
-            self.tableView.reloadData()
-        }
-    }
+    var messages: [Message] = []
     
     @IBAction func add(_ sender: AnyObject) {
         
@@ -35,6 +31,7 @@ class PersitentContainerViewController: UITableViewController {
         alertController.addAction(UIAlertAction(title: "Add", style: .default) { [weak self] action in
             let text = alertController.textFields?.first?.text ?? ""
             self?.create(body: text)
+            self?.fetch()
         })
         
         present(alertController, animated: true)
@@ -46,7 +43,8 @@ class PersitentContainerViewController: UITableViewController {
         request.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: false)]
         
         let asyncRequest = NSAsynchronousFetchRequest<Message>(fetchRequest: request) { result in
-           self.messages = result.finalResult ?? []
+            self.messages = result.finalResult ?? []
+            self.tableView.reloadData()
         }
         
         try! persistentContainer.viewContext.execute(asyncRequest)
@@ -59,8 +57,15 @@ class PersitentContainerViewController: UITableViewController {
         message.createdAt = NSDate()
         
         try! context.save()
+    }
+    
+    func delete(at index: Int) {
+        let context = persistentContainer.viewContext
+        let message = messages.remove(at: index)
         
-        fetch()
+        context.delete(message)
+        
+        try! context.save()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,6 +82,20 @@ class PersitentContainerViewController: UITableViewController {
         cell.detailTextLabel!.text = String(describing: message.createdAt!)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            delete(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        default:
+            break
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
