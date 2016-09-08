@@ -148,7 +148,10 @@ class LivePhotoCaptureViewController: UIViewController {
         
         // Add video input.
         do {
-            let videoDevice = LivePhotoCaptureViewController.deviceWithMediaType(AVMediaTypeVideo, preferringPosition: .back)
+            let videoDevice = AVCaptureDevice.defaultDevice(
+                withDeviceType: AVCaptureDeviceType.builtInWideAngleCamera,
+                mediaType: AVMediaTypeVideo,
+                position: .back)
             let videoDeviceInput = try AVCaptureDeviceInput(device: videoDevice)
             
             if session.canAddInput(videoDeviceInput) {
@@ -201,14 +204,6 @@ class LivePhotoCaptureViewController: UIViewController {
         }
         
         session.commitConfiguration()
-    }
-    
-    private class func deviceWithMediaType(_ mediaType: String, preferringPosition position: AVCaptureDevicePosition) -> AVCaptureDevice? {
-        if let devices = AVCaptureDevice.devices(withMediaType: mediaType) as? [AVCaptureDevice] {
-            return devices.filter({ $0.position == position }).first
-        }
-        
-        return nil
     }
     
     // MARK: KVO and Notifications
