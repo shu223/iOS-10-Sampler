@@ -67,5 +67,10 @@ struct SampleDataSource {
                detail: "Simple Core Data stack using NSPersistentContainer",
                classPrefix: "PersistentContainer"
         ),
+        Sample(
+            title: "TabBar Customization",
+            detail: "Customization sample for UITabBar's badge using text attributes.",
+            classPrefix: "TabBadge"
+        ),
         ]
 }

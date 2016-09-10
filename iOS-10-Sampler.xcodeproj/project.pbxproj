@@ -26,6 +26,8 @@
 		8A1CC3991D7AC43C00562709 /* StickerPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC3981D7AC43C00562709 /* StickerPackViewController.swift */; };
 		8A1CC39B1D7AC44A00562709 /* StickerPack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1CC39A1D7AC44A00562709 /* StickerPack.storyboard */; };
 		8A3F09A51D83E38000D28DF2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F09A41D83E38000D28DF2 /* README.md */; };
+		8A3F09A71D83E51100D28DF2 /* TabBadge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3F09A61D83E51100D28DF2 /* TabBadge.storyboard */; };
+		8A3F09A91D83E51F00D28DF2 /* TabBadgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F09A81D83E51F00D28DF2 /* TabBadgeViewController.swift */; };
 		8A49EF461D7BF4D8003EE90B /* UserNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A49EF451D7BF4D8003EE90B /* UserNotificationViewController.swift */; };
 		8A5AE0B71D7D50D90095209E /* LivePhotoCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AE0B61D7D50D90095209E /* LivePhotoCaptureViewController.swift */; };
 		8A5AE0B91D7D50E80095209E /* LivePhotoCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */; };
@@ -118,6 +120,8 @@
 		8A1CC3981D7AC43C00562709 /* StickerPackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerPackViewController.swift; sourceTree = "<group>"; };
 		8A1CC39A1D7AC44A00562709 /* StickerPack.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StickerPack.storyboard; sourceTree = "<group>"; };
 		8A3F09A41D83E38000D28DF2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8A3F09A61D83E51100D28DF2 /* TabBadge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBadge.storyboard; sourceTree = "<group>"; };
+		8A3F09A81D83E51F00D28DF2 /* TabBadgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBadgeViewController.swift; sourceTree = "<group>"; };
 		8A49EF451D7BF4D8003EE90B /* UserNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationViewController.swift; sourceTree = "<group>"; };
 		8A5AE0B61D7D50D90095209E /* LivePhotoCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePhotoCaptureViewController.swift; sourceTree = "<group>"; };
 		8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LivePhotoCapture.storyboard; sourceTree = "<group>"; };
@@ -243,6 +247,15 @@
 				8A1CC39A1D7AC44A00562709 /* StickerPack.storyboard */,
 			);
 			name = StickerPack;
+			sourceTree = "<group>";
+		};
+		8A3F09AA1D83E52300D28DF2 /* TabBadge */ = {
+			isa = PBXGroup;
+			children = (
+				8A3F09A81D83E51F00D28DF2 /* TabBadgeViewController.swift */,
+				8A3F09A61D83E51100D28DF2 /* TabBadge.storyboard */,
+			);
+			name = TabBadge;
 			sourceTree = "<group>";
 		};
 		8A49EF491D7BF4F9003EE90B /* UserNotification */ = {
@@ -389,6 +402,7 @@
 				8A736F1E1D7A8F5600A58684 /* Audio Fade-in/out */,
 				8A1CC39C1D7AC4F900562709 /* StickerPack */,
 				8C3A5F531D7EF7C300B7A480 /* PersistentContainer */,
+				8A3F09AA1D83E52300D28DF2 /* TabBadge */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -552,6 +566,7 @@
 				8A1CC3701D7AB06900562709 /* bias_conv1.dat in Resources */,
 				8A1CC39B1D7AC44A00562709 /* StickerPack.storyboard in Resources */,
 				8C67369C1D7EFD1E00BAAE02 /* PersistentContainer.storyboard in Resources */,
+				8A3F09A71D83E51100D28DF2 /* TabBadge.storyboard in Resources */,
 				8A1CC3771D7AB06900562709 /* weights_fc2.dat in Resources */,
 				8AB430631D7A6B4900A3BD98 /* LaunchScreen.storyboard in Resources */,
 				8A825D541D7AA4F3008D74EA /* AttributedSpeech.storyboard in Resources */,
@@ -600,6 +615,7 @@
 				8A5AE0BE1D7D61C70095209E /* PreviewView.swift in Sources */,
 				8A5AE0B71D7D50D90095209E /* LivePhotoCaptureViewController.swift in Sources */,
 				8AB4305B1D7A6B4900A3BD98 /* RootViewController.swift in Sources */,
+				8A3F09A91D83E51F00D28DF2 /* TabBadgeViewController.swift in Sources */,
 				8A3F09A51D83E38000D28DF2 /* README.md in Sources */,
 				8A736F161D7A892D00A58684 /* AudioFadeInOutViewController.swift in Sources */,
 				8A736F1A1D7A8D3B00A58684 /* ImageFiltersViewController.swift in Sources */,
