@@ -215,6 +215,10 @@
 		8A3F08FC1D81D35000D28DF2 /* weights_mixed_tower_conv.dat in Resources */ = {isa = PBXBuildFile; fileRef = 8A3F083E1D81D34F00D28DF2 /* weights_mixed_tower_conv.dat */; };
 		8A3F08FD1D81D35000D28DF2 /* weights_mixed_tower_conv_1.dat in Resources */ = {isa = PBXBuildFile; fileRef = 8A3F083F1D81D34F00D28DF2 /* weights_mixed_tower_conv_1.dat */; };
 		8A3F08FE1D81D35000D28DF2 /* weights_softmax.dat in Resources */ = {isa = PBXBuildFile; fileRef = 8A3F08401D81D35000D28DF2 /* weights_softmax.dat */; };
+		8A3F09021D81D47400D28DF2 /* Inception3Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F09011D81D47400D28DF2 /* Inception3Net.swift */; };
+		8A3F09061D81D4B800D28DF2 /* MetalImageRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F09051D81D4B800D28DF2 /* MetalImageRecognitionViewController.swift */; };
+		8A3F09081D81D4C700D28DF2 /* MetalImageRecognition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3F09071D81D4C700D28DF2 /* MetalImageRecognition.storyboard */; };
+		8A3F09A11D83CF2000D28DF2 /* final0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3F09A01D83CF2000D28DF2 /* final0.jpg */; };
 		8A49EF461D7BF4D8003EE90B /* UserNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A49EF451D7BF4D8003EE90B /* UserNotificationViewController.swift */; };
 		8A5AE0B71D7D50D90095209E /* LivePhotoCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AE0B61D7D50D90095209E /* LivePhotoCaptureViewController.swift */; };
 		8A5AE0B91D7D50E80095209E /* LivePhotoCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */; };
@@ -301,7 +305,7 @@
 		8A1CC36D1D7AB06900562709 /* weights_conv2.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = weights_conv2.dat; sourceTree = "<group>"; };
 		8A1CC36E1D7AB06900562709 /* weights_fc1.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = weights_fc1.dat; sourceTree = "<group>"; };
 		8A1CC36F1D7AB06900562709 /* weights_fc2.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = weights_fc2.dat; sourceTree = "<group>"; };
-		8A1CC37B1D7AB10D00562709 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		8A1CC37B1D7AB10D00562709 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawView.swift; path = MetalCNNBasicApple/DrawView.swift; sourceTree = "<group>"; };
 		8A1CC37D1D7AB10D00562709 /* SlimMPSCNN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlimMPSCNN.swift; sourceTree = "<group>"; };
 		8A1CC3851D7AB15B00562709 /* iOS10Sampler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS10Sampler-Bridging-Header.h"; sourceTree = "<group>"; };
 		8A1CC3881D7ABCE400562709 /* MNISTDeepCNN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNISTDeepCNN.swift; sourceTree = "<group>"; };
@@ -500,6 +504,10 @@
 		8A3F083E1D81D34F00D28DF2 /* weights_mixed_tower_conv.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = weights_mixed_tower_conv.dat; sourceTree = "<group>"; };
 		8A3F083F1D81D34F00D28DF2 /* weights_mixed_tower_conv_1.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = weights_mixed_tower_conv_1.dat; sourceTree = "<group>"; };
 		8A3F08401D81D35000D28DF2 /* weights_softmax.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = weights_softmax.dat; sourceTree = "<group>"; };
+		8A3F09011D81D47400D28DF2 /* Inception3Net.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inception3Net.swift; sourceTree = "<group>"; };
+		8A3F09051D81D4B800D28DF2 /* MetalImageRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalImageRecognitionViewController.swift; sourceTree = "<group>"; };
+		8A3F09071D81D4C700D28DF2 /* MetalImageRecognition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MetalImageRecognition.storyboard; sourceTree = "<group>"; };
+		8A3F09A01D83CF2000D28DF2 /* final0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = final0.jpg; sourceTree = "<group>"; };
 		8A49EF451D7BF4D8003EE90B /* UserNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationViewController.swift; sourceTree = "<group>"; };
 		8A5AE0B61D7D50D90095209E /* LivePhotoCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePhotoCaptureViewController.swift; sourceTree = "<group>"; };
 		8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LivePhotoCapture.storyboard; sourceTree = "<group>"; };
@@ -567,15 +575,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8A1CC3651D7AAFD200562709 /* MetalCNNBasic */ = {
+		8A1CC3651D7AAFD200562709 /* MetalCNN */ = {
 			isa = PBXGroup;
 			children = (
-				8A1CC3781D7AB10D00562709 /* Apple */,
-				8A1CC3881D7ABCE400562709 /* MNISTDeepCNN.swift */,
-				8A1CC3611D7AAFBC00562709 /* MetalCNNBasicViewController.swift */,
-				8A1CC3631D7AAFCC00562709 /* MetalCNNBasic.storyboard */,
+				8A1CC3781D7AB10D00562709 /* Common */,
+				8A3F08FF1D81D3D200D28DF2 /* Basic */,
+				8A3F09001D81D3FA00D28DF2 /* ImageRecognition */,
 			);
-			name = MetalCNNBasic;
+			name = MetalCNN;
 			sourceTree = "<group>";
 		};
 		8A1CC3661D7AB06900562709 /* Resources */ = {
@@ -604,13 +611,12 @@
 			path = deep_weights;
 			sourceTree = "<group>";
 		};
-		8A1CC3781D7AB10D00562709 /* Apple */ = {
+		8A1CC3781D7AB10D00562709 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				8A1CC37B1D7AB10D00562709 /* DrawView.swift */,
 				8A1CC37D1D7AB10D00562709 /* SlimMPSCNN.swift */,
 			);
-			name = Apple;
+			name = Common;
 			path = MetalCNNBasicApple;
 			sourceTree = "<group>";
 		};
@@ -837,6 +843,28 @@
 			path = batch_normalized_binaries;
 			sourceTree = "<group>";
 		};
+		8A3F08FF1D81D3D200D28DF2 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				8A1CC37B1D7AB10D00562709 /* DrawView.swift */,
+				8A1CC3881D7ABCE400562709 /* MNISTDeepCNN.swift */,
+				8A1CC3611D7AAFBC00562709 /* MetalCNNBasicViewController.swift */,
+				8A1CC3631D7AAFCC00562709 /* MetalCNNBasic.storyboard */,
+			);
+			name = Basic;
+			sourceTree = "<group>";
+		};
+		8A3F09001D81D3FA00D28DF2 /* ImageRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				8A3F09A01D83CF2000D28DF2 /* final0.jpg */,
+				8A3F09011D81D47400D28DF2 /* Inception3Net.swift */,
+				8A3F09051D81D4B800D28DF2 /* MetalImageRecognitionViewController.swift */,
+				8A3F09071D81D4C700D28DF2 /* MetalImageRecognition.storyboard */,
+			);
+			name = ImageRecognition;
+			sourceTree = "<group>";
+		};
 		8A49EF491D7BF4F9003EE90B /* UserNotification */ = {
 			isa = PBXGroup;
 			children = (
@@ -992,7 +1020,7 @@
 				8A5AE0BA1D7D51000095209E /* LivePhotoCapture */,
 				8A49EF491D7BF4F9003EE90B /* UserNotification */,
 				8AABF1541D7B545E004A1FE1 /* SpeechRecognition */,
-				8A1CC3651D7AAFD200562709 /* MetalCNNBasic */,
+				8A1CC3651D7AAFD200562709 /* MetalCNN */,
 				8A825D551D7AA505008D74EA /* AttributedSpeech */,
 				8A736F1D1D7A8F4B00A58684 /* New Image Filters */,
 				8A736F1E1D7A8F5600A58684 /* Audio Fade-in/out */,
@@ -1188,6 +1216,7 @@
 				8A3F08F31D81D35000D28DF2 /* weights_mixed_9_tower_2_conv.dat in Resources */,
 				8A3F08B01D81D35000D28DF2 /* weights_mixed_1_tower_1_conv_1.dat in Resources */,
 				8A3F08FB1D81D35000D28DF2 /* weights_mixed_tower_2_conv.dat in Resources */,
+				8A3F09081D81D4C700D28DF2 /* MetalImageRecognition.storyboard in Resources */,
 				8A3F08521D81D35000D28DF2 /* bias_mixed_1_tower_1_conv_2.dat in Resources */,
 				8A3F08471D81D35000D28DF2 /* bias_mixed_10_tower_1_conv.dat in Resources */,
 				8A1CC3771D7AB06900562709 /* weights_fc2.dat in Resources */,
@@ -1343,6 +1372,7 @@
 				8A3F08DF1D81D35000D28DF2 /* weights_mixed_7_tower_1_conv.dat in Resources */,
 				8A3F08B11D81D35000D28DF2 /* weights_mixed_1_tower_1_conv_2.dat in Resources */,
 				8A3F08BF1D81D35000D28DF2 /* weights_mixed_3_tower_conv_2.dat in Resources */,
+				8A3F09A11D83CF2000D28DF2 /* final0.jpg in Resources */,
 				8A3F08461D81D35000D28DF2 /* bias_mixed_10_conv.dat in Resources */,
 				8A3F08AB1D81D35000D28DF2 /* weights_mixed_10_tower_conv.dat in Resources */,
 				8A3F08871D81D35000D28DF2 /* bias_mixed_7_tower_conv_1.dat in Resources */,
@@ -1412,6 +1442,8 @@
 				8C67369F1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodeld in Sources */,
 				8A1CC37F1D7AB10D00562709 /* DrawView.swift in Sources */,
 				8A736F221D7A9A8300A58684 /* CIFilterExtension.swift in Sources */,
+				8A3F09061D81D4B800D28DF2 /* MetalImageRecognitionViewController.swift in Sources */,
+				8A3F09021D81D47400D28DF2 /* Inception3Net.swift in Sources */,
 				8AB430891D7A6DF300A3BD98 /* SampleDataSource.swift in Sources */,
 				8A1CC3991D7AC43C00562709 /* StickerPackViewController.swift in Sources */,
 				8AB430901D7A703200A3BD98 /* BarViewController.swift in Sources */,
