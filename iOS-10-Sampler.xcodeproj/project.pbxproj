@@ -30,6 +30,8 @@
 		8A3F09AC1D83F7F700D28DF2 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F09AB1D83F7F700D28DF2 /* FontsViewController.swift */; };
 		8A3F09AE1D83F80100D28DF2 /* Fonts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3F09AD1D83F80100D28DF2 /* Fonts.storyboard */; };
 		8A3F09B41D8400BB00D28DF2 /* iOS10AddedFonts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A3F09B31D8400BB00D28DF2 /* iOS10AddedFonts.plist */; };
+		8A3F09B61D84096D00D28DF2 /* PropertyAnimator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3F09B51D84096D00D28DF2 /* PropertyAnimator.storyboard */; };
+		8A3F09B81D84097900D28DF2 /* PropertyAnimatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F09B71D84097900D28DF2 /* PropertyAnimatorViewController.swift */; };
 		8A49EF461D7BF4D8003EE90B /* UserNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A49EF451D7BF4D8003EE90B /* UserNotificationViewController.swift */; };
 		8A5AE0B71D7D50D90095209E /* LivePhotoCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AE0B61D7D50D90095209E /* LivePhotoCaptureViewController.swift */; };
 		8A5AE0B91D7D50E80095209E /* LivePhotoCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */; };
@@ -127,6 +129,8 @@
 		8A3F09AB1D83F7F700D28DF2 /* FontsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
 		8A3F09AD1D83F80100D28DF2 /* Fonts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fonts.storyboard; sourceTree = "<group>"; };
 		8A3F09B31D8400BB00D28DF2 /* iOS10AddedFonts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iOS10AddedFonts.plist; sourceTree = "<group>"; };
+		8A3F09B51D84096D00D28DF2 /* PropertyAnimator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PropertyAnimator.storyboard; sourceTree = "<group>"; };
+		8A3F09B71D84097900D28DF2 /* PropertyAnimatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyAnimatorViewController.swift; sourceTree = "<group>"; };
 		8A49EF451D7BF4D8003EE90B /* UserNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationViewController.swift; sourceTree = "<group>"; };
 		8A5AE0B61D7D50D90095209E /* LivePhotoCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePhotoCaptureViewController.swift; sourceTree = "<group>"; };
 		8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LivePhotoCapture.storyboard; sourceTree = "<group>"; };
@@ -301,6 +305,15 @@
 			name = LivePhotoCapture;
 			sourceTree = "<group>";
 		};
+		8A6AC4EE1D840EA9001939FC /* PropertyAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				8A3F09B71D84097900D28DF2 /* PropertyAnimatorViewController.swift */,
+				8A3F09B51D84096D00D28DF2 /* PropertyAnimator.storyboard */,
+			);
+			name = PropertyAnimator;
+			sourceTree = "<group>";
+		};
 		8A736F1D1D7A8F4B00A58684 /* New Image Filters */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +433,7 @@
 				8A49EF491D7BF4F9003EE90B /* UserNotification */,
 				8AABF1541D7B545E004A1FE1 /* SpeechRecognition */,
 				8A1CC3651D7AAFD200562709 /* MetalCNNBasic */,
+				8A6AC4EE1D840EA9001939FC /* PropertyAnimator */,
 				8A825D551D7AA505008D74EA /* AttributedSpeech */,
 				8A736F1D1D7A8F4B00A58684 /* New Image Filters */,
 				8A736F1E1D7A8F5600A58684 /* Audio Fade-in/out */,
@@ -604,6 +618,7 @@
 				8AABF1531D7B5416004A1FE1 /* SpeechRecognition.storyboard in Resources */,
 				8A3F09AE1D83F80100D28DF2 /* Fonts.storyboard in Resources */,
 				8A8614791D7C090B0036DBBB /* superquest.mp4 in Resources */,
+				8A3F09B61D84096D00D28DF2 /* PropertyAnimator.storyboard in Resources */,
 				8A8614701D7BF5470036DBBB /* UserNotification.storyboard in Resources */,
 				8A1CC3751D7AB06900562709 /* weights_conv2.dat in Resources */,
 				8A1CC3721D7AB06900562709 /* bias_fc1.dat in Resources */,
@@ -635,6 +650,7 @@
 			files = (
 				8A825D521D7AA4E6008D74EA /* AttributedSpeechViewController.swift in Sources */,
 				8AB430871D7A6DA700A3BD98 /* RootViewCell.swift in Sources */,
+				8A3F09B81D84097900D28DF2 /* PropertyAnimatorViewController.swift in Sources */,
 				8A5AE0BC1D7D58AB0095209E /* LivePhotoCaptureDelegate.swift in Sources */,
 				8AABF1511D7B53FF004A1FE1 /* SpeechRecognitionViewController.swift in Sources */,
 				8A1CC3621D7AAFBC00562709 /* MetalCNNBasicViewController.swift in Sources */,

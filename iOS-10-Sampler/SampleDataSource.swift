@@ -44,6 +44,11 @@ struct SampleDataSource {
             classPrefix: "SpeechRecognition"
         ),
         Sample(
+            title: "PropertyAnimator",
+            detail: "PropertyAnimator",
+            classPrefix: "PropertyAnimator"
+        ),
+        Sample(
             title: "Attributed Speech",
             detail: "Attributed Speech demo using attributedSpeechString of AVSpeechUtterance.",
             classPrefix: "AttributedSpeech"
