@@ -22,11 +22,3 @@ Just build with Xcode 8.
 ###Audio Fade-in/out
 
 Audio fade-in/out demo using `setVolume:fadeDuration` method which is added to AVAudioPlayer.
-
-###Foo
-
-FooFooFooFooFooFooFooFooFooFooFooFoo
-
-###Bar
-
-BarBarBarBarBarBarBarBarBarBarBarBarBar

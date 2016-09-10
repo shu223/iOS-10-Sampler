@@ -25,6 +25,7 @@
 		8A1CC3931D7AC22E00562709 /* SamplerStickerPack.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8A1CC38C1D7AC22E00562709 /* SamplerStickerPack.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8A1CC3991D7AC43C00562709 /* StickerPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC3981D7AC43C00562709 /* StickerPackViewController.swift */; };
 		8A1CC39B1D7AC44A00562709 /* StickerPack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1CC39A1D7AC44A00562709 /* StickerPack.storyboard */; };
+		8A3F09A51D83E38000D28DF2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F09A41D83E38000D28DF2 /* README.md */; };
 		8A49EF461D7BF4D8003EE90B /* UserNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A49EF451D7BF4D8003EE90B /* UserNotificationViewController.swift */; };
 		8A5AE0B71D7D50D90095209E /* LivePhotoCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AE0B61D7D50D90095209E /* LivePhotoCaptureViewController.swift */; };
 		8A5AE0B91D7D50E80095209E /* LivePhotoCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */; };
@@ -50,10 +51,6 @@
 		8AB430791D7A6B4A00A3BD98 /* iOS_10_SamplerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430781D7A6B4A00A3BD98 /* iOS_10_SamplerUITests.swift */; };
 		8AB430871D7A6DA700A3BD98 /* RootViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430861D7A6DA700A3BD98 /* RootViewCell.swift */; };
 		8AB430891D7A6DF300A3BD98 /* SampleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430881D7A6DF300A3BD98 /* SampleDataSource.swift */; };
-		8AB4308C1D7A701100A3BD98 /* FooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4308B1D7A701100A3BD98 /* FooViewController.swift */; };
-		8AB4308E1D7A701B00A3BD98 /* Foo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB4308D1D7A701B00A3BD98 /* Foo.storyboard */; };
-		8AB430901D7A703200A3BD98 /* BarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4308F1D7A703200A3BD98 /* BarViewController.swift */; };
-		8AB430921D7A704100A3BD98 /* Bar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB430911D7A704100A3BD98 /* Bar.storyboard */; };
 		8C3A5F501D7EF7BE00B7A480 /* Message+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A5F4C1D7EF7BE00B7A480 /* Message+CoreDataClass.swift */; };
 		8C3A5F511D7EF7BE00B7A480 /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A5F4D1D7EF7BE00B7A480 /* Message+CoreDataProperties.swift */; };
 		8C3A5F521D7EF7BE00B7A480 /* PersistentContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A5F4E1D7EF7BE00B7A480 /* PersistentContainerViewController.swift */; };
@@ -120,6 +117,7 @@
 		8A1CC3901D7AC22E00562709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A1CC3981D7AC43C00562709 /* StickerPackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerPackViewController.swift; sourceTree = "<group>"; };
 		8A1CC39A1D7AC44A00562709 /* StickerPack.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StickerPack.storyboard; sourceTree = "<group>"; };
+		8A3F09A41D83E38000D28DF2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8A49EF451D7BF4D8003EE90B /* UserNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationViewController.swift; sourceTree = "<group>"; };
 		8A5AE0B61D7D50D90095209E /* LivePhotoCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePhotoCaptureViewController.swift; sourceTree = "<group>"; };
 		8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LivePhotoCapture.storyboard; sourceTree = "<group>"; };
@@ -151,10 +149,6 @@
 		8AB4307A1D7A6B4A00A3BD98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AB430861D7A6DA700A3BD98 /* RootViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewCell.swift; sourceTree = "<group>"; };
 		8AB430881D7A6DF300A3BD98 /* SampleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleDataSource.swift; sourceTree = "<group>"; };
-		8AB4308B1D7A701100A3BD98 /* FooViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooViewController.swift; sourceTree = "<group>"; };
-		8AB4308D1D7A701B00A3BD98 /* Foo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Foo.storyboard; sourceTree = "<group>"; };
-		8AB4308F1D7A703200A3BD98 /* BarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarViewController.swift; sourceTree = "<group>"; };
-		8AB430911D7A704100A3BD98 /* Bar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bar.storyboard; sourceTree = "<group>"; };
 		8C3A5F4C1D7EF7BE00B7A480 /* Message+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8C3A5F4D1D7EF7BE00B7A480 /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8C3A5F4E1D7EF7BE00B7A480 /* PersistentContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentContainerViewController.swift; sourceTree = "<group>"; };
@@ -290,24 +284,6 @@
 			name = "Audio Fade-in/out";
 			sourceTree = "<group>";
 		};
-		8A736F1F1D7A8F6600A58684 /* Foo */ = {
-			isa = PBXGroup;
-			children = (
-				8AB4308B1D7A701100A3BD98 /* FooViewController.swift */,
-				8AB4308D1D7A701B00A3BD98 /* Foo.storyboard */,
-			);
-			name = Foo;
-			sourceTree = "<group>";
-		};
-		8A736F201D7A8F6D00A58684 /* Bar */ = {
-			isa = PBXGroup;
-			children = (
-				8AB4308F1D7A703200A3BD98 /* BarViewController.swift */,
-				8AB430911D7A704100A3BD98 /* Bar.storyboard */,
-			);
-			name = Bar;
-			sourceTree = "<group>";
-		};
 		8A825D551D7AA505008D74EA /* AttributedSpeech */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +321,7 @@
 		8AB4304C1D7A6B4900A3BD98 = {
 			isa = PBXGroup;
 			children = (
+				8A3F09A41D83E38000D28DF2 /* README.md */,
 				8AB430571D7A6B4900A3BD98 /* iOS-10-Sampler */,
 				8AB4306C1D7A6B4A00A3BD98 /* iOS-10-SamplerTests */,
 				8AB430771D7A6B4A00A3BD98 /* iOS-10-SamplerUITests */,
@@ -412,8 +389,6 @@
 				8A736F1E1D7A8F5600A58684 /* Audio Fade-in/out */,
 				8A1CC39C1D7AC4F900562709 /* StickerPack */,
 				8C3A5F531D7EF7C300B7A480 /* PersistentContainer */,
-				8A736F1F1D7A8F6600A58684 /* Foo */,
-				8A736F201D7A8F6D00A58684 /* Bar */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -581,8 +556,6 @@
 				8AB430631D7A6B4900A3BD98 /* LaunchScreen.storyboard in Resources */,
 				8A825D541D7AA4F3008D74EA /* AttributedSpeech.storyboard in Resources */,
 				8A1A04D01D7A742A0040F613 /* Main.storyboard in Resources */,
-				8AB4308E1D7A701B00A3BD98 /* Foo.storyboard in Resources */,
-				8AB430921D7A704100A3BD98 /* Bar.storyboard in Resources */,
 				8AB430601D7A6B4900A3BD98 /* Assets.xcassets in Resources */,
 				8A736F181D7A893A00A58684 /* AudioFadeInOut.storyboard in Resources */,
 				8A1CC3761D7AB06900562709 /* weights_fc1.dat in Resources */,
@@ -627,7 +600,7 @@
 				8A5AE0BE1D7D61C70095209E /* PreviewView.swift in Sources */,
 				8A5AE0B71D7D50D90095209E /* LivePhotoCaptureViewController.swift in Sources */,
 				8AB4305B1D7A6B4900A3BD98 /* RootViewController.swift in Sources */,
-				8AB4308C1D7A701100A3BD98 /* FooViewController.swift in Sources */,
+				8A3F09A51D83E38000D28DF2 /* README.md in Sources */,
 				8A736F161D7A892D00A58684 /* AudioFadeInOutViewController.swift in Sources */,
 				8A736F1A1D7A8D3B00A58684 /* ImageFiltersViewController.swift in Sources */,
 				8A1CC3891D7ABCE400562709 /* MNISTDeepCNN.swift in Sources */,
@@ -638,7 +611,6 @@
 				8A736F221D7A9A8300A58684 /* CIFilterExtension.swift in Sources */,
 				8AB430891D7A6DF300A3BD98 /* SampleDataSource.swift in Sources */,
 				8A1CC3991D7AC43C00562709 /* StickerPackViewController.swift in Sources */,
-				8AB430901D7A703200A3BD98 /* BarViewController.swift in Sources */,
 				8A49EF461D7BF4D8003EE90B /* UserNotificationViewController.swift in Sources */,
 				8C3A5F521D7EF7BE00B7A480 /* PersistentContainerViewController.swift in Sources */,
 				8C3A5F511D7EF7BE00B7A480 /* Message+CoreDataProperties.swift in Sources */,

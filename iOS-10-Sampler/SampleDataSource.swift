@@ -67,15 +67,5 @@ struct SampleDataSource {
                detail: "Simple Core Data stack using NSPersistentContainer",
                classPrefix: "PersistentContainer"
         ),
-        Sample(
-            title: "Foo",
-            detail: "FooFooFooFooFooFooFooFooFooFooFooFoo",
-            classPrefix: "Foo"
-        ),
-        Sample(
-            title: "Bar",
-            detail: "BarBarBarBarBarBarBarBarBarBarBarBarBarBarBarBarBarBarBarBarBarBarBarBarBarBar",
-            classPrefix: "Bar"
-        ),
         ]
 }
