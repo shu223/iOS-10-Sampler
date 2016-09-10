@@ -25,7 +25,6 @@
 		8A1CC3931D7AC22E00562709 /* SamplerStickerPack.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8A1CC38C1D7AC22E00562709 /* SamplerStickerPack.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8A1CC3991D7AC43C00562709 /* StickerPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC3981D7AC43C00562709 /* StickerPackViewController.swift */; };
 		8A1CC39B1D7AC44A00562709 /* StickerPack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1CC39A1D7AC44A00562709 /* StickerPack.storyboard */; };
-		8A3F09A51D83E38000D28DF2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F09A41D83E38000D28DF2 /* README.md */; };
 		8A3F09A71D83E51100D28DF2 /* TabBadge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3F09A61D83E51100D28DF2 /* TabBadge.storyboard */; };
 		8A3F09A91D83E51F00D28DF2 /* TabBadgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F09A81D83E51F00D28DF2 /* TabBadgeViewController.swift */; };
 		8A49EF461D7BF4D8003EE90B /* UserNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A49EF451D7BF4D8003EE90B /* UserNotificationViewController.swift */; };
@@ -616,7 +615,6 @@
 				8A5AE0B71D7D50D90095209E /* LivePhotoCaptureViewController.swift in Sources */,
 				8AB4305B1D7A6B4900A3BD98 /* RootViewController.swift in Sources */,
 				8A3F09A91D83E51F00D28DF2 /* TabBadgeViewController.swift in Sources */,
-				8A3F09A51D83E38000D28DF2 /* README.md in Sources */,
 				8A736F161D7A892D00A58684 /* AudioFadeInOutViewController.swift in Sources */,
 				8A736F1A1D7A8D3B00A58684 /* ImageFiltersViewController.swift in Sources */,
 				8A1CC3891D7ABCE400562709 /* MNISTDeepCNN.swift in Sources */,
