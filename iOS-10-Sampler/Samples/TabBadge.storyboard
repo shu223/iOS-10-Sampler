@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rUM-iN-G6w">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Badge View Controller-->
+        <scene sceneID="Nf4-zj-JOs">
+            <objects>
+                <viewController id="rUM-iN-G6w" customClass="TabBadgeViewController" customModule="iOS_10_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4t6-ft-1dL"/>
+                        <viewControllerLayoutGuide type="bottom" id="dCw-An-biw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xkK-to-WYj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uD-fy-YXd">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="8Xc-80-JB8"/>
+                                    <tabBarItem systemItem="more" id="XG5-e8-q8g"/>
+                                </items>
+                                <color key="selectedImageTintColor" red="0.16648837920000001" green="0.52587974069999999" blue="0.75460344550000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </tabBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzC-Jz-mmz">
+                                <connections>
+                                    <action selector="countBtnTappedWithSender:" destination="rUM-iN-G6w" eventType="touchUpInside" id="aL6-v2-F4V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dCw-An-biw" firstAttribute="top" secondItem="1uD-fy-YXd" secondAttribute="bottom" id="7r1-W0-qe6"/>
+                            <constraint firstItem="tzC-Jz-mmz" firstAttribute="centerY" secondItem="xkK-to-WYj" secondAttribute="centerY" id="LiL-T4-MOS"/>
+                            <constraint firstItem="tzC-Jz-mmz" firstAttribute="centerX" secondItem="xkK-to-WYj" secondAttribute="centerX" id="eZ0-Vx-VEz"/>
+                            <constraint firstItem="1uD-fy-YXd" firstAttribute="leading" secondItem="xkK-to-WYj" secondAttribute="leading" id="gfb-We-Agp"/>
+                            <constraint firstAttribute="trailing" secondItem="1uD-fy-YXd" secondAttribute="trailing" id="yBe-WN-A1v"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tabBar" destination="1uD-fy-YXd" id="qkn-PL-16c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRf-nw-iyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="235" y="-243"/>
+        </scene>
+    </scenes>
+</document>
