@@ -10,49 +10,70 @@ import UIKit
 
 class PropertyAnimatorViewController: UIViewController {
 
-    @IBOutlet private weak var objectView: UIView!
-    private var animator: UIViewPropertyAnimator?
     private var targetLocation: CGPoint!
     
+    @IBOutlet private weak var objectView: UIView!
+    @IBOutlet weak var springSwitch: UISwitch!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        objectView.backgroundColor = colorAt(location: objectView.center)
+        targetLocation = objectView.center
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-
-    private func goto(location: CGPoint) {
-        targetLocation = location
-        
-        let timing = UICubicTimingParameters(animationCurve: .easeInOut)
-        animator = UIViewPropertyAnimator(duration: 0.5, timingParameters: timing)
-        guard let animator = animator else {return}
-        animator.addAnimations {
-            self.objectView.center = location
-        }
-        animator.startAnimation()
+    private func colorAt(location: CGPoint) -> UIColor {
+        let hue: CGFloat = (location.x / UIScreen.main.bounds.width + location.y / UIScreen.main.bounds.height) / 2
+        return UIColor(hue: hue, saturation: 0.78, brightness: 0.75, alpha: 1)
     }
 
-    // =========================================================================
-    // MARK: - Touch handlers
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else {return}
-        let loc = touch.location(in: view)
-
-        goto(location: loc)
-    }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    private func processTouches(_ touches: Set<UITouch>) {
         guard let touch = touches.first else {return}
         let loc = touch.location(in: view)
         
         if loc == targetLocation {
             return
         }
+        
+        animateTo(location: loc)
+    }
+    
+    private func animateTo(location: CGPoint) {
+        var duration: TimeInterval
+        var timing: UITimingCurveProvider
+        if !springSwitch.isOn {
+            duration = 0.4
+            timing = UICubicTimingParameters(animationCurve: .easeOut)
+        } else {
+            duration = 0.6
+            timing = UISpringTimingParameters(dampingRatio: 0.5)
+        }
 
-        goto(location: loc)
+        let animator = UIViewPropertyAnimator(
+            duration: duration,
+            timingParameters: timing)
+
+        animator.addAnimations {
+            self.objectView.center = location
+            self.objectView.backgroundColor = self.colorAt(location: location)
+        }
+
+        animator.startAnimation()
+
+        targetLocation = location
+    }
+
+    // =========================================================================
+    // MARK: - Touch handlers
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        processTouches(touches)
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        processTouches(touches)
     }
 }

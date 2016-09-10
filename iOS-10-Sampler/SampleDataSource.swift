@@ -45,7 +45,7 @@ struct SampleDataSource {
         ),
         Sample(
             title: "PropertyAnimator",
-            detail: "PropertyAnimator",
+            detail: "Animation sample using UIViewPropertyAnimator.",
             classPrefix: "PropertyAnimator"
         ),
         Sample(
