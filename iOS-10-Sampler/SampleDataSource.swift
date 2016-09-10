@@ -72,5 +72,10 @@ struct SampleDataSource {
             detail: "Customization sample for UITabBar's badge using text attributes.",
             classPrefix: "TabBadge"
         ),
+        Sample(
+            title: "New Fonts",
+            detail: "New Fonts gallery",
+            classPrefix: "Fonts"
+        ),
         ]
 }

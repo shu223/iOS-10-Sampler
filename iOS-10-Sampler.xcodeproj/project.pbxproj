@@ -27,6 +27,9 @@
 		8A1CC39B1D7AC44A00562709 /* StickerPack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1CC39A1D7AC44A00562709 /* StickerPack.storyboard */; };
 		8A3F09A71D83E51100D28DF2 /* TabBadge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3F09A61D83E51100D28DF2 /* TabBadge.storyboard */; };
 		8A3F09A91D83E51F00D28DF2 /* TabBadgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F09A81D83E51F00D28DF2 /* TabBadgeViewController.swift */; };
+		8A3F09AC1D83F7F700D28DF2 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F09AB1D83F7F700D28DF2 /* FontsViewController.swift */; };
+		8A3F09AE1D83F80100D28DF2 /* Fonts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3F09AD1D83F80100D28DF2 /* Fonts.storyboard */; };
+		8A3F09B41D8400BB00D28DF2 /* iOS10AddedFonts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A3F09B31D8400BB00D28DF2 /* iOS10AddedFonts.plist */; };
 		8A49EF461D7BF4D8003EE90B /* UserNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A49EF451D7BF4D8003EE90B /* UserNotificationViewController.swift */; };
 		8A5AE0B71D7D50D90095209E /* LivePhotoCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AE0B61D7D50D90095209E /* LivePhotoCaptureViewController.swift */; };
 		8A5AE0B91D7D50E80095209E /* LivePhotoCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */; };
@@ -121,6 +124,9 @@
 		8A3F09A41D83E38000D28DF2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8A3F09A61D83E51100D28DF2 /* TabBadge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBadge.storyboard; sourceTree = "<group>"; };
 		8A3F09A81D83E51F00D28DF2 /* TabBadgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBadgeViewController.swift; sourceTree = "<group>"; };
+		8A3F09AB1D83F7F700D28DF2 /* FontsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
+		8A3F09AD1D83F80100D28DF2 /* Fonts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fonts.storyboard; sourceTree = "<group>"; };
+		8A3F09B31D8400BB00D28DF2 /* iOS10AddedFonts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iOS10AddedFonts.plist; sourceTree = "<group>"; };
 		8A49EF451D7BF4D8003EE90B /* UserNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationViewController.swift; sourceTree = "<group>"; };
 		8A5AE0B61D7D50D90095209E /* LivePhotoCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePhotoCaptureViewController.swift; sourceTree = "<group>"; };
 		8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LivePhotoCapture.storyboard; sourceTree = "<group>"; };
@@ -198,6 +204,7 @@
 		8A1CC3661D7AB06900562709 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8A3F09B21D8400BB00D28DF2 /* plists */,
 				8A8614771D7C090B0036DBBB /* movies */,
 				8A8614711D7BFEDF0036DBBB /* sounds */,
 				8A1CC3671D7AB06900562709 /* deep_weights */,
@@ -255,6 +262,23 @@
 				8A3F09A61D83E51100D28DF2 /* TabBadge.storyboard */,
 			);
 			name = TabBadge;
+			sourceTree = "<group>";
+		};
+		8A3F09AF1D83F80600D28DF2 /* New Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8A3F09AB1D83F7F700D28DF2 /* FontsViewController.swift */,
+				8A3F09AD1D83F80100D28DF2 /* Fonts.storyboard */,
+			);
+			name = "New Fonts";
+			sourceTree = "<group>";
+		};
+		8A3F09B21D8400BB00D28DF2 /* plists */ = {
+			isa = PBXGroup;
+			children = (
+				8A3F09B31D8400BB00D28DF2 /* iOS10AddedFonts.plist */,
+			);
+			path = plists;
 			sourceTree = "<group>";
 		};
 		8A49EF491D7BF4F9003EE90B /* UserNotification */ = {
@@ -402,6 +426,7 @@
 				8A1CC39C1D7AC4F900562709 /* StickerPack */,
 				8C3A5F531D7EF7C300B7A480 /* PersistentContainer */,
 				8A3F09AA1D83E52300D28DF2 /* TabBadge */,
+				8A3F09AF1D83F80600D28DF2 /* New Fonts */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -574,8 +599,10 @@
 				8A736F181D7A893A00A58684 /* AudioFadeInOut.storyboard in Resources */,
 				8A1CC3761D7AB06900562709 /* weights_fc1.dat in Resources */,
 				8A1CC3711D7AB06900562709 /* bias_conv2.dat in Resources */,
+				8A3F09B41D8400BB00D28DF2 /* iOS10AddedFonts.plist in Resources */,
 				8A1CC3731D7AB06900562709 /* bias_fc2.dat in Resources */,
 				8AABF1531D7B5416004A1FE1 /* SpeechRecognition.storyboard in Resources */,
+				8A3F09AE1D83F80100D28DF2 /* Fonts.storyboard in Resources */,
 				8A8614791D7C090B0036DBBB /* superquest.mp4 in Resources */,
 				8A8614701D7BF5470036DBBB /* UserNotification.storyboard in Resources */,
 				8A1CC3751D7AB06900562709 /* weights_conv2.dat in Resources */,
@@ -619,6 +646,7 @@
 				8A736F1A1D7A8D3B00A58684 /* ImageFiltersViewController.swift in Sources */,
 				8A1CC3891D7ABCE400562709 /* MNISTDeepCNN.swift in Sources */,
 				8C3A5F501D7EF7BE00B7A480 /* Message+CoreDataClass.swift in Sources */,
+				8A3F09AC1D83F7F700D28DF2 /* FontsViewController.swift in Sources */,
 				8A1CC3811D7AB10D00562709 /* SlimMPSCNN.swift in Sources */,
 				8C67369F1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodeld in Sources */,
 				8A1CC37F1D7AB10D00562709 /* DrawView.swift in Sources */,
