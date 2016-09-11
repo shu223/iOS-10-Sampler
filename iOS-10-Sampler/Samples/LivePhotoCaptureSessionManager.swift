@@ -160,15 +160,17 @@ class LivePhotoCaptureSessionManager: NSObject {
         }
     }
     
-    func startSession() {
-        guard setupResult == .success else {
-            print("setup is not succeeded!")
-            return
-        }
-
+    func startSession(handler: @escaping ((Bool) -> Void)) {
         sessionQueue.async {
+            guard self.setupResult == .success else {
+                print("setup is not succeeded!")
+                handler(false)
+                return
+            }
+            
             self.session.startRunning()
             self.isSessionRunning = self.session.isRunning
+            handler(true)
         }
     }
 

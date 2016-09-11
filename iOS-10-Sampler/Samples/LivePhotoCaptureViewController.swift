@@ -28,19 +28,30 @@ class LivePhotoCaptureViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        switch LivePhotoCaptureSessionManager.sharedManager.setupResult {
-        case .success:
-            // Only setup observers and start the session running if setup succeeded.
-            addObservers()
-            LivePhotoCaptureSessionManager.sharedManager.startSession()
-        case .notAuthorized:
-            showAlert(title: "Not Authorized", message: "Doesn't have permission to use the camera, please change privacy settings")
-        case .notSupported:
-            showAlert(title: "Not Supported", message: "Live photo captureling is not supported on this device.")
-        case .configurationFailed:
-            showAlert(title: "Configuration Failed", message: "Unable to capture media")
-        }
+
+        LivePhotoCaptureSessionManager.sharedManager.startSession(handler: { [unowned self] (isStarted) in
+            if isStarted {
+                // Only setup observers and start the session running if setup succeeded.
+                self.addObservers()
+            } else {
+                switch LivePhotoCaptureSessionManager.sharedManager.setupResult {
+                case .success:
+                    break
+                case .notAuthorized:
+                    self.showAlert(
+                        title: "Not Authorized",
+                        message: "Doesn't have permission to use the camera, please change privacy settings")
+                case .notSupported:
+                    self.showAlert(
+                        title: "Not Supported",
+                        message: "Live photo captureling is not supported on this device.")
+                case .configurationFailed:
+                    self.showAlert(
+                        title: "Configuration Failed",
+                        message: "Unable to capture media")
+                }
+            }
+        })
     }
 
     override func viewWillDisappear(_ animated: Bool) {
