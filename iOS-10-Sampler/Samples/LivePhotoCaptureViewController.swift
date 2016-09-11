@@ -55,9 +55,10 @@ class LivePhotoCaptureViewController: UIViewController {
     }
 
     override func viewWillDisappear(_ animated: Bool) {
-        
-        LivePhotoCaptureSessionManager.sharedManager.stopSession()
-        self.removeObservers()
+        if LivePhotoCaptureSessionManager.sharedManager.isSessionRunning {
+            LivePhotoCaptureSessionManager.sharedManager.stopSession()
+            self.removeObservers()            
+        }
 
         super.viewWillDisappear(animated)
     }

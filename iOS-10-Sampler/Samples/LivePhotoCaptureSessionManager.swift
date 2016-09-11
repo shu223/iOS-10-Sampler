@@ -24,7 +24,7 @@ class LivePhotoCaptureSessionManager: NSObject {
 
     internal let session = AVCaptureSession()
     private let sessionQueue = DispatchQueue(label: "session queue", attributes: [], target: nil)
-    private var isSessionRunning = false
+    internal var isSessionRunning = false
 
     private var videoDeviceInput: AVCaptureDeviceInput!
 
