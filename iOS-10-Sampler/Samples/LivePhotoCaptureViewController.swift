@@ -29,35 +29,18 @@ class LivePhotoCaptureViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Only setup observers and start the session running if setup succeeded.
-        self.addObservers()
-
         switch LivePhotoCaptureSessionManager.sharedManager.setupResult {
         case .success:
-            break
+            // Only setup observers and start the session running if setup succeeded.
+            addObservers()
+            LivePhotoCaptureSessionManager.sharedManager.startSession()
         case .notAuthorized:
-            DispatchQueue.main.async { [unowned self] in
-                let message = NSLocalizedString("AVCam doesn't have permission to use the camera, please change privacy settings", comment: "Alert message when the user has denied access to the camera")
-                let alertController = UIAlertController(title: "AVCam", message: message, preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Alert OK button"), style: .cancel, handler: nil))
-                alertController.addAction(UIAlertAction(title: NSLocalizedString("Settings", comment: "Alert button to open Settings"), style: .`default`, handler: { action in
-                    UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: nil)
-                }))
-                
-                self.present(alertController, animated: true, completion: nil)
-            }
-            
+            showAlert(title: "Not Authorized", message: "Doesn't have permission to use the camera, please change privacy settings")
+        case .notSupported:
+            showAlert(title: "Not Supported", message: "Live photo captureling is not supported on this device.")
         case .configurationFailed:
-            DispatchQueue.main.async { [unowned self] in
-                let message = NSLocalizedString("Unable to capture media", comment: "Alert message when something goes wrong during capture session configuration")
-                let alertController = UIAlertController(title: "AVCam", message: message, preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Alert OK button"), style: .cancel, handler: nil))
-                
-                self.present(alertController, animated: true, completion: nil)
-            }
+            showAlert(title: "Configuration Failed", message: "Unable to capture media")
         }
-
-        LivePhotoCaptureSessionManager.sharedManager.startSession()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -70,6 +53,14 @@ class LivePhotoCaptureViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    private func showAlert(title: String, message: String) {
+        DispatchQueue.main.async { [unowned self] in
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     // =========================================================================

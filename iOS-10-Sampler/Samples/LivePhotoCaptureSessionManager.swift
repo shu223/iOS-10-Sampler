@@ -12,6 +12,7 @@ import AVFoundation
 internal enum SessionSetupResult {
     case success
     case notAuthorized
+    case notSupported
     case configurationFailed
 }
 
@@ -104,6 +105,11 @@ class LivePhotoCaptureSessionManager: NSObject {
         }
         
         session.commitConfiguration()
+
+        // Live Photo capture is only supported for certain AVCaptureSession sessionPresets and AVCaptureDevice activeFormats. When switching cameras or formats this property may change. 
+        if !photoOutput.isLivePhotoCaptureSupported {
+            setupResult = .notSupported
+        }
     }
 
     // =========================================================================
