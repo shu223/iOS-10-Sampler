@@ -5,7 +5,7 @@
 //  Created by Shuichi Tsutsumi on 9/5/16.
 //  Copyright © 2016 Shuichi Tsutsumi. All rights reserved.
 //
-//  [Referene] This sample is based on the Apple's sample "AVCam-iOS".
+//  [Reference] This sample is based on the Apple's sample "AVCam-iOS".
 
 import AVFoundation
 import Photos

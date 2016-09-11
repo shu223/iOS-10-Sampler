@@ -37,6 +37,7 @@
 		8A5AE0B91D7D50E80095209E /* LivePhotoCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */; };
 		8A5AE0BC1D7D58AB0095209E /* LivePhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AE0BB1D7D58AB0095209E /* LivePhotoCaptureDelegate.swift */; };
 		8A5AE0BE1D7D61C70095209E /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AE0BD1D7D61C70095209E /* PreviewView.swift */; };
+		8A6CE2EC1D854B9E00DC79B4 /* LivePhotoCaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6CE2EB1D854B9E00DC79B4 /* LivePhotoCaptureSessionManager.swift */; };
 		8A736F161D7A892D00A58684 /* AudioFadeInOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A736F151D7A892D00A58684 /* AudioFadeInOutViewController.swift */; };
 		8A736F181D7A893A00A58684 /* AudioFadeInOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A736F171D7A893A00A58684 /* AudioFadeInOut.storyboard */; };
 		8A736F1A1D7A8D3B00A58684 /* ImageFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A736F191D7A8D3B00A58684 /* ImageFiltersViewController.swift */; };
@@ -136,6 +137,7 @@
 		8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LivePhotoCapture.storyboard; sourceTree = "<group>"; };
 		8A5AE0BB1D7D58AB0095209E /* LivePhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 		8A5AE0BD1D7D61C70095209E /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		8A6CE2EB1D854B9E00DC79B4 /* LivePhotoCaptureSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePhotoCaptureSessionManager.swift; sourceTree = "<group>"; };
 		8A736F151D7A892D00A58684 /* AudioFadeInOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFadeInOutViewController.swift; sourceTree = "<group>"; };
 		8A736F171D7A893A00A58684 /* AudioFadeInOut.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudioFadeInOut.storyboard; sourceTree = "<group>"; };
 		8A736F191D7A8D3B00A58684 /* ImageFiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFiltersViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				8A5AE0B61D7D50D90095209E /* LivePhotoCaptureViewController.swift */,
+				8A6CE2EB1D854B9E00DC79B4 /* LivePhotoCaptureSessionManager.swift */,
 				8A5AE0BB1D7D58AB0095209E /* LivePhotoCaptureDelegate.swift */,
 				8A5AE0BD1D7D61C70095209E /* PreviewView.swift */,
 				8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */,
@@ -665,6 +668,7 @@
 				8A3F09AC1D83F7F700D28DF2 /* FontsViewController.swift in Sources */,
 				8A1CC3811D7AB10D00562709 /* SlimMPSCNN.swift in Sources */,
 				8C67369F1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodeld in Sources */,
+				8A6CE2EC1D854B9E00DC79B4 /* LivePhotoCaptureSessionManager.swift in Sources */,
 				8A1CC37F1D7AB10D00562709 /* DrawView.swift in Sources */,
 				8A736F221D7A9A8300A58684 /* CIFilterExtension.swift in Sources */,
 				8AB430891D7A6DF300A3BD98 /* SampleDataSource.swift in Sources */,
