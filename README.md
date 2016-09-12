@@ -16,6 +16,8 @@ Code examples for new APIs of iOS 10.
 
 Just build with Xcode 8.
 
+It can **NOT** run on **Simulator**. (Because it uses Metal.)
+
 
 ##Contents
 
