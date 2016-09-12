@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rhH-x1-xpG">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Looper View Controller-->
+        <scene sceneID="VEW-TP-txS">
+            <objects>
+                <viewController id="rhH-x1-xpG" customClass="LooperViewController" customModule="iOS_10_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YyK-tj-PJg"/>
+                        <viewControllerLayoutGuide type="bottom" id="X9J-L2-CRr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cnv-vt-emf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.5" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGF-a4-ko9">
+                                <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="maximumTrackTintColor" red="0.16648837920000001" green="0.52587974069999999" blue="0.75460344550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderChangedWithSender:" destination="rhH-x1-xpG" eventType="valueChanged" id="ad6-88-QPY"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.5" maxValue="1" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXv-c3-oQG">
+                                <color key="minimumTrackTintColor" red="0.16648837920000001" green="0.52587974069999999" blue="0.75460344550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="sliderChangedWithSender:" destination="rhH-x1-xpG" eventType="valueChanged" id="5iA-R3-9sS"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VXv-c3-oQG" firstAttribute="leading" secondItem="aGF-a4-ko9" secondAttribute="trailing" constant="8" id="1nK-c3-FS1"/>
+                            <constraint firstItem="VXv-c3-oQG" firstAttribute="width" secondItem="aGF-a4-ko9" secondAttribute="width" id="dTf-Mh-Whg"/>
+                            <constraint firstItem="X9J-L2-CRr" firstAttribute="top" secondItem="aGF-a4-ko9" secondAttribute="bottom" constant="86" id="feU-Ws-Cac"/>
+                            <constraint firstItem="VXv-c3-oQG" firstAttribute="trailing" secondItem="Cnv-vt-emf" secondAttribute="trailingMargin" constant="-20" id="qmE-BS-K64"/>
+                            <constraint firstItem="VXv-c3-oQG" firstAttribute="centerY" secondItem="aGF-a4-ko9" secondAttribute="centerY" id="tcV-Fa-3TQ"/>
+                            <constraint firstItem="aGF-a4-ko9" firstAttribute="leading" secondItem="Cnv-vt-emf" secondAttribute="leadingMargin" constant="20" id="x7k-6i-ybF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="maxSlider" destination="VXv-c3-oQG" id="GAl-Uk-fgg"/>
+                        <outlet property="minSlider" destination="aGF-a4-ko9" id="aRv-vE-cV8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ai-LD-N3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="209" y="218"/>
+        </scene>
+    </scenes>
+</document>

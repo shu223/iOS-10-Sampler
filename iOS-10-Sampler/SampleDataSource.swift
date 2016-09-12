@@ -49,6 +49,11 @@ struct SampleDataSource {
             classPrefix: "SpeechRecognition"
         ),
         Sample(
+            title: "Looper",
+            detail: "Loop playback demo using AVPlayerLooper.",
+            classPrefix: "Looper"
+        ),
+        Sample(
             title: "PropertyAnimator: Position",
             detail: "Animating view's position & color using UIViewPropertyAnimator.",
             classPrefix: "PropertyAnimator"
