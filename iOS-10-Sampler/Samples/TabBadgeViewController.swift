@@ -19,16 +19,16 @@ class TabBadgeViewController: UIViewController, UITabBarDelegate {
         tabBar.selectedItem = tabBar.items?.first
 
         // New!
-        tabBar.unselectedItemTintColor = UIColor.magenta.withAlphaComponent(0.2)
-
+        tabBar.unselectedItemTintColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 0.4)
+        
         guard let items = tabBar.items else {fatalError()}
         for item in items where item != tabBar.selectedItem {
             let shadow = NSShadow()
-            shadow.shadowColor = UIColor.black
+            shadow.shadowColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             shadow.shadowOffset = CGSize(width: 1, height: 1)
-            shadow.shadowBlurRadius = 5
-            let attributes: [String : Any] = [NSFontAttributeName: UIFont(name: "Menlo-Bold", size: 50)!,
-                                              NSForegroundColorAttributeName: UIColor.magenta,
+            shadow.shadowBlurRadius = 3
+            let attributes: [String : Any] = [NSFontAttributeName: UIFont(name: "Menlo-Bold", size: 30)!,
+                                              NSForegroundColorAttributeName: #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1),
                                               NSShadowAttributeName: shadow]
             // New!
             item.setBadgeTextAttributes(attributes, for: .normal)
