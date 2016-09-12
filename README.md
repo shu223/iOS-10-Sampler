@@ -30,3 +30,7 @@ Animating blur effect using `fractionComplete` property of UIViewPropertyAnimato
 ###Audio Fade-in/out
 
 Audio fade-in/out demo using `setVolume:fadeDuration` method which is added to AVAudioPlayer.
+
+###Attributed Speech
+
+Attributed Speech demo using `attributedSpeechString` of AVSpeechUtterance. But it seems NOT to affect the speech with this attribute. Anyone, please let me know how it works.
