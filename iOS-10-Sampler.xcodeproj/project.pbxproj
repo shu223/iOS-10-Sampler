@@ -13,8 +13,8 @@
 		8A081D041D87080000D7DDF4 /* PropertyAnimatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A081D021D87080000D7DDF4 /* PropertyAnimatorViewController.swift */; };
 		8A081D071D8714C200D7DDF4 /* LooperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A081D061D8714C200D7DDF4 /* LooperViewController.swift */; };
 		8A081D091D8714CB00D7DDF4 /* Looper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A081D081D8714CB00D7DDF4 /* Looper.storyboard */; };
-		8A081D0C1D871E1A00D7DDF4 /* PlayerLooper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A081D0B1D871E1A00D7DDF4 /* PlayerLooper.swift */; };
 		8A081D0D1D871FEB00D7DDF4 /* superquest.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8A8614781D7C090B0036DBBB /* superquest.mp4 */; };
+		8A081D0F1D87224E00D7DDF4 /* Looper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A081D0E1D87224E00D7DDF4 /* Looper.swift */; };
 		8A1A04D01D7A742A0040F613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A04CE1D7A742A0040F613 /* Main.storyboard */; };
 		8A1CC3621D7AAFBC00562709 /* MetalCNNBasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC3611D7AAFBC00562709 /* MetalCNNBasicViewController.swift */; };
 		8A1CC3641D7AAFCC00562709 /* MetalCNNBasic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1CC3631D7AAFCC00562709 /* MetalCNNBasic.storyboard */; };
@@ -312,7 +312,7 @@
 		8A081D021D87080000D7DDF4 /* PropertyAnimatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyAnimatorViewController.swift; sourceTree = "<group>"; };
 		8A081D061D8714C200D7DDF4 /* LooperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LooperViewController.swift; sourceTree = "<group>"; };
 		8A081D081D8714CB00D7DDF4 /* Looper.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Looper.storyboard; sourceTree = "<group>"; };
-		8A081D0B1D871E1A00D7DDF4 /* PlayerLooper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerLooper.swift; sourceTree = "<group>"; };
+		8A081D0E1D87224E00D7DDF4 /* Looper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Looper.swift; sourceTree = "<group>"; };
 		8A1A04CF1D7A742A0040F613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A1CC3611D7AAFBC00562709 /* MetalCNNBasicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalCNNBasicViewController.swift; sourceTree = "<group>"; };
 		8A1CC3631D7AAFCC00562709 /* MetalCNNBasic.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MetalCNNBasic.storyboard; sourceTree = "<group>"; };
@@ -620,9 +620,9 @@
 		8A081D0A1D8714D000D7DDF4 /* Looper */ = {
 			isa = PBXGroup;
 			children = (
-				8A081D0B1D871E1A00D7DDF4 /* PlayerLooper.swift */,
 				8A081D061D8714C200D7DDF4 /* LooperViewController.swift */,
 				8A081D081D8714CB00D7DDF4 /* Looper.storyboard */,
+				8A081D0E1D87224E00D7DDF4 /* Looper.swift */,
 			);
 			name = Looper;
 			sourceTree = "<group>";
@@ -1530,6 +1530,7 @@
 				8A1CC3621D7AAFBC00562709 /* MetalCNNBasicViewController.swift in Sources */,
 				8AA074911D86830200FEAC28 /* AVCaptureDevice+Extension.swift in Sources */,
 				8AA074921D86830200FEAC28 /* VideoCameraType.swift in Sources */,
+				8A081D0F1D87224E00D7DDF4 /* Looper.swift in Sources */,
 				8A5AE0BE1D7D61C70095209E /* PreviewView.swift in Sources */,
 				8A081D041D87080000D7DDF4 /* PropertyAnimatorViewController.swift in Sources */,
 				8A5AE0B71D7D50D90095209E /* LivePhotoCaptureViewController.swift in Sources */,
@@ -1547,7 +1548,6 @@
 				8A081CFD1D86FC9B00D7DDF4 /* Inception3Net+result.swift in Sources */,
 				8A1CC37F1D7AB10D00562709 /* DrawView.swift in Sources */,
 				8A736F221D7A9A8300A58684 /* CIFilterExtension.swift in Sources */,
-				8A081D0C1D871E1A00D7DDF4 /* PlayerLooper.swift in Sources */,
 				8A3F09061D81D4B800D28DF2 /* MetalImageRecognitionViewController.swift in Sources */,
 				8A3F09021D81D47400D28DF2 /* Inception3Net.swift in Sources */,
 				8AB430891D7A6DF300A3BD98 /* SampleDataSource.swift in Sources */,

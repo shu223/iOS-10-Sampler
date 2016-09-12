@@ -10,14 +10,14 @@ import UIKit
 
 class LooperViewController: UIViewController {
 
-    private var looper: PlayerLooper!
+    private var looper: Looper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         guard let videoPath = Bundle.main.path(forResource: "superquest", ofType: "mp4") else {fatalError()}
         let videoUrl = URL(fileURLWithPath: videoPath)
-        looper = PlayerLooper(videoURL: videoUrl, loopCount: -1)
+        looper = Looper(videoURL: videoUrl)
     }
 
     override func viewWillAppear(_ animated: Bool) {
