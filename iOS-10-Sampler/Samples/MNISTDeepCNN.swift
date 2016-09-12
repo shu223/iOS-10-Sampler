@@ -7,7 +7,7 @@
 //
 //
 /*
-    This is the deep layer network where we define and encode the correct layers on a command buffer as needed
+    Deep layer network where we define and encode the correct layers on a command buffer as needed
     This is based on MNISTSingleLayer.swift and MNISTDeepCNN.swift provided by Apple
  */
 

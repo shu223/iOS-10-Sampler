@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A081CFD1D86FC9B00D7DDF4 /* Inception3Net+result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A081CFC1D86FC9B00D7DDF4 /* Inception3Net+result.swift */; };
 		8A1A04D01D7A742A0040F613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A04CE1D7A742A0040F613 /* Main.storyboard */; };
 		8A1CC3621D7AAFBC00562709 /* MetalCNNBasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC3611D7AAFBC00562709 /* MetalCNNBasicViewController.swift */; };
 		8A1CC3641D7AAFCC00562709 /* MetalCNNBasic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1CC3631D7AAFCC00562709 /* MetalCNNBasic.storyboard */; };
@@ -218,7 +219,6 @@
 		8A3F09021D81D47400D28DF2 /* Inception3Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F09011D81D47400D28DF2 /* Inception3Net.swift */; };
 		8A3F09061D81D4B800D28DF2 /* MetalImageRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F09051D81D4B800D28DF2 /* MetalImageRecognitionViewController.swift */; };
 		8A3F09081D81D4C700D28DF2 /* MetalImageRecognition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3F09071D81D4C700D28DF2 /* MetalImageRecognition.storyboard */; };
-		8A3F09A11D83CF2000D28DF2 /* final0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3F09A01D83CF2000D28DF2 /* final0.jpg */; };
 		8A49EF461D7BF4D8003EE90B /* UserNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A49EF451D7BF4D8003EE90B /* UserNotificationViewController.swift */; };
 		8A5AE0B71D7D50D90095209E /* LivePhotoCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AE0B61D7D50D90095209E /* LivePhotoCaptureViewController.swift */; };
 		8A5AE0B91D7D50E80095209E /* LivePhotoCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */; };
@@ -297,6 +297,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8A081CFC1D86FC9B00D7DDF4 /* Inception3Net+result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Inception3Net+result.swift"; sourceTree = "<group>"; };
 		8A1A04CF1D7A742A0040F613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A1CC3611D7AAFBC00562709 /* MetalCNNBasicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalCNNBasicViewController.swift; sourceTree = "<group>"; };
 		8A1CC3631D7AAFCC00562709 /* MetalCNNBasic.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MetalCNNBasic.storyboard; sourceTree = "<group>"; };
@@ -510,7 +511,6 @@
 		8A3F09011D81D47400D28DF2 /* Inception3Net.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inception3Net.swift; sourceTree = "<group>"; };
 		8A3F09051D81D4B800D28DF2 /* MetalImageRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalImageRecognitionViewController.swift; sourceTree = "<group>"; };
 		8A3F09071D81D4C700D28DF2 /* MetalImageRecognition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MetalImageRecognition.storyboard; sourceTree = "<group>"; };
-		8A3F09A01D83CF2000D28DF2 /* final0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = final0.jpg; sourceTree = "<group>"; };
 		8A49EF451D7BF4D8003EE90B /* UserNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationViewController.swift; sourceTree = "<group>"; };
 		8A5AE0B61D7D50D90095209E /* LivePhotoCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePhotoCaptureViewController.swift; sourceTree = "<group>"; };
 		8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LivePhotoCapture.storyboard; sourceTree = "<group>"; };
@@ -863,8 +863,8 @@
 		8A3F09001D81D3FA00D28DF2 /* ImageRecognition */ = {
 			isa = PBXGroup;
 			children = (
-				8A3F09A01D83CF2000D28DF2 /* final0.jpg */,
 				8A3F09011D81D47400D28DF2 /* Inception3Net.swift */,
+				8A081CFC1D86FC9B00D7DDF4 /* Inception3Net+result.swift */,
 				8A3F09051D81D4B800D28DF2 /* MetalImageRecognitionViewController.swift */,
 				8A3F09071D81D4C700D28DF2 /* MetalImageRecognition.storyboard */,
 			);
@@ -1397,7 +1397,6 @@
 				8A3F08DF1D81D35000D28DF2 /* weights_mixed_7_tower_1_conv.dat in Resources */,
 				8A3F08B11D81D35000D28DF2 /* weights_mixed_1_tower_1_conv_2.dat in Resources */,
 				8A3F08BF1D81D35000D28DF2 /* weights_mixed_3_tower_conv_2.dat in Resources */,
-				8A3F09A11D83CF2000D28DF2 /* final0.jpg in Resources */,
 				8A3F08461D81D35000D28DF2 /* bias_mixed_10_conv.dat in Resources */,
 				8A3F08AB1D81D35000D28DF2 /* weights_mixed_10_tower_conv.dat in Resources */,
 				8A3F08871D81D35000D28DF2 /* bias_mixed_7_tower_conv_1.dat in Resources */,
@@ -1468,6 +1467,7 @@
 				8C3A5F501D7EF7BE00B7A480 /* Message+CoreDataClass.swift in Sources */,
 				8A1CC3811D7AB10D00562709 /* SlimMPSCNN.swift in Sources */,
 				8C67369F1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodeld in Sources */,
+				8A081CFD1D86FC9B00D7DDF4 /* Inception3Net+result.swift in Sources */,
 				8A1CC37F1D7AB10D00562709 /* DrawView.swift in Sources */,
 				8A736F221D7A9A8300A58684 /* CIFilterExtension.swift in Sources */,
 				8A3F09061D81D4B800D28DF2 /* MetalImageRecognitionViewController.swift in Sources */,

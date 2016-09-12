@@ -22,6 +22,7 @@ class VideoCapture: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
     private var videoDevice: AVCaptureDevice!
     private var videoConnection: AVCaptureConnection!
     private var audioConnection: AVCaptureConnection!
+    private var previewLayer: AVCaptureVideoPreviewLayer?
     
     var imageBufferHandler: ImageBufferHandler?
     
@@ -78,6 +79,7 @@ class VideoCapture: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
             previewLayer.contentsGravity = kCAGravityResizeAspectFill
             previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
             previewContainer.insertSublayer(previewLayer, at: 0)
+            self.previewLayer = previewLayer
         }
         
         // setup video output
@@ -139,6 +141,12 @@ class VideoCapture: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
         captureSession.stopRunning()
     }
     
+    func resizePreview() {
+        if let previewLayer = previewLayer {
+            guard let superlayer = previewLayer.superlayer else {return}
+            previewLayer.frame = superlayer.bounds
+        }
+    }
     
     // =========================================================================
     // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
