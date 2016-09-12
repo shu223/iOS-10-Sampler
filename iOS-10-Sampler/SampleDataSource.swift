@@ -49,11 +49,6 @@ struct SampleDataSource {
             classPrefix: "PropertyAnimator"
         ),
         Sample(
-            title: "Attributed Speech",
-            detail: "Attributed Speech demo using attributedSpeechString of AVSpeechUtterance.",
-            classPrefix: "AttributedSpeech"
-        ),
-        Sample(
             title: "New filters",
             detail: "New filters of CIImage.",
             classPrefix: "ImageFilters"
@@ -81,6 +76,11 @@ struct SampleDataSource {
             title: "New Fonts",
             detail: "New Fonts gallery",
             classPrefix: "Fonts"
+        ),
+        Sample(
+            title: "Attributed Speech",
+            detail: "Attributed Speech demo using attributedSpeechString of AVSpeechUtterance.",
+            classPrefix: "AttributedSpeech"
         ),
         ]
 }
