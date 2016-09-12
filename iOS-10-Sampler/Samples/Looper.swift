@@ -10,41 +10,29 @@ import AVFoundation
 
 class Looper: NSObject {
 
-    private let playerItemDurationKey = "duration"
-
+    private var playerItem: AVPlayerItem!
     private let player = AVQueuePlayer()
     private let playerLayer = AVPlayerLayer()
     private var playerLooper: AVPlayerLooper!
-
-    // MARK: Looper
     
     required init(videoURL: URL) {
         super.init()
 
         playerLayer.player = player
 
-        let playerItem = AVPlayerItem(url: videoURL)
-        playerItem.asset.loadValuesAsynchronously(forKeys: [playerItemDurationKey], completionHandler: {()->Void in
-            /*
-             The asset invokes its completion handler on an arbitrary queue when
-             loading is complete. Because we want to access our AVPlayerLooper
-             in our ensuing set-up, we must dispatch our handler to the main queue.
-             */
-            DispatchQueue.main.async(execute: {
-                var durationError: NSError? = nil
-                let durationStatus = playerItem.asset.statusOfValue(forKey: self.playerItemDurationKey,
-                                                                    error: &durationError)
-                guard durationStatus == .loaded else {
-                    fatalError("Failed to load duration property with error: \(durationError)")
-                }
-                self.playerLooper = AVPlayerLooper(player: self.player, templateItem: playerItem)
-            })
-        })
+        playerItem = AVPlayerItem(url: videoURL)
+        playerLooper = AVPlayerLooper(player: player, templateItem: playerItem)
     }
     
     func start(in parentLayer: CALayer) {
+        // Getting the natural size of the video
+        // http://stackoverflow.com/questions/14466842/ios-6-avplayeritem-presentationsize-returning-zero-naturalsize-method-deprec
+        let videoTracks = playerItem.asset.tracks(withMediaType: AVMediaTypeVideo)
+        guard let videoSize = videoTracks.first?.naturalSize else {fatalError()}
+        
         parentLayer.addSublayer(playerLayer)
-        playerLayer.frame = parentLayer.bounds
+        playerLayer.frame.size = videoSize
+        playerLayer.position = CGPoint(x: parentLayer.frame.midX, y: parentLayer.frame.midY)
         player.play()
         
     }
