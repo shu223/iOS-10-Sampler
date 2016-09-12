@@ -12,10 +12,13 @@ class LooperViewController: UIViewController {
 
     private var looper: Looper!
     
+    @IBOutlet weak var minSlider: UISlider!
+    @IBOutlet weak var maxSlider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let videoPath = Bundle.main.path(forResource: "superquest", ofType: "mp4") else {fatalError()}
+        guard let videoPath = Bundle.main.path(forResource: "superquest_attack", ofType: "mp4") else {fatalError()}
         let videoUrl = URL(fileURLWithPath: videoPath)
         looper = Looper(videoURL: videoUrl)
     }
@@ -34,4 +37,13 @@ class LooperViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+    @IBAction func sliderChanged(sender: UISlider) {
+        looper.stop()
+        let result = looper.start(in: view.layer,
+                                  startRate: Double(minSlider.value),
+                                  endRate: Double(maxSlider.value))
+        if !result {
+            showAlert(title: "Invalid value", message: "Start or End seem to be wrong.")
+        }
+    }
 }

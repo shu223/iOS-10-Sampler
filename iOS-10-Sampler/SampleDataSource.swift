@@ -50,7 +50,7 @@ struct SampleDataSource {
         ),
         Sample(
             title: "Looper",
-            detail: "Looper",
+            detail: "Loop playback demo using AVPlayerLooper.",
             classPrefix: "Looper"
         ),
         Sample(
