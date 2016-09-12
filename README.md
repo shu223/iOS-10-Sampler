@@ -19,6 +19,14 @@ Just build with Xcode 8.
 
 ##Contents
 
+###PropertyAnimator1
+
+Animating UIView's `center` & `backgroundColor` using UIViewPropertyAnimator.
+
+###PropertyAnimator2
+
+Animating blur effect using `fractionComplete` property of UIViewPropertyAnimator.
+
 ###Audio Fade-in/out
 
 Audio fade-in/out demo using `setVolume:fadeDuration` method which is added to AVAudioPlayer.
