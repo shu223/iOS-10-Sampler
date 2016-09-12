@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mBL-qT-bR7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Property Animator Effect View Controller-->
+        <scene sceneID="Vb4-xH-aFc">
+            <objects>
+                <viewController id="mBL-qT-bR7" customClass="PropertyAnimatorEffectViewController" customModule="iOS_10_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4A9-u4-nSh"/>
+                        <viewControllerLayoutGuide type="bottom" id="dSW-dq-JJX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Eg2-3X-2Hy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="sierra" translatesAutoresizingMaskIntoConstraints="NO" id="nna-QJ-SKW"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLw-CQ-Mct">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="p2M-7a-9fY">
+                                    <frame key="frameInset"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="N2j-8y-vEf">
+                                <connections>
+                                    <action selector="sliderChangedWithSender:" destination="mBL-qT-bR7" eventType="valueChanged" id="jEl-ax-4uq"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="N2j-8y-vEf" secondAttribute="trailing" constant="20" id="23f-9J-1MM"/>
+                            <constraint firstAttribute="trailing" secondItem="ZLw-CQ-Mct" secondAttribute="trailing" id="4jk-zd-Qh0"/>
+                            <constraint firstItem="nna-QJ-SKW" firstAttribute="leading" secondItem="Eg2-3X-2Hy" secondAttribute="leading" id="Ecl-tz-r6K"/>
+                            <constraint firstAttribute="trailing" secondItem="nna-QJ-SKW" secondAttribute="trailing" id="Hmu-bw-nxt"/>
+                            <constraint firstItem="N2j-8y-vEf" firstAttribute="leading" secondItem="Eg2-3X-2Hy" secondAttribute="leadingMargin" constant="20" id="OBl-pV-qAm"/>
+                            <constraint firstAttribute="bottom" secondItem="ZLw-CQ-Mct" secondAttribute="bottom" id="OGu-P5-EIt"/>
+                            <constraint firstItem="nna-QJ-SKW" firstAttribute="top" secondItem="Eg2-3X-2Hy" secondAttribute="top" id="XaF-3g-tCW"/>
+                            <constraint firstItem="ZLw-CQ-Mct" firstAttribute="top" secondItem="Eg2-3X-2Hy" secondAttribute="top" id="bpo-hi-OiY"/>
+                            <constraint firstItem="dSW-dq-JJX" firstAttribute="top" secondItem="N2j-8y-vEf" secondAttribute="bottom" constant="20" id="fsc-7r-2Ol"/>
+                            <constraint firstAttribute="bottom" secondItem="nna-QJ-SKW" secondAttribute="bottom" id="iHD-IB-UTe"/>
+                            <constraint firstItem="ZLw-CQ-Mct" firstAttribute="leading" secondItem="Eg2-3X-2Hy" secondAttribute="leading" id="xkt-9e-QYG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="effectView" destination="ZLw-CQ-Mct" id="IZZ-Pc-ZOn"/>
+                        <outlet property="imageView" destination="nna-QJ-SKW" id="3Rn-yP-mXs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="63g-mV-xiF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="54"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sierra" width="622" height="622"/>
+    </resources>
+</document>
