@@ -234,6 +234,9 @@
 		8A8614701D7BF5470036DBBB /* UserNotification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A86146F1D7BF5470036DBBB /* UserNotification.storyboard */; };
 		8A8614731D7BFEDF0036DBBB /* superquest_levelup.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8A8614721D7BFEDF0036DBBB /* superquest_levelup.m4a */; };
 		8A8614791D7C090B0036DBBB /* superquest.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8A8614781D7C090B0036DBBB /* superquest.mp4 */; };
+		8AA074911D86830200FEAC28 /* AVCaptureDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA0748E1D86830200FEAC28 /* AVCaptureDevice+Extension.swift */; };
+		8AA074921D86830200FEAC28 /* VideoCameraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA0748F1D86830200FEAC28 /* VideoCameraType.swift */; };
+		8AA074931D86830200FEAC28 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA074901D86830200FEAC28 /* VideoCapture.swift */; };
 		8AABF1511D7B53FF004A1FE1 /* SpeechRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AABF1501D7B53FF004A1FE1 /* SpeechRecognitionViewController.swift */; };
 		8AABF1531D7B5416004A1FE1 /* SpeechRecognition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AABF1521D7B5416004A1FE1 /* SpeechRecognition.storyboard */; };
 		8AB430591D7A6B4900A3BD98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430581D7A6B4900A3BD98 /* AppDelegate.swift */; };
@@ -523,6 +526,9 @@
 		8A86146F1D7BF5470036DBBB /* UserNotification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserNotification.storyboard; sourceTree = "<group>"; };
 		8A8614721D7BFEDF0036DBBB /* superquest_levelup.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = superquest_levelup.m4a; sourceTree = "<group>"; };
 		8A8614781D7C090B0036DBBB /* superquest.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = superquest.mp4; sourceTree = "<group>"; };
+		8AA0748E1D86830200FEAC28 /* AVCaptureDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Extension.swift"; sourceTree = "<group>"; };
+		8AA0748F1D86830200FEAC28 /* VideoCameraType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCameraType.swift; sourceTree = "<group>"; };
+		8AA074901D86830200FEAC28 /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		8AABF1501D7B53FF004A1FE1 /* SpeechRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionViewController.swift; sourceTree = "<group>"; };
 		8AABF1521D7B5416004A1FE1 /* SpeechRecognition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SpeechRecognition.storyboard; sourceTree = "<group>"; };
 		8AB430551D7A6B4900A3BD98 /* iOS-10-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-10-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -947,6 +953,24 @@
 			path = movies;
 			sourceTree = "<group>";
 		};
+		8AA0748C1D86830200FEAC28 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				8AA0748D1D86830200FEAC28 /* VideoCapture */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		8AA0748D1D86830200FEAC28 /* VideoCapture */ = {
+			isa = PBXGroup;
+			children = (
+				8AA0748E1D86830200FEAC28 /* AVCaptureDevice+Extension.swift */,
+				8AA0748F1D86830200FEAC28 /* VideoCameraType.swift */,
+				8AA074901D86830200FEAC28 /* VideoCapture.swift */,
+			);
+			path = VideoCapture;
+			sourceTree = "<group>";
+		};
 		8AABF1541D7B545E004A1FE1 /* SpeechRecognition */ = {
 			isa = PBXGroup;
 			children = (
@@ -962,6 +986,7 @@
 				8AB430571D7A6B4900A3BD98 /* iOS-10-Sampler */,
 				8AB4306C1D7A6B4A00A3BD98 /* iOS-10-SamplerTests */,
 				8AB430771D7A6B4A00A3BD98 /* iOS-10-SamplerUITests */,
+				8AA0748C1D86830200FEAC28 /* libs */,
 				8A1CC38D1D7AC22E00562709 /* SamplerStickerPack */,
 				8AB430561D7A6B4900A3BD98 /* Products */,
 			);
@@ -1429,7 +1454,10 @@
 				8AB430871D7A6DA700A3BD98 /* RootViewCell.swift in Sources */,
 				8A5AE0BC1D7D58AB0095209E /* LivePhotoCaptureDelegate.swift in Sources */,
 				8AABF1511D7B53FF004A1FE1 /* SpeechRecognitionViewController.swift in Sources */,
+				8AA074931D86830200FEAC28 /* VideoCapture.swift in Sources */,
 				8A1CC3621D7AAFBC00562709 /* MetalCNNBasicViewController.swift in Sources */,
+				8AA074911D86830200FEAC28 /* AVCaptureDevice+Extension.swift in Sources */,
+				8AA074921D86830200FEAC28 /* VideoCameraType.swift in Sources */,
 				8A5AE0BE1D7D61C70095209E /* PreviewView.swift in Sources */,
 				8A5AE0B71D7D50D90095209E /* LivePhotoCaptureViewController.swift in Sources */,
 				8AB4305B1D7A6B4900A3BD98 /* RootViewController.swift in Sources */,
