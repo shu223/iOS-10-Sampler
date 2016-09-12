@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0Xl-yk-nao">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Metal Image Recognition View Controller-->
+        <scene sceneID="71d-m2-KJ4">
+            <objects>
+                <viewController id="0Xl-yk-nao" customClass="MetalImageRecognitionViewController" customModule="iOS_10_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cze-I2-EGa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z5a-YL-kYA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f5H-zY-hKe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPW-dG-rVE">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xc3-W5-qAq">
+                                <subviews>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpR-SF-YSn">
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hpR-SF-YSn" secondAttribute="bottom" constant="20" id="DvO-4t-Nir"/>
+                                    <constraint firstItem="hpR-SF-YSn" firstAttribute="leading" secondItem="xc3-W5-qAq" secondAttribute="leading" constant="20" id="QeY-hJ-Cwm"/>
+                                    <constraint firstItem="hpR-SF-YSn" firstAttribute="top" secondItem="xc3-W5-qAq" secondAttribute="top" constant="36" id="fRn-HZ-A7M"/>
+                                    <constraint firstAttribute="trailing" secondItem="hpR-SF-YSn" secondAttribute="trailing" constant="20" id="odX-Yc-N24"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xc3-W5-qAq" firstAttribute="top" secondItem="f5H-zY-hKe" secondAttribute="top" id="55u-cF-LAA"/>
+                            <constraint firstAttribute="trailing" secondItem="xc3-W5-qAq" secondAttribute="trailing" id="GbP-lM-qpb"/>
+                            <constraint firstAttribute="trailing" secondItem="MPW-dG-rVE" secondAttribute="trailing" id="GpE-Xt-H2b"/>
+                            <constraint firstItem="MPW-dG-rVE" firstAttribute="top" secondItem="Cze-I2-EGa" secondAttribute="bottom" id="I48-Xy-1Mx"/>
+                            <constraint firstAttribute="bottom" secondItem="MPW-dG-rVE" secondAttribute="bottom" id="N7z-Ew-IAo"/>
+                            <constraint firstItem="MPW-dG-rVE" firstAttribute="leading" secondItem="f5H-zY-hKe" secondAttribute="leading" id="kVi-v1-w6X"/>
+                            <constraint firstItem="xc3-W5-qAq" firstAttribute="leading" secondItem="f5H-zY-hKe" secondAttribute="leading" id="qBL-IY-3ly"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="predictLabel" destination="hpR-SF-YSn" id="mhD-mM-UgB"/>
+                        <outlet property="previewView" destination="MPW-dG-rVE" id="Uts-z8-SMd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8f5-Pe-2NG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="-57.121439280359823"/>
+        </scene>
+    </scenes>
+</document>

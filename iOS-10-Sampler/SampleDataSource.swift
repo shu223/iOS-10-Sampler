@@ -39,6 +39,11 @@ struct SampleDataSource {
             classPrefix: "MetalCNNBasic"
         ),
         Sample(
+            title: "MetalImageRecognition",
+            detail: "MetalImageRecognition",
+            classPrefix: "MetalImageRecognition"
+        ),
+        Sample(
             title: "Speech Recognition",
             detail: "Speech Recognition demo using Speech Framework. All available language can be selected.",
             classPrefix: "SpeechRecognition"
