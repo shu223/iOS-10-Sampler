@@ -41,17 +41,33 @@ Live Photo Capturing example using AVCapturePhotoOutput.
 
 <img src="README_resources/livephoto.jpg" width="200">
 
-###PropertyAnimator1
-
-Animating UIView's `center` & `backgroundColor` using UIViewPropertyAnimator.
-
-###PropertyAnimator2
-
-Animating blur effect using `fractionComplete` property of UIViewPropertyAnimator.
-
 ###Audio Fade-in/out
 
 Audio fade-in/out demo using `setVolume:fadeDuration` method which is added to AVAudioPlayer.
+
+###Metal CNN Basic: Digit Detection
+
+Hand-writing digit detection using CNN (Convolutional Neural Network) by Metal Performance Shaders.
+
+<img src="README_resources/digit.gif">
+
+###Metal CNN Advanced: Image Recognition
+
+Real-time image recognition using CNN (Convolutional Neural Network) by Metal Performance Shaders.
+
+<img src="README_resources/imagerecog.gif">
+
+###PropertyAnimator: Position
+
+Animating UIView's `center` & `backgroundColor` using UIViewPropertyAnimator.
+
+<img src="README_resources/animator1.gif">
+
+###PropertyAnimator: Blur
+
+Animating blur effect using `fractionComplete` property of UIViewPropertyAnimator.
+
+<img src="README_resources/animator2.gif">
 
 ###Attributed Speech
 

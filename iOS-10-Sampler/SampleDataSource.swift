@@ -44,19 +44,14 @@ struct SampleDataSource {
             classPrefix: "AudioFadeInOut"
         ),
         Sample(
-            title: "MPSCNN Basic",
-            detail: "Hand-writing digit detection using Convolutional Neural Networks by Metal Performance Shaders.",
+            title: "Metal CNN: Digit Detection",
+            detail: "Hand-writing digit detection using CNN (Convolutional Neural Network) by Metal Performance Shaders.",
             classPrefix: "MetalCNNBasic"
         ),
         Sample(
-            title: "Metal Image Recognition",
-            detail: "Real-time image recognition using CNN by Metal Performance Shaders.",
+            title: "Metal CNN: Image Recognition",
+            detail: "Real-time image recognition using CNN (Convolutional Neural Network) by Metal Performance Shaders.",
             classPrefix: "MetalImageRecognition"
-        ),
-        Sample(
-            title: "New filters",
-            detail: "New filters of CIImage.",
-            classPrefix: "ImageFilters"
         ),
         Sample(
             title: "PropertyAnimator: Position",
@@ -91,6 +86,11 @@ struct SampleDataSource {
             title: "TabBar Customization",
             detail: "Customization sample for UITabBar's badge using text attributes.",
             classPrefix: "TabBadge"
+        ),
+        Sample(
+            title: "New filters",
+            detail: "New filters of CIImage.",
+            classPrefix: "ImageFilters"
         ),
         Sample(
             title: "New Fonts",
