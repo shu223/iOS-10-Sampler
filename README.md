@@ -69,6 +69,22 @@ Animating blur effect using `fractionComplete` property of UIViewPropertyAnimato
 
 <img src="README_resources/animator2.gif">
 
+###Preview Interaction
+
+**Peek & Pop interactions with 3D touch** using UIPreviewInteraction.
+
+<img src="README_resources/peekpop.gif">
+
+###Notification with Image
+
+Local notification with an image using UserNotifications framework.
+
+###Sticker Pack
+
+Example of Sticker Pack for iMessage.
+
+<img src="README_resources/stickers.jpg" width="200">
+
 ###Attributed Speech
 
 Attributed Speech demo using `attributedSpeechString` of AVSpeechUtterance. But it seems NOT to affect the speech with this attribute. Anyone, please let me know how it works.

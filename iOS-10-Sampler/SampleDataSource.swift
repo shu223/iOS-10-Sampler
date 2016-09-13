@@ -69,7 +69,7 @@ struct SampleDataSource {
             classPrefix: "PreviewInteraction"
         ),
         Sample(
-            title: "UserNotification",
+            title: "Notification with Image",
             detail: "Local notification with an image using UserNotifications framework.",
             classPrefix: "UserNotification"
         ),
