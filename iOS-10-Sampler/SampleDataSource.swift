@@ -98,8 +98,8 @@ struct SampleDataSource {
             classPrefix: "Fonts"
         ),
         Sample(
-            title: "Proactive",
-            detail: "Proactive",
+            title: "Proactive: Location Suggestions",
+            detail: "This sample demonstrates how to use new `mapItem` property of NSUserActivity to integrate with location suggestions",
             classPrefix: "Proactive"
         ),
         Sample(
