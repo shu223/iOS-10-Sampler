@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,8 +18,33 @@
                     <view key="view" contentMode="scaleToFill" id="M4Q-Dd-IYT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mm8-Jn-HMo">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Open in Maps"/>
+                                <connections>
+                                    <action selector="openinBtnTappedWithSender:" destination="GcJ-xZ-DrV" eventType="touchUpInside" id="zzl-Nv-N4r"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxu-6Z-19M">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mm8-Jn-HMo" firstAttribute="centerX" secondItem="M4Q-Dd-IYT" secondAttribute="centerX" id="05Y-RX-izE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hxu-6Z-19M" secondAttribute="trailing" constant="16" id="QKd-CC-Lox"/>
+                            <constraint firstItem="mm8-Jn-HMo" firstAttribute="centerY" secondItem="M4Q-Dd-IYT" secondAttribute="centerY" id="W0E-tx-9jb"/>
+                            <constraint firstItem="hxu-6Z-19M" firstAttribute="top" secondItem="mm8-Jn-HMo" secondAttribute="bottom" constant="8" id="tYg-tA-ZOu"/>
+                            <constraint firstItem="hxu-6Z-19M" firstAttribute="leading" secondItem="M4Q-Dd-IYT" secondAttribute="leadingMargin" constant="16" id="vPP-5z-9Lt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="hxu-6Z-19M" id="Fau-BS-AmQ"/>
+                        <outlet property="openinBtn" destination="mm8-Jn-HMo" id="DME-gd-mXa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O78-w3-Ymr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
