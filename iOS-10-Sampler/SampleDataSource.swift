@@ -98,6 +98,11 @@ struct SampleDataSource {
             classPrefix: "Fonts"
         ),
         Sample(
+            title: "Proactive",
+            detail: "Proactive",
+            classPrefix: "Proactive"
+        ),
+        Sample(
             title: "Attributed Speech",
             detail: "Attributed Speech demo using attributedSpeechString of AVSpeechUtterance.",
             classPrefix: "AttributedSpeech"

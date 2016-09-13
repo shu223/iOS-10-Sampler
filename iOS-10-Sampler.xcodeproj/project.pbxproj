@@ -20,6 +20,8 @@
 		8A081D151D876F4F00D7DDF4 /* PreviewInteractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A081D141D876F4F00D7DDF4 /* PreviewInteractionViewController.swift */; };
 		8A081D171D876F5B00D7DDF4 /* PreviewInteraction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A081D161D876F5B00D7DDF4 /* PreviewInteraction.storyboard */; };
 		8A081D1A1D87932100D7DDF4 /* PreviewInteractionPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A081D191D87932100D7DDF4 /* PreviewInteractionPopViewController.swift */; };
+		8A081E9A1D8841C200D7DDF4 /* ProactiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A081E991D8841C200D7DDF4 /* ProactiveViewController.swift */; };
+		8A081E9C1D8841CD00D7DDF4 /* Proactive.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A081E9B1D8841CD00D7DDF4 /* Proactive.storyboard */; };
 		8A1A04D01D7A742A0040F613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A04CE1D7A742A0040F613 /* Main.storyboard */; };
 		8A1CC3621D7AAFBC00562709 /* MetalCNNBasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC3611D7AAFBC00562709 /* MetalCNNBasicViewController.swift */; };
 		8A1CC3641D7AAFCC00562709 /* MetalCNNBasic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1CC3631D7AAFCC00562709 /* MetalCNNBasic.storyboard */; };
@@ -323,6 +325,8 @@
 		8A081D141D876F4F00D7DDF4 /* PreviewInteractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewInteractionViewController.swift; sourceTree = "<group>"; };
 		8A081D161D876F5B00D7DDF4 /* PreviewInteraction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PreviewInteraction.storyboard; sourceTree = "<group>"; };
 		8A081D191D87932100D7DDF4 /* PreviewInteractionPopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewInteractionPopViewController.swift; sourceTree = "<group>"; };
+		8A081E991D8841C200D7DDF4 /* ProactiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProactiveViewController.swift; sourceTree = "<group>"; };
+		8A081E9B1D8841CD00D7DDF4 /* Proactive.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Proactive.storyboard; sourceTree = "<group>"; };
 		8A1A04CF1D7A742A0040F613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A1CC3611D7AAFBC00562709 /* MetalCNNBasicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalCNNBasicViewController.swift; sourceTree = "<group>"; };
 		8A1CC3631D7AAFCC00562709 /* MetalCNNBasic.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MetalCNNBasic.storyboard; sourceTree = "<group>"; };
@@ -645,6 +649,23 @@
 				8A081D191D87932100D7DDF4 /* PreviewInteractionPopViewController.swift */,
 			);
 			name = PreviewInteraction;
+			sourceTree = "<group>";
+		};
+		8A081E9D1D8841EF00D7DDF4 /* Proactive */ = {
+			isa = PBXGroup;
+			children = (
+				8A081E991D8841C200D7DDF4 /* ProactiveViewController.swift */,
+				8A081E9B1D8841CD00D7DDF4 /* Proactive.storyboard */,
+			);
+			name = Proactive;
+			sourceTree = "<group>";
+		};
+		8A081E9E1D88420700D7DDF4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8A081D121D87394200D7DDF4 /* UIViewController+alert.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		8A1CC3651D7AAFD200562709 /* MetalCNN */ = {
@@ -1103,7 +1124,7 @@
 				8AB4305A1D7A6B4900A3BD98 /* RootViewController.swift */,
 				8AB430861D7A6DA700A3BD98 /* RootViewCell.swift */,
 				8AB430881D7A6DF300A3BD98 /* SampleDataSource.swift */,
-				8A081D121D87394200D7DDF4 /* UIViewController+alert.swift */,
+				8A081E9E1D88420700D7DDF4 /* Common */,
 				8AB4308A1D7A6ED400A3BD98 /* Samples */,
 				8A1CC3661D7AB06900562709 /* Resources */,
 			);
@@ -1145,6 +1166,7 @@
 				8A3F09AA1D83E52300D28DF2 /* TabBadge */,
 				8A3F09AF1D83F80600D28DF2 /* New Fonts */,
 				8A081D181D876F5F00D7DDF4 /* PreviewInteraction */,
+				8A081E9D1D8841EF00D7DDF4 /* Proactive */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -1480,6 +1502,7 @@
 				8A3F08421D81D35000D28DF2 /* bias_conv_1.dat in Resources */,
 				8A3F08FD1D81D35000D28DF2 /* weights_mixed_tower_conv_1.dat in Resources */,
 				8A3F08751D81D35000D28DF2 /* bias_mixed_6_conv.dat in Resources */,
+				8A081E9C1D8841CD00D7DDF4 /* Proactive.storyboard in Resources */,
 				8A3F08991D81D35000D28DF2 /* bias_mixed_tower_1_conv.dat in Resources */,
 				8A3F08A81D81D35000D28DF2 /* weights_mixed_10_tower_1_mixed_conv.dat in Resources */,
 				8A3F08C31D81D35000D28DF2 /* weights_mixed_4_tower_1_conv_2.dat in Resources */,
@@ -1575,6 +1598,7 @@
 				8A1CC37F1D7AB10D00562709 /* DrawView.swift in Sources */,
 				8A736F221D7A9A8300A58684 /* CIFilterExtension.swift in Sources */,
 				8A081D151D876F4F00D7DDF4 /* PreviewInteractionViewController.swift in Sources */,
+				8A081E9A1D8841C200D7DDF4 /* ProactiveViewController.swift in Sources */,
 				8A3F09061D81D4B800D28DF2 /* MetalImageRecognitionViewController.swift in Sources */,
 				8A3F09021D81D47400D28DF2 /* Inception3Net.swift in Sources */,
 				8A081D1A1D87932100D7DDF4 /* PreviewInteractionPopViewController.swift in Sources */,
