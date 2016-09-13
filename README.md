@@ -101,7 +101,7 @@ Customization sample for UITabBar's badge using text attributes.
 
 ###New filters
 
-New filters of CIImage.
+New filters of CIFilter in Core Image.
 
 <img src="README_resources/filter1.jpg" width="200" alighn="left"> <img src="README_resources/filter2.jpg" width="200">
 <br clear="all">

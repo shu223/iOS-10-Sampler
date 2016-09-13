@@ -89,7 +89,7 @@ struct SampleDataSource {
         ),
         Sample(
             title: "New filters",
-            detail: "New filters of CIImage.",
+            detail: "New filters of CIFilter in Core Image",
             classPrefix: "ImageFilters"
         ),
         Sample(
