@@ -19,25 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g9B-PH-HM1">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.12941177189350128" green="0.12941177189350128" blue="0.12941177189350128" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciY-qS-XNc">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="pe8-mO-3zy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Start Recording!">
-                                    <color key="titleColor" red="0.16648837924003601" green="0.52587974071502686" blue="0.75460344552993774" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="recordBtnTapped" destination="v3o-YW-iCf" eventType="touchUpInside" id="akL-tA-226"/>
-                                </connections>
-                            </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uo1-Db-kKU">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="9eP-WF-yBZ"/>
@@ -47,19 +28,47 @@
                                     <outlet property="delegate" destination="v3o-YW-iCf" id="9hA-3U-Llt"/>
                                 </connections>
                             </pickerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g9B-PH-HM1">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciY-qS-XNc">
+                                <color key="backgroundColor" red="0.16648837920000001" green="0.52587974069999999" blue="0.75460344550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pe8-mO-3zy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start Recording!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recordBtnTapped" destination="v3o-YW-iCf" eventType="touchUpInside" id="akL-tA-226"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="g9B-PH-HM1" firstAttribute="top" secondItem="uo1-Db-kKU" secondAttribute="bottom" constant="8" id="2zm-2y-097"/>
                             <constraint firstItem="g9B-PH-HM1" firstAttribute="leading" secondItem="Arw-Mu-YxT" secondAttribute="leadingMargin" id="BGX-i0-XSd"/>
-                            <constraint firstItem="ciY-qS-XNc" firstAttribute="top" secondItem="g9B-PH-HM1" secondAttribute="bottom" constant="8" id="QDS-oY-9Em"/>
                             <constraint firstAttribute="trailing" secondItem="uo1-Db-kKU" secondAttribute="trailing" id="WUQ-ZJ-ric"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ciY-qS-XNc" secondAttribute="trailing" id="YZP-uS-nNw"/>
                             <constraint firstItem="g9B-PH-HM1" firstAttribute="trailing" secondItem="Arw-Mu-YxT" secondAttribute="trailingMargin" id="d54-26-FnN"/>
-                            <constraint firstItem="g9B-PH-HM1" firstAttribute="top" secondItem="n6H-uw-j8B" secondAttribute="bottom" id="fHZ-LA-hat"/>
-                            <constraint firstItem="ciY-qS-XNc" firstAttribute="top" secondItem="g9B-PH-HM1" secondAttribute="bottom" constant="8" id="kWC-we-x9F"/>
+                            <constraint firstItem="zoI-Hs-40m" firstAttribute="top" secondItem="ciY-qS-XNc" secondAttribute="bottom" constant="20" id="e1g-O0-AqF"/>
                             <constraint firstItem="ciY-qS-XNc" firstAttribute="top" secondItem="g9B-PH-HM1" secondAttribute="bottom" constant="8" id="kXP-x5-nas"/>
-                            <constraint firstItem="zoI-Hs-40m" firstAttribute="top" secondItem="uo1-Db-kKU" secondAttribute="bottom" id="qr5-8F-oCo"/>
-                            <constraint firstItem="uo1-Db-kKU" firstAttribute="top" secondItem="ciY-qS-XNc" secondAttribute="bottom" constant="8" id="smb-ae-c2T"/>
+                            <constraint firstItem="uo1-Db-kKU" firstAttribute="top" secondItem="n6H-uw-j8B" secondAttribute="bottom" id="mrJ-LV-Imc"/>
                             <constraint firstItem="uo1-Db-kKU" firstAttribute="leading" secondItem="Arw-Mu-YxT" secondAttribute="leading" id="tnb-qT-3HY"/>
                             <constraint firstItem="ciY-qS-XNc" firstAttribute="leading" secondItem="Arw-Mu-YxT" secondAttribute="leadingMargin" id="ucr-yS-Rc6"/>
                         </constraints>
@@ -72,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVR-sW-2fz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119" y="187"/>
+            <point key="canvasLocation" x="117.59999999999999" y="186.65667166416793"/>
         </scene>
     </scenes>
 </document>
