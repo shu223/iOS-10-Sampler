@@ -116,6 +116,9 @@ New Fonts gallery
 
 This sample demonstrates how to use new `mapItem` property of NSUserActivity to integrate with location suggestions.
 
+<img src="README_resources/proactive1.jpg" width="200" alighn="left"> <img src="README_resources/proactive2.jpg" width="200">
+<br clear="all">
+
 ###Attributed Speech
 
 Attributed Speech demo using `attributedSpeechString` of AVSpeechUtterance. 
