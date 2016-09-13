@@ -102,5 +102,10 @@ struct SampleDataSource {
             detail: "Attributed Speech demo using attributedSpeechString of AVSpeechUtterance.",
             classPrefix: "AttributedSpeech"
         ),
+        Sample(
+            title: "Preview Interaction",
+            detail: "Preview Interaction",
+            classPrefix: "PreviewInteraction"
+        ),
         ]
 }
