@@ -11,6 +11,8 @@
 
 Code examples for new APIs of iOS 10.
 
+<a href='https://pledgie.com/campaigns/32568'><img alt='Click here to lend your support to: iOS-10-Sampler and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/32568.png?skin_name=chrome' border='0' ></a>
+
 
 ##How to build
 
