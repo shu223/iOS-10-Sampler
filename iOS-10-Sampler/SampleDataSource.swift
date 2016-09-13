@@ -29,9 +29,19 @@ struct SampleDataSource {
             classPrefix: "LivePhotoCapture"
         ),
         Sample(
-            title: "UserNotification",
-            detail: "Local notification with an image using UserNotifications framework.",
-            classPrefix: "UserNotification"
+            title: "Speech Recognition",
+            detail: "Speech Recognition demo using Speech Framework. All available language can be selected.",
+            classPrefix: "SpeechRecognition"
+        ),
+        Sample(
+            title: "Looper",
+            detail: "Loop playback demo using AVPlayerLooper.",
+            classPrefix: "Looper"
+        ),
+        Sample(
+            title: "Audio Fade-in/out",
+            detail: "Audio fade-in/out demo.",
+            classPrefix: "AudioFadeInOut"
         ),
         Sample(
             title: "MPSCNN Basic",
@@ -44,14 +54,9 @@ struct SampleDataSource {
             classPrefix: "MetalImageRecognition"
         ),
         Sample(
-            title: "Speech Recognition",
-            detail: "Speech Recognition demo using Speech Framework. All available language can be selected.",
-            classPrefix: "SpeechRecognition"
-        ),
-        Sample(
-            title: "Looper",
-            detail: "Loop playback demo using AVPlayerLooper.",
-            classPrefix: "Looper"
+            title: "New filters",
+            detail: "New filters of CIImage.",
+            classPrefix: "ImageFilters"
         ),
         Sample(
             title: "PropertyAnimator: Position",
@@ -69,19 +74,9 @@ struct SampleDataSource {
             classPrefix: "PreviewInteraction"
         ),
         Sample(
-            title: "Attributed Speech",
-            detail: "Attributed Speech demo using attributedSpeechString of AVSpeechUtterance.",
-            classPrefix: "AttributedSpeech"
-        ),
-        Sample(
-            title: "New filters",
-            detail: "New filters of CIImage.",
-            classPrefix: "ImageFilters"
-        ),
-        Sample(
-            title: "Audio Fade-in/out",
-            detail: "Audio fade-in/out demo.",
-            classPrefix: "AudioFadeInOut"
+            title: "UserNotification",
+            detail: "Local notification with an image using UserNotifications framework.",
+            classPrefix: "UserNotification"
         ),
         Sample(
             title: "Sticker Pack",
