@@ -17,7 +17,18 @@
                     <view key="view" contentMode="scaleToFill" id="Sgi-3b-S0V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peek &amp; Pop" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyI-1e-PyC">
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GyI-1e-PyC" firstAttribute="centerY" secondItem="Sgi-3b-S0V" secondAttribute="centerY" id="20t-N6-FE9"/>
+                            <constraint firstItem="GyI-1e-PyC" firstAttribute="centerX" secondItem="Sgi-3b-S0V" secondAttribute="centerX" id="AGX-ok-AWt"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="4Jh-JS-Npb" kind="presentation" identifier="Pop" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="MrM-EZ-QKS"/>
@@ -45,6 +56,13 @@
                                     <outletCollection property="gestureRecognizers" destination="AwV-am-a8b" appends="YES" id="3GW-u9-3BI"/>
                                 </connections>
                             </imageView>
+                            <visualEffectView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1Y-9J-SdH">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TQn-3j-jQI">
+                                    <frame key="frameInset"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APc-lM-lQs">
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -54,8 +72,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="u1Y-9J-SdH" secondAttribute="bottom" id="5aj-3d-D20"/>
                             <constraint firstItem="hFv-uP-TQm" firstAttribute="top" secondItem="Vw3-8d-5nh" secondAttribute="top" id="Mp1-QK-JIJ"/>
                             <constraint firstItem="APc-lM-lQs" firstAttribute="top" secondItem="rSW-kk-3S2" secondAttribute="bottom" id="Nyj-09-VON"/>
+                            <constraint firstItem="u1Y-9J-SdH" firstAttribute="leading" secondItem="Vw3-8d-5nh" secondAttribute="leading" id="TSk-Xh-jpz"/>
+                            <constraint firstItem="u1Y-9J-SdH" firstAttribute="top" secondItem="Vw3-8d-5nh" secondAttribute="top" id="bTN-CE-uHQ"/>
+                            <constraint firstAttribute="trailing" secondItem="u1Y-9J-SdH" secondAttribute="trailing" id="gxc-3k-7L9"/>
                             <constraint firstAttribute="bottom" secondItem="hFv-uP-TQm" secondAttribute="bottom" id="hxP-ip-agw"/>
                             <constraint firstAttribute="trailing" secondItem="hFv-uP-TQm" secondAttribute="trailing" id="joN-eo-RLr"/>
                             <constraint firstItem="APc-lM-lQs" firstAttribute="centerX" secondItem="Vw3-8d-5nh" secondAttribute="centerX" id="qay-wd-sgG"/>
@@ -63,6 +85,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="effectView" destination="u1Y-9J-SdH" id="hBZ-KO-mya"/>
                         <outlet property="statusLabel" destination="APc-lM-lQs" id="HQp-uT-seP"/>
                     </connections>
                 </viewController>

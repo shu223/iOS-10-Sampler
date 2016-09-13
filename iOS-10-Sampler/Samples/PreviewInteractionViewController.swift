@@ -13,6 +13,7 @@ class PreviewInteractionViewController: UIViewController, UIPreviewInteractionDe
     private var previewInteraction: UIPreviewInteraction!
     private var popVC: PreviewInteractionPopViewController?
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         previewInteraction = UIPreviewInteraction(view: view)
@@ -37,16 +38,17 @@ class PreviewInteractionViewController: UIViewController, UIPreviewInteractionDe
         if popVC == nil {
             performSegue(withIdentifier: "Pop", sender: nil)
         }
-        
+
         if ended {
-            popVC?.statusLabel.text = "Peak"
+            popVC?.statusLabel.text = "Peek!"
         }
     }
     
     func previewInteraction(_ previewInteraction: UIPreviewInteraction, didUpdateCommitTransition transitionProgress: CGFloat, ended: Bool) {
 //        print("\(self.classForCoder)/" + #function + ", transition:\(transitionProgress), ended:\(ended)")
+        popVC?.animator.fractionComplete = transitionProgress
         if ended {
-            popVC?.statusLabel.text = "Pop"
+            popVC?.statusLabel.text = "Pop!"
         }
     }
     

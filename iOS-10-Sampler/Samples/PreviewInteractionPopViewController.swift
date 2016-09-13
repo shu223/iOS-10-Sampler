@@ -10,20 +10,26 @@ import UIKit
 
 class PreviewInteractionPopViewController: UIViewController {
 
+    internal var animator: UIViewPropertyAnimator!
+
     @IBOutlet weak var statusLabel: UILabel!
-    
+    @IBOutlet weak var effectView: UIVisualEffectView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         statusLabel.text = nil
+        
+        animator = UIViewPropertyAnimator(duration: 0, curve: .linear) {
+            self.effectView.effect = nil
+        }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        animator.fractionComplete = 0
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        dismiss(animated: true) { 
-//            self.statusLabel.text = nil
-//        }
-//    }
 }
