@@ -38,17 +38,21 @@ class PreviewInteractionViewController: UIViewController, UIPreviewInteractionDe
         if popVC == nil {
             performSegue(withIdentifier: "Pop", sender: nil)
         }
+        guard let popVC = popVC else {fatalError()}
+        popVC.progressLabel.text = String(format: "%.0f%", transitionProgress * 100)
 
         if ended {
-            popVC?.statusLabel.text = "Peek!"
+            popVC.statusLabel.text = "Peek!"
         }
     }
     
     func previewInteraction(_ previewInteraction: UIPreviewInteraction, didUpdateCommitTransition transitionProgress: CGFloat, ended: Bool) {
 //        print("\(self.classForCoder)/" + #function + ", transition:\(transitionProgress), ended:\(ended)")
-        popVC?.animator.fractionComplete = transitionProgress
+        guard let popVC = popVC else {fatalError()}
+        popVC.animator.fractionComplete = transitionProgress
+        popVC.progressLabel.text = String(format: "%.0f%", transitionProgress * 100)
         if ended {
-            popVC?.statusLabel.text = "Pop!"
+            popVC.statusLabel.text = "Pop!"
         }
     }
     

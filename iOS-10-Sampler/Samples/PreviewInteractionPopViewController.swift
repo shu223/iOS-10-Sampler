@@ -12,11 +12,13 @@ class PreviewInteractionPopViewController: UIViewController {
 
     internal var animator: UIViewPropertyAnimator!
 
+    @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var effectView: UIVisualEffectView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        progressLabel.text = nil
         statusLabel.text = nil
         
         animator = UIViewPropertyAnimator(duration: 0, curve: .linear) {

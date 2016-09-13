@@ -65,7 +65,13 @@
                             </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APc-lM-lQs">
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5i-0F-de9">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -73,19 +79,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="u1Y-9J-SdH" secondAttribute="bottom" id="5aj-3d-D20"/>
+                            <constraint firstItem="B5i-0F-de9" firstAttribute="centerY" secondItem="Vw3-8d-5nh" secondAttribute="centerY" constant="-40" id="BKU-fh-xT6"/>
+                            <constraint firstItem="APc-lM-lQs" firstAttribute="centerX" secondItem="Vw3-8d-5nh" secondAttribute="centerX" id="K3m-RO-hy4"/>
                             <constraint firstItem="hFv-uP-TQm" firstAttribute="top" secondItem="Vw3-8d-5nh" secondAttribute="top" id="Mp1-QK-JIJ"/>
-                            <constraint firstItem="APc-lM-lQs" firstAttribute="top" secondItem="rSW-kk-3S2" secondAttribute="bottom" id="Nyj-09-VON"/>
                             <constraint firstItem="u1Y-9J-SdH" firstAttribute="leading" secondItem="Vw3-8d-5nh" secondAttribute="leading" id="TSk-Xh-jpz"/>
+                            <constraint firstItem="B5i-0F-de9" firstAttribute="centerX" secondItem="Vw3-8d-5nh" secondAttribute="centerX" id="YNj-JQ-8mO"/>
                             <constraint firstItem="u1Y-9J-SdH" firstAttribute="top" secondItem="Vw3-8d-5nh" secondAttribute="top" id="bTN-CE-uHQ"/>
+                            <constraint firstItem="B5i-0F-de9" firstAttribute="top" secondItem="APc-lM-lQs" secondAttribute="bottom" constant="8" id="f1N-Nt-OeE"/>
                             <constraint firstAttribute="trailing" secondItem="u1Y-9J-SdH" secondAttribute="trailing" id="gxc-3k-7L9"/>
                             <constraint firstAttribute="bottom" secondItem="hFv-uP-TQm" secondAttribute="bottom" id="hxP-ip-agw"/>
                             <constraint firstAttribute="trailing" secondItem="hFv-uP-TQm" secondAttribute="trailing" id="joN-eo-RLr"/>
-                            <constraint firstItem="APc-lM-lQs" firstAttribute="centerX" secondItem="Vw3-8d-5nh" secondAttribute="centerX" id="qay-wd-sgG"/>
                             <constraint firstItem="hFv-uP-TQm" firstAttribute="leading" secondItem="Vw3-8d-5nh" secondAttribute="leading" id="txR-p0-rVP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="effectView" destination="u1Y-9J-SdH" id="hBZ-KO-mya"/>
+                        <outlet property="progressLabel" destination="B5i-0F-de9" id="tXk-o2-sOy"/>
                         <outlet property="statusLabel" destination="APc-lM-lQs" id="HQp-uT-seP"/>
                     </connections>
                 </viewController>
