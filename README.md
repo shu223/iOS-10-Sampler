@@ -31,8 +31,7 @@ Speech Recognition demo using Speech Framework. All available languages can be s
 
 Loop playback demo using AVPlayerLooper.
 
-<img src="README_resources/loop_normal.gif" align="left">
-<img src="README_resources/loop_short.gif">
+<img src="README_resources/loop_normal.gif" align="left"> <img src="README_resources/loop_short.gif">
 <br clear="all">
 
 ###Live Photo Capturing
@@ -79,12 +78,46 @@ Animating blur effect using `fractionComplete` property of UIViewPropertyAnimato
 
 Local notification with an image using UserNotifications framework.
 
+<img src="README_resources/notif1.jpg" width="200" alighn="left"> <img src="README_resources/notif2.jpg" width="200">
+<br clear="all">
+
 ###Sticker Pack
 
 Example of Sticker Pack for iMessage.
 
 <img src="README_resources/stickers.jpg" width="200">
 
+###Core Data Stack (Created by [nolili](https://github.com/nolili))
+
+Simple Core Data stack using NSPersistentContainer.
+
+<img src="README_resources/coredata.jpg" width="200">
+
+###TabBar Customization
+
+Customization sample for UITabBar's badge using text attributes.
+
+<img src="README_resources/tab.jpg" width="200">
+
+###New filters
+
+New filters of CIImage.
+
+<img src="README_resources/filter1.jpg" width="200" alighn="left"> <img src="README_resources/filter2.jpg" width="200">
+<br clear="all">
+
+###New Fonts
+
+New Fonts gallery
+
+<img src="README_resources/fonts.jpg" width="200">
+
+###Proactive: Location Suggestions
+
+This sample demonstrates how to use new `mapItem` property of NSUserActivity to integrate with location suggestions.
+
 ###Attributed Speech
 
-Attributed Speech demo using `attributedSpeechString` of AVSpeechUtterance. But it seems NOT to affect the speech with this attribute. Anyone, please let me know how it works.
+Attributed Speech demo using `attributedSpeechString` of AVSpeechUtterance. 
+
+But it seems **NOT** to affect the speech with this attribute. Anyone, please let me know how to use this new API.
