@@ -35,12 +35,12 @@ struct SampleDataSource {
         ),
         Sample(
             title: "MPSCNN Basic",
-            detail: "Hand-writing digit detection using convolutional neural networks by Metal Performance Shaders.",
+            detail: "Hand-writing digit detection using Convolutional Neural Networks by Metal Performance Shaders.",
             classPrefix: "MetalCNNBasic"
         ),
         Sample(
-            title: "MetalImageRecognition",
-            detail: "MetalImageRecognition",
+            title: "Metal Image Recognition",
+            detail: "Real-time image recognition using CNN by Metal Performance Shaders.",
             classPrefix: "MetalImageRecognition"
         ),
         Sample(
