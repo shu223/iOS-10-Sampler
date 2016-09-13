@@ -24,19 +24,19 @@ struct Sample {
 struct SampleDataSource {
     let samples = [
         Sample(
-            title: "Live Photo Capturing",
-            detail: "Live Photo Capturing example using AVCapturePhotoOutput.",
-            classPrefix: "LivePhotoCapture"
-        ),
-        Sample(
             title: "Speech Recognition",
-            detail: "Speech Recognition demo using Speech Framework. All available language can be selected.",
+            detail: "Speech Recognition demo using Speech Framework. All available languages can be selected.",
             classPrefix: "SpeechRecognition"
         ),
         Sample(
             title: "Looper",
             detail: "Loop playback demo using AVPlayerLooper.",
             classPrefix: "Looper"
+        ),
+        Sample(
+            title: "Live Photo Capturing",
+            detail: "Live Photo Capturing example using AVCapturePhotoOutput.",
+            classPrefix: "LivePhotoCapture"
         ),
         Sample(
             title: "Audio Fade-in/out",

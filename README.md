@@ -21,6 +21,26 @@ It can **NOT** run on **Simulator**. (Because it uses Metal.)
 
 ##Contents
 
+###Speech Recognition
+
+Speech Recognition demo using Speech Framework. All available languages can be selected.
+
+<img src="README_resources/speechrecognition.jpg" width="405">
+
+###Looper
+
+Loop playback demo using AVPlayerLooper.
+
+<img src="README_resources/loop_normal.gif" align="left">
+<img src="README_resources/loop_short.gif">
+<br clear="all">
+
+###Live Photo Capturing
+
+Live Photo Capturing example using AVCapturePhotoOutput.
+
+<img src="README_resources/livephoto.jpg" width="200">
+
 ###PropertyAnimator1
 
 Animating UIView's `center` & `backgroundColor` using UIViewPropertyAnimator.
