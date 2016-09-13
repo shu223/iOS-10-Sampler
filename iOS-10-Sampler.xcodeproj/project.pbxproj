@@ -1674,7 +1674,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = 9Z86A4AWDE;
 				INFOPLIST_FILE = SamplerStickerPack/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = "Shuichi-Tsutsumi.iOS-10-Sampler.SamplerStickerPack";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-Sampler.SamplerStickerPack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -1686,7 +1686,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = 9Z86A4AWDE;
 				INFOPLIST_FILE = SamplerStickerPack/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = "Shuichi-Tsutsumi.iOS-10-Sampler.SamplerStickerPack";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-Sampler.SamplerStickerPack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -1790,7 +1790,7 @@
 				DEVELOPMENT_TEAM = 9Z86A4AWDE;
 				INFOPLIST_FILE = "iOS-10-Sampler/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Shuichi-Tsutsumi.iOS-10-Sampler";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-Sampler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS-10-Sampler/iOS10Sampler-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -1804,7 +1804,7 @@
 				DEVELOPMENT_TEAM = 9Z86A4AWDE;
 				INFOPLIST_FILE = "iOS-10-Sampler/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Shuichi-Tsutsumi.iOS-10-Sampler";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-Sampler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS-10-Sampler/iOS10Sampler-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -1819,7 +1819,7 @@
 				DEVELOPMENT_TEAM = 9Z86A4AWDE;
 				INFOPLIST_FILE = "iOS-10-SamplerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Shuichi-Tsutsumi.iOS-10-SamplerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-SamplerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-10-Sampler.app/iOS-10-Sampler";
@@ -1834,7 +1834,7 @@
 				DEVELOPMENT_TEAM = 9Z86A4AWDE;
 				INFOPLIST_FILE = "iOS-10-SamplerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Shuichi-Tsutsumi.iOS-10-SamplerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-SamplerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-10-Sampler.app/iOS-10-Sampler";
@@ -1848,7 +1848,7 @@
 				DEVELOPMENT_TEAM = 9Z86A4AWDE;
 				INFOPLIST_FILE = "iOS-10-SamplerUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Shuichi-Tsutsumi.iOS-10-SamplerUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-SamplerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "iOS-10-Sampler";
@@ -1862,7 +1862,7 @@
 				DEVELOPMENT_TEAM = 9Z86A4AWDE;
 				INFOPLIST_FILE = "iOS-10-SamplerUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Shuichi-Tsutsumi.iOS-10-SamplerUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-SamplerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "iOS-10-Sampler";
