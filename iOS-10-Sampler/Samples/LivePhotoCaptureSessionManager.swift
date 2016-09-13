@@ -41,10 +41,6 @@ class LivePhotoCaptureSessionManager: NSObject {
         
         session.beginConfiguration()
         
-        /*
-         We do not create an AVCaptureMovieFileOutput when setting up the session because the
-         AVCaptureMovieFileOutput does not support movie recording with AVCaptureSessionPresetPhoto.
-         */
         session.sessionPreset = AVCaptureSessionPresetPhoto
         
         // Add video input.
@@ -118,7 +114,6 @@ class LivePhotoCaptureSessionManager: NSObject {
     func authorize() {
         switch AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) {
         case .authorized:
-            // The user has previously granted access to the camera.
             break
             
         case .notDetermined:
@@ -139,7 +134,6 @@ class LivePhotoCaptureSessionManager: NSObject {
                 })
             
         default:
-            // The user has previously denied access.
             setupResult = .notAuthorized
         }
     }

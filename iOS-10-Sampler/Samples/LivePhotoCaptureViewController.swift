@@ -96,11 +96,6 @@ class LivePhotoCaptureViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction private func capturePhoto(_ photoButton: UIButton) {
-        /*
-         Retrieve the video preview layer's video orientation on the main queue before
-         entering the session queue. We do this to ensure UI elements are accessed on
-         the main thread and session configuration is done on the session queue.
-         */
         let videoPreviewLayerOrientation = previewView.videoPreviewLayer.connection.videoOrientation
         LivePhotoCaptureSessionManager.sharedManager.capture(videoOrientation: videoPreviewLayerOrientation) { (inProgressLivePhotoCapturesCount) in
             DispatchQueue.main.async { [unowned self] in
