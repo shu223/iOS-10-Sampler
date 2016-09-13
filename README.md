@@ -121,3 +121,20 @@ This sample demonstrates how to use new `mapItem` property of NSUserActivity to 
 Attributed Speech demo using `attributedSpeechString` of AVSpeechUtterance. 
 
 But it seems **NOT** to affect the speech with this attribute. Anyone, please let me know how to use this new API.
+
+
+##Author
+
+**Shuichi Tsutsumi**
+
+Freelance iOS programmer in Japan.
+
+- PAST WORKS:  [My Profile Summary](https://medium.com/@shu223/my-profile-summary-f14bfc1e7099#.vdh0i7clr)
+- PROFILES: [LinkedIn](https://www.linkedin.com/profile/view?id=214896557)
+- BLOGS: [English](https://medium.com/@shu223/) / [Japanese](http://d.hatena.ne.jp/shu223/)
+- CONTACTS: [Twitter](https://twitter.com/shu223) / [Facebook](https://www.facebook.com/shuichi.tsutsumi)
+
+
+##Special Thanks
+
+The icon is designed by [Okazu](https://www.facebook.com/pashimo)
