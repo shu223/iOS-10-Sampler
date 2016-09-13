@@ -75,9 +75,7 @@ class MetalImageRecognitionViewController: UIViewController, UIImagePickerContro
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        
+        super.viewWillAppear(animated)        
         videoCapture.startCapture()
     }
     

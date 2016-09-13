@@ -31,22 +31,27 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="hpR-SF-YSn" secondAttribute="bottom" constant="20" id="DvO-4t-Nir"/>
-                                    <constraint firstItem="hpR-SF-YSn" firstAttribute="leading" secondItem="xc3-W5-qAq" secondAttribute="leading" constant="20" id="QeY-hJ-Cwm"/>
-                                    <constraint firstItem="hpR-SF-YSn" firstAttribute="top" secondItem="xc3-W5-qAq" secondAttribute="top" constant="36" id="fRn-HZ-A7M"/>
-                                    <constraint firstAttribute="trailing" secondItem="hpR-SF-YSn" secondAttribute="trailing" constant="20" id="odX-Yc-N24"/>
+                                    <constraint firstAttribute="bottom" secondItem="hpR-SF-YSn" secondAttribute="bottom" constant="16" id="DvO-4t-Nir"/>
+                                    <constraint firstItem="hpR-SF-YSn" firstAttribute="leading" secondItem="xc3-W5-qAq" secondAttribute="leading" constant="16" id="QeY-hJ-Cwm"/>
+                                    <constraint firstItem="hpR-SF-YSn" firstAttribute="top" secondItem="xc3-W5-qAq" secondAttribute="top" constant="16" id="fRn-HZ-A7M"/>
+                                    <constraint firstAttribute="trailing" secondItem="hpR-SF-YSn" secondAttribute="trailing" constant="16" id="odX-Yc-N24"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xc3-W5-qAq" firstAttribute="top" secondItem="f5H-zY-hKe" secondAttribute="top" id="55u-cF-LAA"/>
-                            <constraint firstAttribute="trailing" secondItem="xc3-W5-qAq" secondAttribute="trailing" id="GbP-lM-qpb"/>
+                            <constraint firstAttribute="trailing" secondItem="xc3-W5-qAq" secondAttribute="trailing" constant="4" id="GbP-lM-qpb"/>
                             <constraint firstAttribute="trailing" secondItem="MPW-dG-rVE" secondAttribute="trailing" id="GpE-Xt-H2b"/>
                             <constraint firstItem="MPW-dG-rVE" firstAttribute="top" secondItem="Cze-I2-EGa" secondAttribute="bottom" id="I48-Xy-1Mx"/>
                             <constraint firstAttribute="bottom" secondItem="MPW-dG-rVE" secondAttribute="bottom" id="N7z-Ew-IAo"/>
+                            <constraint firstItem="Z5a-YL-kYA" firstAttribute="top" secondItem="xc3-W5-qAq" secondAttribute="bottom" constant="4" id="Q6h-tE-Uil"/>
                             <constraint firstItem="MPW-dG-rVE" firstAttribute="leading" secondItem="f5H-zY-hKe" secondAttribute="leading" id="kVi-v1-w6X"/>
-                            <constraint firstItem="xc3-W5-qAq" firstAttribute="leading" secondItem="f5H-zY-hKe" secondAttribute="leading" id="qBL-IY-3ly"/>
+                            <constraint firstItem="xc3-W5-qAq" firstAttribute="leading" secondItem="f5H-zY-hKe" secondAttribute="leading" constant="4" id="qBL-IY-3ly"/>
                         </constraints>
                     </view>
                     <connections>
