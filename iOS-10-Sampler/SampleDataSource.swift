@@ -64,6 +64,11 @@ struct SampleDataSource {
             classPrefix: "PropertyAnimatorEffect"
         ),
         Sample(
+            title: "Preview Interaction",
+            detail: "Peek & Pop interactions with 3D touch using UIPreviewInteraction.",
+            classPrefix: "PreviewInteraction"
+        ),
+        Sample(
             title: "Attributed Speech",
             detail: "Attributed Speech demo using attributedSpeechString of AVSpeechUtterance.",
             classPrefix: "AttributedSpeech"
