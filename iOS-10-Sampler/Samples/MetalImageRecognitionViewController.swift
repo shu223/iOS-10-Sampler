@@ -31,6 +31,17 @@ class MetalImageRecognitionViewController: UIViewController, UIImagePickerContro
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Load default device.
+        device = MTLCreateSystemDefaultDevice()
+        
+        // Make sure the current device supports MetalPerformanceShaders.
+        guard MPSSupportsMTLDevice(device) else {
+            showAlert(title: "Not Supported", message: "MetalPerformanceShaders is not supported on current device", handler: { (action) in
+                self.navigationController!.popViewController(animated: true)
+            })
+            return
+        }
+
         let spec = VideoSpec(fps: 3, size: CGSize(width: 1280, height: 720))
         videoCapture = VideoCapture(cameraType: .back,
                                     preferredSpec: spec,
@@ -50,15 +61,6 @@ class MetalImageRecognitionViewController: UIViewController, UIImagePickerContro
             self.runNetwork()
         }
         
-        // Load default device.
-        device = MTLCreateSystemDefaultDevice()
-        
-        // Make sure the current device supports MetalPerformanceShaders.
-        guard MPSSupportsMTLDevice(device) else {
-            print("Metal Performance Shaders not Supported on current Device")
-            return
-        }
-        
         // Load any resources required for rendering.
         
         // Create new command queue.
@@ -75,16 +77,19 @@ class MetalImageRecognitionViewController: UIViewController, UIImagePickerContro
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)        
+        super.viewWillAppear(animated)
+        guard let videoCapture = videoCapture else {return}
         videoCapture.startCapture()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        guard let videoCapture = videoCapture else {return}
         videoCapture.resizePreview()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        guard let videoCapture = videoCapture else {return}
         videoCapture.stopCapture()
         
         navigationController?.setNavigationBarHidden(false, animated: true)

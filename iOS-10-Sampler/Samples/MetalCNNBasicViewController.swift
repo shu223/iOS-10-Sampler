@@ -37,7 +37,9 @@ class MetalCNNBasicViewController: UIViewController {
         
         // Make sure the current device supports MetalPerformanceShaders.
         guard MPSSupportsMTLDevice(device) else {
-            print("Metal Performance Shaders not Supported on current Device")
+            showAlert(title: "Not Supported", message: "MetalPerformanceShaders is not supported on current device", handler: { (action) in
+                self.navigationController!.popViewController(animated: true)
+            })
             return
         }
         
