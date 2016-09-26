@@ -13,7 +13,7 @@ class PropertyAnimatorViewController: UIViewController {
     private var targetLocation: CGPoint!
     
     @IBOutlet private weak var objectView: UIView!
-    @IBOutlet weak var springSwitch: UISwitch!
+    @IBOutlet private weak var springSwitch: UISwitch!
 
     override func viewDidLoad() {
         super.viewDidLoad()

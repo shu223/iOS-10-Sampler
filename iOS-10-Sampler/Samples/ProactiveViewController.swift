@@ -15,8 +15,8 @@ class ProactiveViewController: UIViewController, NSUserActivityDelegate, CLLocat
     private let locationManager = CLLocationManager()
     private var mapItem: MKMapItem!
     
-    @IBOutlet weak var openinBtn: UIButton!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet private weak var openinBtn: UIButton!
+    @IBOutlet private weak var label: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()

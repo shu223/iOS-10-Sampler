@@ -31,8 +31,7 @@ class RootViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? RootViewCell else {fatalError()}
         
         let sample = dataSource.samples[(indexPath as NSIndexPath).row]
-        cell.titleLabel.text  = sample.title
-        cell.detailLabel.text = sample.detail
+        cell.showSample(sample)
         
         return cell
     }

@@ -11,7 +11,7 @@ import UIKit
 class TabBadgeViewController: UIViewController, UITabBarDelegate {
 
     var badgeCnt: UInt = 0
-    @IBOutlet weak var tabBar: UITabBar!
+    @IBOutlet private weak var tabBar: UITabBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()

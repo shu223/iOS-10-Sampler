@@ -18,9 +18,9 @@ class SpeechRecognitionViewController: UIViewController, SFSpeechRecognizerDeleg
     private var locales: [Locale]!
     private let defaultLocale = Locale(identifier: "en-US")
     
-    @IBOutlet weak var textView : UITextView!
-    @IBOutlet weak var recordBtn : UIButton!
-    @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet private weak var textView : UITextView!
+    @IBOutlet private weak var recordBtn : UIButton!
+    @IBOutlet private weak var picker: UIPickerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

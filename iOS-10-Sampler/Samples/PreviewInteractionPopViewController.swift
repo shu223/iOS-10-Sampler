@@ -14,7 +14,7 @@ class PreviewInteractionPopViewController: UIViewController {
 
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet weak var effectView: UIVisualEffectView!
+    @IBOutlet private weak var effectView: UIVisualEffectView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

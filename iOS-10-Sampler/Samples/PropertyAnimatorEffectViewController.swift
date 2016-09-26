@@ -13,8 +13,8 @@ class PropertyAnimatorEffectViewController: UIViewController {
 
     private var animator: UIViewPropertyAnimator!
 
-    @IBOutlet weak var effectView: UIVisualEffectView!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet private weak var effectView: UIVisualEffectView!
+    @IBOutlet private weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

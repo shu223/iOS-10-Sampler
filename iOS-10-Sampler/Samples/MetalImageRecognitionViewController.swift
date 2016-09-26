@@ -25,8 +25,8 @@ class MetalImageRecognitionViewController: UIViewController, UIImagePickerContro
 
     private var videoCapture: VideoCapture!
     
-    @IBOutlet weak var predictLabel: UILabel!
-    @IBOutlet weak var previewView: UIView!
+    @IBOutlet private weak var predictLabel: UILabel!
+    @IBOutlet private weak var previewView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

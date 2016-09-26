@@ -12,8 +12,8 @@ class LooperViewController: UIViewController {
 
     private var looper: Looper!
     
-    @IBOutlet weak var minSlider: UISlider!
-    @IBOutlet weak var maxSlider: UISlider!
+    @IBOutlet private weak var minSlider: UISlider!
+    @IBOutlet private weak var maxSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()

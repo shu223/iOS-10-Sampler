@@ -10,8 +10,8 @@ import UIKit
 
 class RootViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var detailLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,4 +21,8 @@ class RootViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
+    func showSample(_ sample: Sample) {
+        titleLabel.text  = sample.title
+        detailLabel.text = sample.detail
+    }
 }

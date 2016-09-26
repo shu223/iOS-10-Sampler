@@ -21,9 +21,9 @@ class MetalCNNBasicViewController: UIViewController {
     let mnistInputWidth  = 28
     let mnistInputHeight = 28
     
-    @IBOutlet weak var digitView: DrawView!
-    @IBOutlet weak var predictionLabel: UILabel!
-    @IBOutlet weak var clearBtn: UIButton!
+    @IBOutlet private weak var digitView: DrawView!
+    @IBOutlet private weak var predictionLabel: UILabel!
+    @IBOutlet private weak var clearBtn: UIButton!
     
     
     override func viewDidLoad() {

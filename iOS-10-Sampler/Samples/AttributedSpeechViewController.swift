@@ -11,7 +11,7 @@ import AVFoundation
 
 class AttributedSpeechViewController: UIViewController {
 
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet private weak var label: UILabel!
     
     private let speech = AVSpeechSynthesizer()
     private let baseStr = "iOS 10 Sampler is a collection of code examples for new APIs of iOS 10."

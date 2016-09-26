@@ -18,7 +18,7 @@ class UserNotificationViewController: UIViewController, UNUserNotificationCenter
     private let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
     private var request: UNNotificationRequest!
 
-    @IBOutlet weak var notifyBtn: UIButton!
+    @IBOutlet private weak var notifyBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
