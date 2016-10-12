@@ -30,9 +30,9 @@ class LivePhotoCaptureDelegate: NSObject, AVCapturePhotoCaptureDelegate {
             creationRequest.addResource(with: .photo, data: photoData, options: nil)
             
             if let livePhotoCompanionMovieURL = self.livePhotoCompanionMovieURL {
-                let livePhotoCompanionMovieFileResourceOptions = PHAssetResourceCreationOptions()
-                livePhotoCompanionMovieFileResourceOptions.shouldMoveFile = true
-                creationRequest.addResource(with: .pairedVideo, fileURL: livePhotoCompanionMovieURL, options: livePhotoCompanionMovieFileResourceOptions)
+                let options = PHAssetResourceCreationOptions()
+                options.shouldMoveFile = true
+                creationRequest.addResource(with: .pairedVideo, fileURL: livePhotoCompanionMovieURL, options: options)
             }
             
             }, completionHandler: { [unowned self] success, error in
