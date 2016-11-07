@@ -137,8 +137,6 @@ Freelance iOS programmer in Japan.
 - BLOGS: [English](https://medium.com/@shu223/) / [Japanese](http://d.hatena.ne.jp/shu223/)
 - CONTACTS: [Twitter](https://twitter.com/shu223) / [Facebook](https://www.facebook.com/shuichi.tsutsumi)
 
-<a href='https://pledgie.com/campaigns/32568'><img alt='Click here to lend your support to: iOS-10-Sampler and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/32568.png?skin_name=chrome' border='0' ></a>
-
 
 ##Special Thanks
 
