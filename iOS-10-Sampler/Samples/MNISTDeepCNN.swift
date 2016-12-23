@@ -17,13 +17,13 @@ import Accelerate
 
 class MNISTDeepCNN {
     // MPSImageDescriptors for different layers outputs to be put in
-    let sid = MPSImageDescriptor(channelFormat: MPSImageFeatureChannelFormat.unorm8, width: 28, height: 28, featureChannels: 1)
-    let did = MPSImageDescriptor(channelFormat: MPSImageFeatureChannelFormat.float16, width: 1, height: 1, featureChannels: 10)
-    let c1id  = MPSImageDescriptor(channelFormat: MPSImageFeatureChannelFormat.float16, width: 28, height: 28, featureChannels: 32)
-    let p1id  = MPSImageDescriptor(channelFormat: MPSImageFeatureChannelFormat.float16, width: 14, height: 14, featureChannels: 32)
-    let c2id  = MPSImageDescriptor(channelFormat: MPSImageFeatureChannelFormat.float16, width: 14, height: 14, featureChannels: 64)
-    let p2id  = MPSImageDescriptor(channelFormat: MPSImageFeatureChannelFormat.float16, width: 7 , height: 7 , featureChannels: 64)
-    let fc1id = MPSImageDescriptor(channelFormat: MPSImageFeatureChannelFormat.float16, width: 1 , height: 1 , featureChannels: 1024)
+    let sid = MPSImageDescriptor(channelFormat: .unorm8, width: 28, height: 28, featureChannels: 1)
+    let did = MPSImageDescriptor(channelFormat: .float16, width: 1, height: 1, featureChannels: 10)
+    let c1id  = MPSImageDescriptor(channelFormat: .float16, width: 28, height: 28, featureChannels: 32)
+    let p1id  = MPSImageDescriptor(channelFormat: .float16, width: 14, height: 14, featureChannels: 32)
+    let c2id  = MPSImageDescriptor(channelFormat: .float16, width: 14, height: 14, featureChannels: 64)
+    let p2id  = MPSImageDescriptor(channelFormat: .float16, width: 7 , height: 7 , featureChannels: 64)
+    let fc1id = MPSImageDescriptor(channelFormat: .float16, width: 1 , height: 1 , featureChannels: 1024)
     
     // MPSImages and layers declared
     var srcImage, dstImage : MPSImage
@@ -49,6 +49,8 @@ class MNISTDeepCNN {
         
         
         // Initialize MPSImage from descriptors
+        srcImage    = MPSImage(device: device, imageDescriptor: sid)
+        dstImage    = MPSImage(device: device, imageDescriptor: did)
         c1Image     = MPSImage(device: device, imageDescriptor: c1id)
         p1Image     = MPSImage(device: device, imageDescriptor: p1id)
         c2Image     = MPSImage(device: device, imageDescriptor: c2id)
@@ -91,10 +93,6 @@ class MNISTDeepCNN {
                                        device: device,
                                        kernelParamsBinaryName: "fc2")
         
-        // Initialize MPSImage from descriptors
-        srcImage = MPSImage(device: device, imageDescriptor: sid)
-        dstImage = MPSImage(device: device, imageDescriptor: did)
-
         // prepare softmax layer to be applied at the end to get a clear label
         softmax = MPSCNNSoftMax(device: device)
     }

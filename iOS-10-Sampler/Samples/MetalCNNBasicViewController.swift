@@ -18,8 +18,8 @@ class MetalCNNBasicViewController: UIViewController {
     var network: MNISTDeepCNN!
     
     // MNIST dataset image parameters
-    let mnistInputWidth  = 28
-    let mnistInputHeight = 28
+    let inputWidth  = 28
+    let inputHeight = 28
     
     @IBOutlet private weak var digitView: DrawView!
     @IBOutlet private weak var predictionLabel: UILabel!
@@ -60,19 +60,21 @@ class MetalCNNBasicViewController: UIViewController {
     
     @IBAction func detectBtnTapped(sender: UIButton) {
         // get the digitView context so we can get the pixel values from it to intput to network
-        let context = digitView.getViewContext()
+        guard let pixelData = digitView.getViewContext()?.data else {return}
         
         // validate NeuralNetwork was initialized properly
         assert(network != nil)
         
         // putting input into MTLTexture in the MPSImage
-        network.srcImage.texture.replace(region: MTLRegion( origin: MTLOrigin(x: 0, y: 0, z: 0),
-                                                        size: MTLSize(width: mnistInputWidth, height: mnistInputHeight, depth: 1)),
-                                             mipmapLevel: 0,
-                                             slice: 0,
-                                             withBytes: context!.data!,
-                                             bytesPerRow: mnistInputWidth,
-                                             bytesPerImage: 0)
+        let region = MTLRegion(origin: MTLOrigin(x: 0, y: 0, z: 0),
+                               size: MTLSize(width: inputWidth, height: inputHeight, depth: 1));
+        network.srcImage.texture.replace(
+            region: region,
+            mipmapLevel: 0,
+            slice: 0,
+            withBytes: pixelData,
+            bytesPerRow: inputWidth,
+            bytesPerImage: 0)
         // run the network forward pass
         let label = network.forward()
         
