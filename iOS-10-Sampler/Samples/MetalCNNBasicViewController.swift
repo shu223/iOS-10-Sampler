@@ -60,8 +60,8 @@ class MetalCNNBasicViewController: UIViewController {
     
     @IBAction func detectBtnTapped(sender: UIButton) {
         // get the digitView context so we can get the pixel values from it to intput to network
-        guard let pixelData = digitView.getViewContext()?.data else {return}
-        
+        guard let context = digitView.getViewContext() else {return}
+
         // validate NeuralNetwork was initialized properly
         assert(network != nil)
         
@@ -72,7 +72,7 @@ class MetalCNNBasicViewController: UIViewController {
             region: region,
             mipmapLevel: 0,
             slice: 0,
-            withBytes: pixelData,
+            withBytes: context.data!,
             bytesPerRow: inputWidth,
             bytesPerImage: 0)
         // run the network forward pass

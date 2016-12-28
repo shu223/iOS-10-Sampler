@@ -122,13 +122,11 @@ class MNISTDeepCNN {
             let finalLayer = MPSImage(device: commandBuffer.device, imageDescriptor: did)
             
             // encode layers to metal commandBuffer
-            if inputImage == nil {
+            if let inputImage = inputImage {
+                conv1.encode(commandBuffer: commandBuffer, sourceImage: inputImage, destinationImage: c1Image)
+            } else{
                 conv1.encode(commandBuffer: commandBuffer, sourceImage: srcImage, destinationImage: c1Image)
             }
-            else{
-                conv1.encode(commandBuffer: commandBuffer, sourceImage: inputImage!, destinationImage: c1Image)
-            }
-            
             pool.encode   (commandBuffer: commandBuffer, sourceImage: c1Image   , destinationImage: p1Image)
             conv2.encode  (commandBuffer: commandBuffer, sourceImage: p1Image   , destinationImage: c2Image)
             pool.encode   (commandBuffer: commandBuffer, sourceImage: c2Image   , destinationImage: p2Image)
