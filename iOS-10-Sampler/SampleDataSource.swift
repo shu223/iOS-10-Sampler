@@ -107,5 +107,10 @@ struct SampleDataSource {
             detail: "Attributed Speech demo using attributedSpeechString of AVSpeechUtterance.",
             classPrefix: "AttributedSpeech"
         ),
+        Sample(
+            title: "Haptic Feedback",
+            detail: "Haptic Feedbacks using UIFeedbackGenerator.",
+            classPrefix: "Haptic"
+        ),
         ]
 }

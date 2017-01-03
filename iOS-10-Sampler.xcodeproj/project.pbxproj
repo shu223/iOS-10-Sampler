@@ -267,6 +267,8 @@
 		8AB430791D7A6B4A00A3BD98 /* iOS_10_SamplerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430781D7A6B4A00A3BD98 /* iOS_10_SamplerUITests.swift */; };
 		8AB430871D7A6DA700A3BD98 /* RootViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430861D7A6DA700A3BD98 /* RootViewCell.swift */; };
 		8AB430891D7A6DF300A3BD98 /* SampleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430881D7A6DF300A3BD98 /* SampleDataSource.swift */; };
+		8ACF88331E1B8F7C00E1555B /* HapticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACF88321E1B8F7C00E1555B /* HapticViewController.swift */; };
+		8ACF88351E1B8F9A00E1555B /* Haptic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ACF88341E1B8F9A00E1555B /* Haptic.storyboard */; };
 		8C3A5F501D7EF7BE00B7A480 /* Message+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A5F4C1D7EF7BE00B7A480 /* Message+CoreDataClass.swift */; };
 		8C3A5F511D7EF7BE00B7A480 /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A5F4D1D7EF7BE00B7A480 /* Message+CoreDataProperties.swift */; };
 		8C3A5F521D7EF7BE00B7A480 /* PersistentContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A5F4E1D7EF7BE00B7A480 /* PersistentContainerViewController.swift */; };
@@ -582,6 +584,8 @@
 		8AB4307A1D7A6B4A00A3BD98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AB430861D7A6DA700A3BD98 /* RootViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewCell.swift; sourceTree = "<group>"; };
 		8AB430881D7A6DF300A3BD98 /* SampleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleDataSource.swift; sourceTree = "<group>"; };
+		8ACF88321E1B8F7C00E1555B /* HapticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticViewController.swift; sourceTree = "<group>"; };
+		8ACF88341E1B8F9A00E1555B /* Haptic.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Haptic.storyboard; sourceTree = "<group>"; };
 		8C3A5F4C1D7EF7BE00B7A480 /* Message+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8C3A5F4D1D7EF7BE00B7A480 /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8C3A5F4E1D7EF7BE00B7A480 /* PersistentContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentContainerViewController.swift; sourceTree = "<group>"; };
@@ -1167,8 +1171,18 @@
 				8A3F09AF1D83F80600D28DF2 /* New Fonts */,
 				8A081D181D876F5F00D7DDF4 /* PreviewInteraction */,
 				8A081E9D1D8841EF00D7DDF4 /* Proactive */,
+				8ACF88361E1B8FAF00E1555B /* Haptic */,
 			);
 			path = Samples;
+			sourceTree = "<group>";
+		};
+		8ACF88361E1B8FAF00E1555B /* Haptic */ = {
+			isa = PBXGroup;
+			children = (
+				8ACF88321E1B8F7C00E1555B /* HapticViewController.swift */,
+				8ACF88341E1B8F9A00E1555B /* Haptic.storyboard */,
+			);
+			name = Haptic;
 			sourceTree = "<group>";
 		};
 		8C3A5F531D7EF7C300B7A480 /* PersistentContainer */ = {
@@ -1409,6 +1423,7 @@
 				8A3F084D1D81D35000D28DF2 /* bias_mixed_10_tower_mixed_conv.dat in Resources */,
 				8A3F08841D81D35000D28DF2 /* bias_mixed_7_tower_1_conv_4.dat in Resources */,
 				8A3F08FE1D81D35000D28DF2 /* weights_softmax.dat in Resources */,
+				8ACF88351E1B8F9A00E1555B /* Haptic.storyboard in Resources */,
 				8A3F08F81D81D35000D28DF2 /* weights_mixed_tower_1_conv.dat in Resources */,
 				8A3F08E91D81D35000D28DF2 /* weights_mixed_8_tower_1_conv_1.dat in Resources */,
 				8A3F08621D81D35000D28DF2 /* bias_mixed_4_tower_1_conv.dat in Resources */,
@@ -1575,6 +1590,7 @@
 				8A5AE0BC1D7D58AB0095209E /* LivePhotoCaptureDelegate.swift in Sources */,
 				8A081D131D87394200D7DDF4 /* UIViewController+alert.swift in Sources */,
 				8AABF1511D7B53FF004A1FE1 /* SpeechRecognitionViewController.swift in Sources */,
+				8ACF88331E1B8F7C00E1555B /* HapticViewController.swift in Sources */,
 				8AA074931D86830200FEAC28 /* VideoCapture.swift in Sources */,
 				8A1CC3621D7AAFBC00562709 /* MetalCNNBasicViewController.swift in Sources */,
 				8AA074911D86830200FEAC28 /* AVCaptureDevice+Extension.swift in Sources */,
