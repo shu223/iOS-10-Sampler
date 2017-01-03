@@ -125,6 +125,12 @@ Attributed Speech demo using `attributedSpeechString` of AVSpeechUtterance.
 
 But it seems **NOT** to affect the speech with this attribute. Anyone, please let me know how to use this new API.
 
+###Haptic Feedback
+
+Haptic Feedbacks using UIFeedbackGenerator.
+
+<img src="README_resources/haptic.jpg" width="200">
+
 
 ##Author
 
