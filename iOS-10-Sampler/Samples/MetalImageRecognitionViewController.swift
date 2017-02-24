@@ -32,7 +32,12 @@ class MetalImageRecognitionViewController: UIViewController, UIImagePickerContro
         super.viewDidLoad()
 
         // Load default device.
-        device = MTLCreateSystemDefaultDevice()
+        guard let device = MTLCreateSystemDefaultDevice() else {
+            showAlert(title: "Not Supported", message: "Metal is not supported on current device", handler: { (action) in
+                self.navigationController!.popViewController(animated: true)
+            })
+            return
+        }
         
         // Make sure the current device supports MetalPerformanceShaders.
         guard MPSSupportsMTLDevice(device) else {
@@ -64,10 +69,10 @@ class MetalImageRecognitionViewController: UIViewController, UIImagePickerContro
         // Load any resources required for rendering.
         
         // Create new command queue.
-        commandQueue = device!.makeCommandQueue()
+        commandQueue = device.makeCommandQueue()
         
         // make a textureLoader to get our input images as MTLTextures
-        textureLoader = MTKTextureLoader(device: device!)
+        textureLoader = MTKTextureLoader(device: device)
         
         // Load the appropriate Network
         inception3Net = Inception3Net(withCommandQueue: commandQueue)

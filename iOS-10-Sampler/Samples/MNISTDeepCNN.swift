@@ -38,7 +38,7 @@ class MNISTDeepCNN {
     var commandQueue : MTLCommandQueue
     var device : MTLDevice
     
-    init(withCommandQueue commandQueueIn: MTLCommandQueue!) {
+    init(withCommandQueue commandQueueIn: MTLCommandQueue) {
         commandQueue = commandQueueIn
         device = commandQueueIn.device
         

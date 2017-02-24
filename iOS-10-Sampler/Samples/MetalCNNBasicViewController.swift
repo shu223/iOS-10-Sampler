@@ -33,7 +33,12 @@ class MetalCNNBasicViewController: UIViewController {
         predictionLabel.text = nil
 
         // Load default device.
-        device = MTLCreateSystemDefaultDevice()
+        guard let device = MTLCreateSystemDefaultDevice() else {
+            showAlert(title: "Not Supported", message: "Metal is not supported on current device", handler: { (action) in
+                self.navigationController!.popViewController(animated: true)
+            })
+            return
+        }
         
         // Make sure the current device supports MetalPerformanceShaders.
         guard MPSSupportsMTLDevice(device) else {
@@ -44,7 +49,7 @@ class MetalCNNBasicViewController: UIViewController {
         }
         
         // Create new command queue.
-        commandQueue = device!.makeCommandQueue()
+        commandQueue = device.makeCommandQueue()
         
         // initialize the networks we shall use to detect digits
         network  = MNISTDeepCNN(withCommandQueue: commandQueue)
