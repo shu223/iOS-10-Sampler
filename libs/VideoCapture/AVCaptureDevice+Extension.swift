@@ -76,7 +76,7 @@ extension AVCaptureDevice {
         } else {
             selectedFormat = formatWithHighestResolution(availableFormats)
         }
-        print("selected format: \(selectedFormat)")
+        print("selected format: \(String(describing: selectedFormat))")
         
         if let selectedFormat = selectedFormat {
             do {
