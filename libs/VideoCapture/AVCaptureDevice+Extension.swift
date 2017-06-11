@@ -9,17 +9,10 @@ import AVFoundation
 
 extension AVCaptureDevice {
     private func availableFormatsFor(preferredFps: Float64) -> [AVCaptureDevice.Format] {
-        guard let allFormats = formats as? [AVCaptureDevice.Format] else {
-            return []
-        }
-        
         var availableFormats: [AVCaptureDevice.Format] = []
-        for format in allFormats
+        for format in formats
         {
-            guard let ranges = format.videoSupportedFrameRateRanges as? [AVCaptureDevice.Format.FrameRateRange] else {
-                continue
-            }
-            
+            let ranges = format.videoSupportedFrameRateRanges
             for range in ranges where range.minFrameRate <= preferredFps && preferredFps <= range.maxFrameRate
             {
                 availableFormats.append(format)
@@ -62,34 +55,30 @@ extension AVCaptureDevice {
         let availableFormats: [AVCaptureDevice.Format]
         if let preferredFps = preferredSpec.fps {
             availableFormats = availableFormatsFor(preferredFps: Float64(preferredFps))
-        }
-        else {
-            guard let allFormats = formats as? [AVCaptureDevice.Format] else { return }
-            availableFormats = allFormats
-        }
-        
-        var selectedFormat: AVCaptureDevice.Format?
-        if let preferredSize = preferredSpec.size {
-            selectedFormat = formatFor(preferredSize: preferredSize, availableFormats: availableFormats)
         } else {
-            selectedFormat = formatWithHighestResolution(availableFormats)
+            availableFormats = formats
         }
-        print("selected format: \(String(describing: selectedFormat))")
         
-        if let selectedFormat = selectedFormat {
-            do {
-                try lockForConfiguration()
-            }
-            catch {
-                fatalError("")
-            }
-            activeFormat = selectedFormat
-            
-            if let preferredFps = preferredSpec.fps {
-                activeVideoMinFrameDuration = CMTimeMake(1, preferredFps)
-                activeVideoMaxFrameDuration = CMTimeMake(1, preferredFps)
-                unlockForConfiguration()
-            }
+        var format: AVCaptureDevice.Format?
+        if let preferredSize = preferredSpec.size {
+            format = formatFor(preferredSize: preferredSize, availableFormats: availableFormats)
+        } else {
+            format = formatWithHighestResolution(availableFormats)
+        }
+        
+        guard let selectedFormat = format else {return}
+        print("selected format: \(selectedFormat)")
+        do {
+            try lockForConfiguration()
+        } catch {
+            fatalError("")
+        }
+        activeFormat = selectedFormat
+        
+        if let preferredFps = preferredSpec.fps {
+            activeVideoMinFrameDuration = CMTimeMake(1, preferredFps)
+            activeVideoMaxFrameDuration = CMTimeMake(1, preferredFps)
+            unlockForConfiguration()
         }
     }
 }
