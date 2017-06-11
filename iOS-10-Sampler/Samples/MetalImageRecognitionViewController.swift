@@ -126,7 +126,9 @@ class MetalImageRecognitionViewController: UIViewController, UIImagePickerContro
             
             // display top-5 predictions for what the object should be labelled
             var resultStr = ""
-            inception3Net.getResults().forEach({ (label, prob) in
+            inception3Net.getResults().forEach({ (arg) in
+                
+                let (label, prob) = arg
                 resultStr = resultStr + label + "\t" + String(format: "%.1f", prob * 100) + "%\n\n"
             })
             
