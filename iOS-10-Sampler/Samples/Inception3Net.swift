@@ -1063,7 +1063,11 @@ class Inception3Net{
         // In this sample code, the aggregate benefit of the use of MPSTemporaryImages
         // is to reduce the area of memory allocated to 1/4 and save about 3 ms of CPU
         // time.
-        MPSTemporaryImage.prefetchStorage(with: commandBuffer, imageDescriptorList: [sid, inid, m0id, m1id, m2id, m3id, m4id, m5id, m6id, m7id, m8id, m9id, m10id])
+        let descriptors = [sid, inid, m0id, m1id, m2id, m3id, m4id, m5id, m6id, m7id, m8id, m9id, m10id]
+        for descriptor in descriptors {
+            descriptor.storageMode = .private
+        }
+        MPSTemporaryImage.prefetchStorage(with: commandBuffer, imageDescriptorList: descriptors)
         
         // we use preImage to hold preprocesing intermediate results
         preImage = MPSTemporaryImage(commandBuffer: commandBuffer, imageDescriptor: sid)
