@@ -106,7 +106,7 @@ class MetalImageRecognitionViewController: UIViewController, UIImagePickerContro
     }
     
     /**
-     This function gets a commanBuffer and encodes layers in it. It follows that by commiting the commandBuffer and getting labels
+     This function gets a commandBuffer and encodes layers in it. It follows that by commiting the commandBuffer and getting labels
      */
     func runNetwork() {
         let startTime = CACurrentMediaTime()
