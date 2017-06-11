@@ -34,7 +34,7 @@ class VideoCapture: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
 
         // setup video format
         do {
-            captureSession.sessionPreset = AVCaptureSessionPresetInputPriority
+            captureSession.sessionPreset = AVCaptureSession.Preset.inputPriority
             if let preferredSpec = preferredSpec {
                 // update the format with a preferred fps
                 videoDevice.updateFormatWithPreferredVideoSpec(preferredSpec: preferredSpec)
@@ -58,7 +58,7 @@ class VideoCapture: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
         
         // setup audio device input
         do {
-            let audioDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeAudio)
+            guard let audioDevice = AVCaptureDevice.default(for: .audio) else {fatalError()}
             let audioDeviceInput: AVCaptureDeviceInput
             do {
                 audioDeviceInput = try AVCaptureDeviceInput(device: audioDevice)
@@ -74,10 +74,10 @@ class VideoCapture: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
 
         // setup preview
         if let previewContainer = previewContainer {
-            guard let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession) else {fatalError()}
+            let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
             previewLayer.frame = previewContainer.bounds
             previewLayer.contentsGravity = kCAGravityResizeAspectFill
-            previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+            previewLayer.videoGravity = .resizeAspectFill
             previewContainer.insertSublayer(previewLayer, at: 0)
             self.previewLayer = previewLayer
         }
@@ -85,7 +85,7 @@ class VideoCapture: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
         // setup video output
         do {
             let videoDataOutput = AVCaptureVideoDataOutput()
-            videoDataOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as AnyHashable: NSNumber(value: kCVPixelFormatType_32BGRA)]
+            videoDataOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as AnyHashable as! String: NSNumber(value: kCVPixelFormatType_32BGRA)]
             videoDataOutput.alwaysDiscardsLateVideoFrames = true
             let queue = DispatchQueue(label: "com.shu223.videosamplequeue")
             videoDataOutput.setSampleBufferDelegate(self, queue: queue)
@@ -94,7 +94,7 @@ class VideoCapture: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
             }
             captureSession.addOutput(videoDataOutput)
 
-            videoConnection = videoDataOutput.connection(withMediaType: AVMediaTypeVideo)
+            videoConnection = videoDataOutput.connection(with: .video)
         }
         
         // setup audio output
@@ -107,7 +107,7 @@ class VideoCapture: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
             }
             captureSession.addOutput(audioDataOutput)
 
-            audioConnection = audioDataOutput.connection(withMediaType: AVMediaTypeAudio)
+            audioConnection = audioDataOutput.connection(with: .audio)
         }
 
         // setup asset writer
@@ -151,7 +151,7 @@ class VideoCapture: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
     // =========================================================================
     // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
     
-    func captureOutput(_ captureOutput: AVCaptureOutput!, didDrop sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
+    func captureOutput(_ captureOutput: AVCaptureOutput, didDrop sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
 //        print("\(self.classForCoder)/" + #function)
     }
 
