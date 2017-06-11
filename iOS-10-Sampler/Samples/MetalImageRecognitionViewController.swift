@@ -109,11 +109,10 @@ class MetalImageRecognitionViewController: UIViewController, UIImagePickerContro
      This function gets a commanBuffer and encodes layers in it. It follows that by commiting the commandBuffer and getting labels
      */
     func runNetwork() {
-        let startTime = CACurrentMediaTime()
-
         // to deliver optimal performance we leave some resources used in MPSCNN to be released at next call of autoreleasepool,
         // so the user can decide the appropriate time to release this
         autoreleasepool{
+//            let startTime = CACurrentMediaTime()
             // encoding command buffer
             let commandBuffer = commandQueue.makeCommandBuffer()
             
@@ -131,13 +130,12 @@ class MetalImageRecognitionViewController: UIViewController, UIImagePickerContro
                 let (label, prob) = arg
                 resultStr = resultStr + label + "\t" + String(format: "%.1f", prob * 100) + "%\n\n"
             })
+//            let endTime = CACurrentMediaTime()
+//            print("Running Time: \(endTime - startTime) [sec]")
             
             DispatchQueue.main.async {
                 self.predictLabel.text = resultStr
             }
         }
-        
-        let endTime = CACurrentMediaTime()
-        print("Running Time: \(endTime - startTime) [sec]")
     }
 }
