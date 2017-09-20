@@ -190,9 +190,9 @@ class LivePhotoCaptureSessionManager: NSObject {
             let photoSettings = AVCapturePhotoSettings()
             photoSettings.flashMode = .auto
             photoSettings.isHighResolutionPhotoEnabled = true
-            if photoSettings.availablePreviewPhotoPixelFormatTypes.count > 0 {
-                photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String : photoSettings.availablePreviewPhotoPixelFormatTypes.first!]
-            }
+//            if photoSettings.availablePreviewPhotoPixelFormatTypes.count > 0 {
+//                photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String : photoSettings.availablePreviewPhotoPixelFormatTypes.first!]
+//            }
             if self.photoOutput.isLivePhotoCaptureSupported { // Live Photo capture is not supported in movie mode.
                 let livePhotoMovieFileName = NSUUID().uuidString
                 let livePhotoMovieFilePath = (NSTemporaryDirectory() as NSString).appendingPathComponent((livePhotoMovieFileName as NSString).appendingPathExtension("mov")!)
