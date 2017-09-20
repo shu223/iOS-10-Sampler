@@ -1826,7 +1826,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-Sampler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS-10-Sampler/iOS10Sampler-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -1841,7 +1841,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-Sampler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS-10-Sampler/iOS10Sampler-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
