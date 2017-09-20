@@ -57,7 +57,7 @@ class MetalImageRecognitionViewController: UIViewController, UIImagePickerContro
             
             // get a texture from this CGImage
             do {
-                self.sourceTexture = try self.textureLoader.newTexture(with: cgImage, options: [:])
+                self.sourceTexture = try self.textureLoader.newTexture(cgImage: cgImage, options: nil)
             }
             catch let error as NSError {
                 fatalError("Unexpected error ocurred: \(error.localizedDescription).")
@@ -114,7 +114,7 @@ class MetalImageRecognitionViewController: UIViewController, UIImagePickerContro
         autoreleasepool{
 //            let startTime = CACurrentMediaTime()
             // encoding command buffer
-            let commandBuffer = commandQueue.makeCommandBuffer()
+            guard let commandBuffer = commandQueue.makeCommandBuffer() else {return}
             
             // encode all layers of network on present commandBuffer, pass in the input image MTLTexture
             inception3Net.forward(commandBuffer: commandBuffer, sourceTexture: sourceTexture)
