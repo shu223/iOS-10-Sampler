@@ -57,7 +57,7 @@ class MetalImageRecognitionViewController: UIViewController, UIImagePickerContro
             
             // get a texture from this CGImage
             do {
-                self.sourceTexture = try self.textureLoader.newTexture(with: cgImage, options: [:])
+                self.sourceTexture = try self.textureLoader.newTexture(cgImage: cgImage, options: nil)
             }
             catch let error as NSError {
                 fatalError("Unexpected error ocurred: \(error.localizedDescription).")
@@ -109,13 +109,12 @@ class MetalImageRecognitionViewController: UIViewController, UIImagePickerContro
      This function gets a commandBuffer and encodes layers in it. It follows that by commiting the commandBuffer and getting labels
      */
     func runNetwork() {
-        let startTime = CACurrentMediaTime()
-
         // to deliver optimal performance we leave some resources used in MPSCNN to be released at next call of autoreleasepool,
         // so the user can decide the appropriate time to release this
         autoreleasepool{
+//            let startTime = CACurrentMediaTime()
             // encoding command buffer
-            let commandBuffer = commandQueue.makeCommandBuffer()
+            guard let commandBuffer = commandQueue.makeCommandBuffer() else {return}
             
             // encode all layers of network on present commandBuffer, pass in the input image MTLTexture
             inception3Net.forward(commandBuffer: commandBuffer, sourceTexture: sourceTexture)
@@ -126,16 +125,17 @@ class MetalImageRecognitionViewController: UIViewController, UIImagePickerContro
             
             // display top-5 predictions for what the object should be labelled
             var resultStr = ""
-            inception3Net.getResults().forEach({ (label, prob) in
+            inception3Net.getResults().forEach({ (arg) in
+                
+                let (label, prob) = arg
                 resultStr = resultStr + label + "\t" + String(format: "%.1f", prob * 100) + "%\n\n"
             })
+//            let endTime = CACurrentMediaTime()
+//            print("Running Time: \(endTime - startTime) [sec]")
             
             DispatchQueue.main.async {
                 self.predictLabel.text = resultStr
             }
         }
-        
-        let endTime = CACurrentMediaTime()
-        print("Running Time: \(endTime - startTime) [sec]")
     }
 }

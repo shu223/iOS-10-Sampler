@@ -15,7 +15,7 @@ enum CameraType : Int {
     func captureDevice() -> AVCaptureDevice {
         switch self {
         case .front:
-            guard let devices = AVCaptureDeviceDiscoverySession(deviceTypes: [], mediaType: AVMediaTypeVideo, position: .front).devices else {break}
+            let devices = AVCaptureDevice.DiscoverySession(deviceTypes: [], mediaType: .video, position: .front).devices
             print("devices:\(devices)")
             for device in devices where device.position == .front {
                 return device
@@ -23,6 +23,6 @@ enum CameraType : Int {
         default:
             break
         }
-        return AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+        return AVCaptureDevice.default(for: .video)!
     }
 }

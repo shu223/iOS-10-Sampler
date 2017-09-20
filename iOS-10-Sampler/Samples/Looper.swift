@@ -40,7 +40,7 @@ class Looper: NSObject {
 
         // Getting the natural size of the video
         // http://stackoverflow.com/questions/14466842/ios-6-avplayeritem-presentationsize-returning-zero-naturalsize-method-deprec
-        let videoTracks = playerItem.asset.tracks(withMediaType: AVMediaTypeVideo)
+        let videoTracks = playerItem.asset.tracks(withMediaType: .video)
         guard let videoSize = videoTracks.first?.naturalSize else {fatalError()}
         
         parentLayer.addSublayer(playerLayer)

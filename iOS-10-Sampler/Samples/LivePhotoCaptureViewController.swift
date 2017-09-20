@@ -96,8 +96,8 @@ class LivePhotoCaptureViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction private func capturePhoto(_ photoButton: UIButton) {
-        let videoPreviewLayerOrientation = previewView.videoPreviewLayer.connection.videoOrientation
-        LivePhotoCaptureSessionManager.sharedManager.capture(videoOrientation: videoPreviewLayerOrientation) { (inProgressLivePhotoCapturesCount) in
+        let videoPreviewLayerOrientation = previewView.videoPreviewLayer.connection?.videoOrientation
+        LivePhotoCaptureSessionManager.sharedManager.capture(videoOrientation: videoPreviewLayerOrientation!) { (inProgressLivePhotoCapturesCount) in
             DispatchQueue.main.async { [unowned self] in
                 if inProgressLivePhotoCapturesCount > 0 {
                     self.capturingLivePhotoLabel.isHidden = false

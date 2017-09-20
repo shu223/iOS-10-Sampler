@@ -41,14 +41,14 @@ class LivePhotoCaptureSessionManager: NSObject {
         
         session.beginConfiguration()
         
-        session.sessionPreset = AVCaptureSessionPresetPhoto
+        session.sessionPreset = .photo
         
         // Add video input.
         do {
-            let videoDevice = AVCaptureDevice.defaultDevice(
-                withDeviceType: AVCaptureDeviceType.builtInWideAngleCamera,
-                mediaType: AVMediaTypeVideo,
-                position: .back)
+            guard let videoDevice = AVCaptureDevice.default(
+                .builtInWideAngleCamera,
+                for: .video,
+                position: .back) else {fatalError()}
             let videoDeviceInput = try AVCaptureDeviceInput(device: videoDevice)
             
             if session.canAddInput(videoDeviceInput) {
@@ -71,7 +71,7 @@ class LivePhotoCaptureSessionManager: NSObject {
         
         // Add audio input.
         do {
-            let audioDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeAudio)
+            guard let audioDevice = AVCaptureDevice.default(for: .audio) else {fatalError()}
             let audioDeviceInput = try AVCaptureDeviceInput(device: audioDevice)
             
             if session.canAddInput(audioDeviceInput) {
@@ -112,7 +112,7 @@ class LivePhotoCaptureSessionManager: NSObject {
     // MARK: - Public
     
     func authorize() {
-        switch AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) {
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .authorized:
             break
             
@@ -126,7 +126,7 @@ class LivePhotoCaptureSessionManager: NSObject {
              create an AVCaptureDeviceInput for audio during session setup.
              */
             sessionQueue.suspend()
-            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo, completionHandler: { [unowned self] granted in
+            AVCaptureDevice.requestAccess(for: .video, completionHandler: { [unowned self] granted in
                 if !granted {
                     self.setupResult = .notAuthorized
                 }
@@ -182,7 +182,7 @@ class LivePhotoCaptureSessionManager: NSObject {
         
         sessionQueue.async {
             // Update the photo output's connection to match the video orientation of the video preview layer.
-            if let photoOutputConnection = self.photoOutput.connection(withMediaType: AVMediaTypeVideo) {
+            if let photoOutputConnection = self.photoOutput.connection(with: .video) {
                 photoOutputConnection.videoOrientation = videoOrientation
             }
             
@@ -190,9 +190,9 @@ class LivePhotoCaptureSessionManager: NSObject {
             let photoSettings = AVCapturePhotoSettings()
             photoSettings.flashMode = .auto
             photoSettings.isHighResolutionPhotoEnabled = true
-            if photoSettings.availablePreviewPhotoPixelFormatTypes.count > 0 {
-                photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String : photoSettings.availablePreviewPhotoPixelFormatTypes.first!]
-            }
+//            if photoSettings.availablePreviewPhotoPixelFormatTypes.count > 0 {
+//                photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String : photoSettings.availablePreviewPhotoPixelFormatTypes.first!]
+//            }
             if self.photoOutput.isLivePhotoCaptureSupported { // Live Photo capture is not supported in movie mode.
                 let livePhotoMovieFileName = NSUUID().uuidString
                 let livePhotoMovieFilePath = (NSTemporaryDirectory() as NSString).appendingPathComponent((livePhotoMovieFileName as NSString).appendingPathExtension("mov")!)
