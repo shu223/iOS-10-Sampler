@@ -22,7 +22,7 @@ class AttributedSpeechViewController: UIViewController {
         super.viewDidLoad()
 
         attributedStr = NSMutableAttributedString(string: baseStr)
-        let rangeAll = NSMakeRange(0, baseStr.characters.count)
+        let rangeAll = NSMakeRange(0, baseStr.count)
         let rangeBold = NSString(string: baseStr).range(of: "iOS")
         attributedStr.addAttributes([NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)], range: rangeAll)
         attributedStr.addAttributes([NSAttributedStringKey.foregroundColor: UIColor.black], range: rangeAll)
