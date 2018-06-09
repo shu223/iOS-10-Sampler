@@ -42,7 +42,7 @@ Live Photo Capturing example using AVCapturePhotoOutput.
 
 ### Audio Fade-in/out
 
-Audio fade-in/out demo using `setVolume:fadeDuration` method which is added to AVAudioPlayer.
+Audio fade-in/out demo using `setVolume:fadeDuration` method which is added to `AVAudioPlayer`.
 
 ### Metal CNN Basic: Digit Detection
 
@@ -58,13 +58,13 @@ Real-time image recognition using CNN (Convolutional Neural Network) by Metal Pe
 
 ### PropertyAnimator: Position
 
-Animating UIView's `center` & `backgroundColor` using UIViewPropertyAnimator.
+Animating UIView's `center` & `backgroundColor` using `UIViewPropertyAnimator`.
 
 <img src="README_resources/animator1.gif">
 
 ### PropertyAnimator: Blur
 
-Animating blur effect using `fractionComplete` property of UIViewPropertyAnimator.
+Animating blur effect using `fractionComplete` property of `UIViewPropertyAnimator`.
 
 <img src="README_resources/animator2.gif">
 
@@ -121,9 +121,8 @@ This sample demonstrates how to use new `mapItem` property of NSUserActivity to 
 
 ### Attributed Speech
 
-Attributed Speech demo using `attributedSpeechString` of AVSpeechUtterance. 
+Attributed Speech demo with `AVSpeechSynthesisIPANotationAttribute` for `AVSpeechUtterance`. 
 
-But it seems **NOT** to affect the speech with this attribute. Anyone, please let me know how to use this new API.
 
 ### Haptic Feedback
 

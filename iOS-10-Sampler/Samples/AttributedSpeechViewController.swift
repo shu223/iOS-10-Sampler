@@ -14,7 +14,7 @@ class AttributedSpeechViewController: UIViewController {
     @IBOutlet private weak var label: UILabel!
     
     private let speech = AVSpeechSynthesizer()
-    private let baseStr = "iOS 10 Sampler is a collection of code examples for new APIs of iOS 10."
+    private let baseStr = "Tsutsumi"
     private var attributedStr: NSMutableAttributedString!
     private var utterance: AVSpeechUtterance!
     
@@ -23,11 +23,7 @@ class AttributedSpeechViewController: UIViewController {
 
         attributedStr = NSMutableAttributedString(string: baseStr)
         let rangeAll = NSMakeRange(0, baseStr.count)
-        let rangeBold = NSString(string: baseStr).range(of: "iOS")
-        attributedStr.addAttributes([NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)], range: rangeAll)
-        attributedStr.addAttributes([NSAttributedStringKey.foregroundColor: UIColor.black], range: rangeAll)
-        attributedStr.addAttributes([NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 20)], range: rangeBold)
-        
+        attributedStr.addAttribute(NSAttributedStringKey(rawValue: AVSpeechSynthesisIPANotationAttribute), value: "tən.tən.mi", range: rangeAll)
         updateUtterance(attributed: false)
     }
 
@@ -38,7 +34,7 @@ class AttributedSpeechViewController: UIViewController {
     private func updateUtterance(attributed: Bool) {
         if attributed {
             utterance = AVSpeechUtterance(attributedString: attributedStr)
-            label.attributedText = attributedStr
+            label.text = baseStr + " (attributed)"
         } else {
             utterance = AVSpeechUtterance(string: baseStr)
             label.text = baseStr
