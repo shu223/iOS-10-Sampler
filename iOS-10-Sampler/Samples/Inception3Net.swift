@@ -127,8 +127,8 @@ class Inception3Net{
                                       neuronFilter: relu,
                                       device: device, 
                                       kernelParamsBinaryName: "conv" ,
-                                      padding: false,
-                                      strideXY: (2, 2))
+                                      padding: true,
+                                      strideX: 2, strideY: 2)
         
         conv1 = SlimMPSCNNConvolution(kernelWidth: 3,
                                       kernelHeight: 3,
@@ -195,6 +195,7 @@ class Inception3Net{
                                           neuronFilter: relu,
                                           device: device,
                                           kernelParamsBinaryName: "mixed_tower_conv_1",
+                                          padding: true,
                                           destinationFeatureChannelOffset: 64)
         
         //  branch3x3dbl
@@ -221,6 +222,7 @@ class Inception3Net{
                                           neuronFilter: relu,
                                           device: device,
                                           kernelParamsBinaryName: "mixed_tower_1_conv_2",
+                                          padding: true,
                                           destinationFeatureChannelOffset: 128)
         
         
@@ -232,6 +234,7 @@ class Inception3Net{
                                           neuronFilter: relu,
                                           device: device,
                                           kernelParamsBinaryName: "mixed_tower_2_conv",
+                                          padding: true,
                                           destinationFeatureChannelOffset: 224)
         
         aPool = MPSCNNPoolingAverage(device: device!, kernelWidth: 3, kernelHeight: 3, strideInPixelsX: 1, strideInPixelsY: 1)
@@ -381,7 +384,8 @@ class Inception3Net{
                                           device: device,
                                           kernelParamsBinaryName: "mixed_3_conv",
                                           padding: false,
-                                          strideXY: (2,2))
+                                          strideX: 2,
+                                          strideY: 2)
         
         //  branch3x3dbl
         m3t1conv0 = SlimMPSCNNConvolution(kernelWidth: 1,
@@ -408,7 +412,8 @@ class Inception3Net{
                                           device: device,
                                           kernelParamsBinaryName: "mixed_3_tower_conv_2",
                                           padding: false,
-                                          strideXY: (2,2),
+                                          strideX: 2,
+                                          strideY: 2,
                                           destinationFeatureChannelOffset: 384)
         
         //  branch_pool
@@ -801,7 +806,8 @@ class Inception3Net{
                                           device: device,
                                           kernelParamsBinaryName: "mixed_8_tower_conv_1",
                                           padding: false,
-                                          strideXY: (2,2))
+                                          strideX: 2,
+                                          strideY: 2)
         
         //  branch7x7x3dbl
         m8t1conv0 = SlimMPSCNNConvolution(kernelWidth: 1,
@@ -837,7 +843,8 @@ class Inception3Net{
                                           device: device,
                                           kernelParamsBinaryName: "mixed_8_tower_1_conv_3",
                                           padding: false,
-                                          strideXY: (2,2),
+                                          strideX: 2,
+                                          strideY: 2,
                                           destinationFeatureChannelOffset: 320)
         
         //  branch_pool

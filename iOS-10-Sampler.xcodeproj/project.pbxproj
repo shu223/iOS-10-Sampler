@@ -26,7 +26,6 @@
 		8A1CC3621D7AAFBC00562709 /* MetalCNNBasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC3611D7AAFBC00562709 /* MetalCNNBasicViewController.swift */; };
 		8A1CC3641D7AAFCC00562709 /* MetalCNNBasic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1CC3631D7AAFCC00562709 /* MetalCNNBasic.storyboard */; };
 		8A1CC37F1D7AB10D00562709 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC37B1D7AB10D00562709 /* DrawView.swift */; };
-		8A1CC3811D7AB10D00562709 /* SlimMPSCNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC37D1D7AB10D00562709 /* SlimMPSCNN.swift */; };
 		8A1CC3891D7ABCE400562709 /* MNISTDeepCNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC3881D7ABCE400562709 /* MNISTDeepCNN.swift */; };
 		8A1CC38F1D7AC22E00562709 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A1CC38E1D7AC22E00562709 /* Stickers.xcassets */; };
 		8A1CC3931D7AC22E00562709 /* SamplerStickerPack.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8A1CC38C1D7AC22E00562709 /* SamplerStickerPack.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -242,6 +241,8 @@
 		8A5AE0B91D7D50E80095209E /* LivePhotoCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */; };
 		8A5AE0BC1D7D58AB0095209E /* LivePhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AE0BB1D7D58AB0095209E /* LivePhotoCaptureDelegate.swift */; };
 		8A5AE0BE1D7D61C70095209E /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AE0BD1D7D61C70095209E /* PreviewView.swift */; };
+		8A662A7F20CC94CE00EF23A2 /* SlimMPSCNNConvolution.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A662A7D20CC94CE00EF23A2 /* SlimMPSCNNConvolution.m */; };
+		8A662A8220CC955700EF23A2 /* SlimMPSCNNFullyConnected.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A662A8120CC955700EF23A2 /* SlimMPSCNNFullyConnected.m */; };
 		8A6CE2EC1D854B9E00DC79B4 /* LivePhotoCaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6CE2EB1D854B9E00DC79B4 /* LivePhotoCaptureSessionManager.swift */; };
 		8A736F161D7A892D00A58684 /* AudioFadeInOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A736F151D7A892D00A58684 /* AudioFadeInOutViewController.swift */; };
 		8A736F181D7A893A00A58684 /* AudioFadeInOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A736F171D7A893A00A58684 /* AudioFadeInOut.storyboard */; };
@@ -264,7 +265,6 @@
 		8AB430601D7A6B4900A3BD98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB4305F1D7A6B4900A3BD98 /* Assets.xcassets */; };
 		8AB430631D7A6B4900A3BD98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB430611D7A6B4900A3BD98 /* LaunchScreen.storyboard */; };
 		8AB4306E1D7A6B4A00A3BD98 /* iOS_10_SamplerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4306D1D7A6B4A00A3BD98 /* iOS_10_SamplerTests.swift */; };
-		8AB430791D7A6B4A00A3BD98 /* iOS_10_SamplerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430781D7A6B4A00A3BD98 /* iOS_10_SamplerUITests.swift */; };
 		8AB430871D7A6DA700A3BD98 /* RootViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430861D7A6DA700A3BD98 /* RootViewCell.swift */; };
 		8AB430891D7A6DF300A3BD98 /* SampleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB430881D7A6DF300A3BD98 /* SampleDataSource.swift */; };
 		8ACF88331E1B8F7C00E1555B /* HapticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACF88321E1B8F7C00E1555B /* HapticViewController.swift */; };
@@ -285,13 +285,6 @@
 			remoteInfo = SamplerStickerPack;
 		};
 		8AB4306A1D7A6B4A00A3BD98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8AB4304D1D7A6B4900A3BD98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8AB430541D7A6B4900A3BD98;
-			remoteInfo = "iOS-10-Sampler";
-		};
-		8AB430751D7A6B4A00A3BD98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8AB4304D1D7A6B4900A3BD98 /* Project object */;
 			proxyType = 1;
@@ -333,7 +326,6 @@
 		8A1CC3611D7AAFBC00562709 /* MetalCNNBasicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalCNNBasicViewController.swift; sourceTree = "<group>"; };
 		8A1CC3631D7AAFCC00562709 /* MetalCNNBasic.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MetalCNNBasic.storyboard; sourceTree = "<group>"; };
 		8A1CC37B1D7AB10D00562709 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawView.swift; path = MetalCNNBasicApple/DrawView.swift; sourceTree = "<group>"; };
-		8A1CC37D1D7AB10D00562709 /* SlimMPSCNN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlimMPSCNN.swift; sourceTree = "<group>"; };
 		8A1CC3851D7AB15B00562709 /* iOS10Sampler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS10Sampler-Bridging-Header.h"; sourceTree = "<group>"; };
 		8A1CC3881D7ABCE400562709 /* MNISTDeepCNN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNISTDeepCNN.swift; sourceTree = "<group>"; };
 		8A1CC38C1D7AC22E00562709 /* SamplerStickerPack.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SamplerStickerPack.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -552,6 +544,10 @@
 		8A5AE0B81D7D50E80095209E /* LivePhotoCapture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LivePhotoCapture.storyboard; sourceTree = "<group>"; };
 		8A5AE0BB1D7D58AB0095209E /* LivePhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 		8A5AE0BD1D7D61C70095209E /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		8A662A7D20CC94CE00EF23A2 /* SlimMPSCNNConvolution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlimMPSCNNConvolution.m; sourceTree = "<group>"; };
+		8A662A7E20CC94CE00EF23A2 /* SlimMPSCNNConvolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlimMPSCNNConvolution.h; sourceTree = "<group>"; };
+		8A662A8020CC955700EF23A2 /* SlimMPSCNNFullyConnected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlimMPSCNNFullyConnected.h; sourceTree = "<group>"; };
+		8A662A8120CC955700EF23A2 /* SlimMPSCNNFullyConnected.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlimMPSCNNFullyConnected.m; sourceTree = "<group>"; };
 		8A6CE2EB1D854B9E00DC79B4 /* LivePhotoCaptureSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePhotoCaptureSessionManager.swift; sourceTree = "<group>"; };
 		8A736F151D7A892D00A58684 /* AudioFadeInOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFadeInOutViewController.swift; sourceTree = "<group>"; };
 		8A736F171D7A893A00A58684 /* AudioFadeInOut.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudioFadeInOut.storyboard; sourceTree = "<group>"; };
@@ -579,7 +575,6 @@
 		8AB430691D7A6B4A00A3BD98 /* iOS-10-SamplerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-10-SamplerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB4306D1D7A6B4A00A3BD98 /* iOS_10_SamplerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_10_SamplerTests.swift; sourceTree = "<group>"; };
 		8AB4306F1D7A6B4A00A3BD98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8AB430741D7A6B4A00A3BD98 /* iOS-10-SamplerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-10-SamplerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB430781D7A6B4A00A3BD98 /* iOS_10_SamplerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_10_SamplerUITests.swift; sourceTree = "<group>"; };
 		8AB4307A1D7A6B4A00A3BD98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AB430861D7A6DA700A3BD98 /* RootViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewCell.swift; sourceTree = "<group>"; };
@@ -602,13 +597,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8AB430661D7A6B4A00A3BD98 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AB430711D7A6B4A00A3BD98 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -696,7 +684,10 @@
 		8A1CC3781D7AB10D00562709 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				8A1CC37D1D7AB10D00562709 /* SlimMPSCNN.swift */,
+				8A662A8020CC955700EF23A2 /* SlimMPSCNNFullyConnected.h */,
+				8A662A8120CC955700EF23A2 /* SlimMPSCNNFullyConnected.m */,
+				8A662A7E20CC94CE00EF23A2 /* SlimMPSCNNConvolution.h */,
+				8A662A7D20CC94CE00EF23A2 /* SlimMPSCNNConvolution.m */,
 			);
 			name = Common;
 			path = MetalCNNBasicApple;
@@ -1110,7 +1101,6 @@
 			children = (
 				8AB430551D7A6B4900A3BD98 /* iOS-10-Sampler.app */,
 				8AB430691D7A6B4A00A3BD98 /* iOS-10-SamplerTests.xctest */,
-				8AB430741D7A6B4A00A3BD98 /* iOS-10-SamplerUITests.xctest */,
 				8A1CC38C1D7AC22E00562709 /* SamplerStickerPack.appex */,
 			);
 			name = Products;
@@ -1252,24 +1242,6 @@
 			productReference = 8AB430691D7A6B4A00A3BD98 /* iOS-10-SamplerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8AB430731D7A6B4A00A3BD98 /* iOS-10-SamplerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8AB430831D7A6B4A00A3BD98 /* Build configuration list for PBXNativeTarget "iOS-10-SamplerUITests" */;
-			buildPhases = (
-				8AB430701D7A6B4A00A3BD98 /* Sources */,
-				8AB430711D7A6B4A00A3BD98 /* Frameworks */,
-				8AB430721D7A6B4A00A3BD98 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8AB430761D7A6B4A00A3BD98 /* PBXTargetDependency */,
-			);
-			name = "iOS-10-SamplerUITests";
-			productName = "iOS-10-SamplerUITests";
-			productReference = 8AB430741D7A6B4A00A3BD98 /* iOS-10-SamplerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1277,7 +1249,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Shuichi Tsutsumi";
 				TargetAttributes = {
 					8A1CC38B1D7AC22E00562709 = {
@@ -1292,13 +1264,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					8AB430681D7A6B4A00A3BD98 = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 9Z86A4AWDE;
-						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 8AB430541D7A6B4900A3BD98;
-					};
-					8AB430731D7A6B4A00A3BD98 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9Z86A4AWDE;
 						LastSwiftMigration = 0900;
@@ -1322,7 +1287,6 @@
 			targets = (
 				8AB430541D7A6B4900A3BD98 /* iOS-10-Sampler */,
 				8AB430681D7A6B4A00A3BD98 /* iOS-10-SamplerTests */,
-				8AB430731D7A6B4A00A3BD98 /* iOS-10-SamplerUITests */,
 				8A1CC38B1D7AC22E00562709 /* SamplerStickerPack */,
 			);
 		};
@@ -1574,13 +1538,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8AB430721D7A6B4A00A3BD98 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1589,6 +1546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A825D521D7AA4E6008D74EA /* AttributedSpeechViewController.swift in Sources */,
+				8A662A7F20CC94CE00EF23A2 /* SlimMPSCNNConvolution.m in Sources */,
 				8AB430871D7A6DA700A3BD98 /* RootViewCell.swift in Sources */,
 				8A5AE0BC1D7D58AB0095209E /* LivePhotoCaptureDelegate.swift in Sources */,
 				8A081D131D87394200D7DDF4 /* UIViewController+alert.swift in Sources */,
@@ -1609,7 +1567,6 @@
 				8A1CC3891D7ABCE400562709 /* MNISTDeepCNN.swift in Sources */,
 				8C3A5F501D7EF7BE00B7A480 /* Message+CoreDataClass.swift in Sources */,
 				8A3F09AC1D83F7F700D28DF2 /* FontsViewController.swift in Sources */,
-				8A1CC3811D7AB10D00562709 /* SlimMPSCNN.swift in Sources */,
 				8C67369F1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodeld in Sources */,
 				8A6CE2EC1D854B9E00DC79B4 /* LivePhotoCaptureSessionManager.swift in Sources */,
 				8A081D071D8714C200D7DDF4 /* LooperViewController.swift in Sources */,
@@ -1623,6 +1580,7 @@
 				8A081D1A1D87932100D7DDF4 /* PreviewInteractionPopViewController.swift in Sources */,
 				8AB430891D7A6DF300A3BD98 /* SampleDataSource.swift in Sources */,
 				8A1CC3991D7AC43C00562709 /* StickerPackViewController.swift in Sources */,
+				8A662A8220CC955700EF23A2 /* SlimMPSCNNFullyConnected.m in Sources */,
 				8A49EF461D7BF4D8003EE90B /* UserNotificationViewController.swift in Sources */,
 				8AA0743F1D86614400FEAC28 /* PropertyAnimatorEffectViewController.swift in Sources */,
 				8C3A5F521D7EF7BE00B7A480 /* PersistentContainerViewController.swift in Sources */,
@@ -1639,14 +1597,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8AB430701D7A6B4A00A3BD98 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8AB430791D7A6B4A00A3BD98 /* iOS_10_SamplerUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1659,11 +1609,6 @@
 			isa = PBXTargetDependency;
 			target = 8AB430541D7A6B4900A3BD98 /* iOS-10-Sampler */;
 			targetProxy = 8AB4306A1D7A6B4A00A3BD98 /* PBXContainerItemProxy */;
-		};
-		8AB430761D7A6B4A00A3BD98 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8AB430541D7A6B4900A3BD98 /* iOS-10-Sampler */;
-			targetProxy = 8AB430751D7A6B4A00A3BD98 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1724,6 +1669,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1731,6 +1677,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1780,6 +1727,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1787,6 +1735,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1826,7 +1775,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-Sampler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS-10-Sampler/iOS10Sampler-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -1841,7 +1790,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-Sampler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS-10-Sampler/iOS10Sampler-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -1856,7 +1805,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-SamplerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-10-Sampler.app/iOS-10-Sampler";
 			};
@@ -1872,39 +1821,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-SamplerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-10-Sampler.app/iOS-10-Sampler";
-			};
-			name = Release;
-		};
-		8AB430841D7A6B4A00A3BD98 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 9Z86A4AWDE;
-				INFOPLIST_FILE = "iOS-10-SamplerUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-SamplerUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = "iOS-10-Sampler";
-			};
-			name = Debug;
-		};
-		8AB430851D7A6B4A00A3BD98 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 9Z86A4AWDE;
-				INFOPLIST_FILE = "iOS-10-SamplerUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-SamplerUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = "iOS-10-Sampler";
 			};
 			name = Release;
 		};
@@ -1943,15 +1862,6 @@
 			buildConfigurations = (
 				8AB430811D7A6B4A00A3BD98 /* Debug */,
 				8AB430821D7A6B4A00A3BD98 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8AB430831D7A6B4A00A3BD98 /* Build configuration list for PBXNativeTarget "iOS-10-SamplerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8AB430841D7A6B4A00A3BD98 /* Debug */,
-				8AB430851D7A6B4A00A3BD98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

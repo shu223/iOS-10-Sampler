@@ -9,4 +9,7 @@
 #ifndef iOS10Sampler_Bridging_Header_h
 #define iOS10Sampler_Bridging_Header_h
 
+#import "SlimMPSCNNConvolution.h"
+#import "SlimMPSCNNFullyConnected.h"
+
 #endif /* iOS10Sampler_Bridging_Header_h */
