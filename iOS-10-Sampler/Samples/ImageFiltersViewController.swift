@@ -26,7 +26,7 @@ class ImageFiltersViewController: UIViewController, UIPickerViewDataSource, UIPi
             available_iOS: 10,
             category: kCICategoryBuiltIn,
             exceptCategories: [kCICategoryGradient])
-        print("filters:\(filters)\n")
+        print("filters:\(String(describing: filters))")
         filters.insert("Original", at: 0)
     }
 
@@ -90,7 +90,7 @@ class ImageFiltersViewController: UIViewController, UIPickerViewDataSource, UIPi
         
         guard let cgImage = context.createCGImage(outputImage, from: extent) else {fatalError()}
         let image = UIImage(cgImage: cgImage, scale: scale, orientation: .up)
-        print("extent:\(extent), image:\(image), org:\(self.orgImage), scale:\(scale)\n")
+        print("extent:\(extent), image:\(image), org:\(String(describing: self.orgImage)), scale:\(String(describing: scale))\n")
         
         handler(image)
     }
