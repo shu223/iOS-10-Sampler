@@ -23,7 +23,7 @@ class AttributedSpeechViewController: UIViewController {
 
         attributedStr = NSMutableAttributedString(string: baseStr)
         let rangeAll = NSMakeRange(0, baseStr.count)
-        attributedStr.addAttribute(NSAttributedStringKey(rawValue: AVSpeechSynthesisIPANotationAttribute), value: "tən.tən.mi", range: rangeAll)
+        attributedStr.addAttribute(NSAttributedString.Key(rawValue: AVSpeechSynthesisIPANotationAttribute), value: "tən.tən.mi", range: rangeAll)
         updateUtterance(attributed: false)
     }
 

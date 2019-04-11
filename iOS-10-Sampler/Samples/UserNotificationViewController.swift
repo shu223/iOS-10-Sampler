@@ -35,7 +35,7 @@ class UserNotificationViewController: UIViewController, UNUserNotificationCenter
         // Build content
         content.title = "iOS-10-Sampler"
         content.body = "This is the body."
-        content.sound = UNNotificationSound.default()
+        content.sound = UNNotificationSound.default
         content.attachments = [movieAttachment]
         
         // Initializa request
@@ -67,11 +67,11 @@ class UserNotificationViewController: UIViewController, UNUserNotificationCenter
     // =========================================================================
     // MARK: - UNNotificationCenterDelegate
     
-    private func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: () -> Void) {
+    internal func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: () -> Void) {
         print("\(self.classForCoder)/" + #function)
     }
     
-    private func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: (UNNotificationPresentationOptions) -> Void) {
+    internal func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: (UNNotificationPresentationOptions) -> Void) {
         print("\(self.classForCoder)/" + #function)
     }
     
@@ -88,10 +88,10 @@ class UserNotificationViewController: UIViewController, UNUserNotificationCenter
                 let alert = UIAlertController(
                     title: "Close this app",
                     message: "A local notification has been scheduled. Close this app and wait 10 sec.",
-                    preferredStyle: UIAlertControllerStyle.alert)
+                    preferredStyle: UIAlertController.Style.alert)
                 let okAction = UIAlertAction(
                     title: "OK",
-                    style: UIAlertActionStyle.cancel,
+                    style: UIAlertAction.Style.cancel,
                     handler: nil)
                 alert.addAction(okAction)
                 self.present(alert, animated: true, completion: nil)

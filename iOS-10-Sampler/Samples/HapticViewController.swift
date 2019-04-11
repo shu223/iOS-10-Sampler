@@ -25,14 +25,14 @@ class HapticViewController: UIViewController {
     }
 
     @IBAction func impactBtnTapped(_ sender: UIButton) {
-        guard let style = UIImpactFeedbackStyle(rawValue: sender.tag) else {fatalError()}
+        guard let style = UIImpactFeedbackGenerator.FeedbackStyle(rawValue: sender.tag) else {fatalError()}
         impactFeedbacker = UIImpactFeedbackGenerator(style: style)
         impactFeedbacker.prepare()
         impactFeedbacker.impactOccurred()
     }
 
     @IBAction func notificationBtnTapped(_ sender: UIButton) {
-        guard let type = UINotificationFeedbackType(rawValue: sender.tag) else {fatalError()}
+        guard let type = UINotificationFeedbackGenerator.FeedbackType(rawValue: sender.tag) else {fatalError()}
         notificationFeedbacker.notificationOccurred(type)
     }
     

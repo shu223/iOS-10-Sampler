@@ -59,6 +59,8 @@ class SpeechRecognitionViewController: UIViewController, SFSpeechRecognizerDeleg
                 case .notDetermined:
                     self.recordBtn.isEnabled = false
                     self.recordBtn.setTitle("Speech recognition not yet authorized", for: .disabled)
+                @unknown default:
+                    fatalError()
                 }
             }
         }
@@ -82,9 +84,9 @@ class SpeechRecognitionViewController: UIViewController, SFSpeechRecognizerDeleg
         }
         
         let audioSession = AVAudioSession.sharedInstance()
-        try audioSession.setCategory(AVAudioSessionCategoryRecord)
-        try audioSession.setMode(AVAudioSessionModeMeasurement)
-        try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
+        try audioSession.setCategory(AVAudioSession.Category(rawValue: convertFromAVAudioSessionCategory(AVAudioSession.Category.record)))
+        try audioSession.setMode(AVAudioSession.Mode.measurement)
+        try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
         
@@ -178,4 +180,9 @@ class SpeechRecognitionViewController: UIViewController, SFSpeechRecognizerDeleg
             recordBtn.setTitle("Stop recording", for: [])
         }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
 }

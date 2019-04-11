@@ -76,7 +76,7 @@ class VideoCapture: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
         if let previewContainer = previewContainer {
             let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
             previewLayer.frame = previewContainer.bounds
-            previewLayer.contentsGravity = kCAGravityResizeAspectFill
+            previewLayer.contentsGravity = CALayerContentsGravity.resizeAspectFill
             previewLayer.videoGravity = .resizeAspectFill
             previewContainer.insertSublayer(previewLayer, at: 0)
             self.previewLayer = previewLayer

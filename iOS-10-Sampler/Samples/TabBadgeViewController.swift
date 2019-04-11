@@ -27,11 +27,11 @@ class TabBadgeViewController: UIViewController, UITabBarDelegate {
             shadow.shadowColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             shadow.shadowOffset = CGSize(width: 1, height: 1)
             shadow.shadowBlurRadius = 3
-            let attributes: [String : Any] = [NSAttributedStringKey.font.rawValue: UIFont(name: "Menlo-Bold", size: 30)!,
-                                              NSAttributedStringKey.foregroundColor.rawValue: #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1),
-                                              NSAttributedStringKey.shadow.rawValue: shadow]
+            let attributes: [String : Any] = [NSAttributedString.Key.font.rawValue: UIFont(name: "Menlo-Bold", size: 30)!,
+                                              NSAttributedString.Key.foregroundColor.rawValue: #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1),
+                                              NSAttributedString.Key.shadow.rawValue: shadow]
             // New!
-            item.setBadgeTextAttributes(attributes, for: .normal)
+            item.setBadgeTextAttributes(convertToOptionalNSAttributedStringKeyDictionary(attributes), for: .normal)
 
             // New!
             item.badgeColor = UIColor.clear
@@ -61,4 +61,10 @@ class TabBadgeViewController: UIViewController, UITabBarDelegate {
             item.badgeValue = "\(badgeCnt)"
         }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }
