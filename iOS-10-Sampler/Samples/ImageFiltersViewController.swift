@@ -34,7 +34,7 @@ class ImageFiltersViewController: UIViewController, UIPickerViewDataSource, UIPi
         super.didReceiveMemoryWarning()
     }
 
-    private func applyFilter(name: String, handler: ((UIImage?) -> Void)) {
+    private func applyFilter(name: String, size: CGSize, scale: CGFloat, handler: ((UIImage?) -> Void)) {
         let inputImage = CIImage(image: self.orgImage)!
         guard let filter = CIFilter(name: name) else {fatalError()}
         let attributes = filter.attributes
@@ -76,20 +76,18 @@ class ImageFiltersViewController: UIViewController, UIPickerViewDataSource, UIPi
             return
         }
         
-        let size = self.imageView.frame.size
         var extent = outputImage.extent
-        let scale: CGFloat!
+        var imageScale = scale
         
         // some outputImage have infinite extents. e.g. CIDroste
         if extent.isInfinite {
-            scale = UIScreen.main.scale
             extent = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         } else {
-            scale = extent.size.width / self.orgImage.size.width
+            imageScale = extent.size.width / self.orgImage.size.width
         }
         
         guard let cgImage = context.createCGImage(outputImage, from: extent) else {fatalError()}
-        let image = UIImage(cgImage: cgImage, scale: scale, orientation: .up)
+        let image = UIImage(cgImage: cgImage, scale: imageScale, orientation: .up)
         print("extent:\(extent), image:\(image), org:\(String(describing: self.orgImage)), scale:\(String(describing: scale))\n")
         
         handler(image)
@@ -120,9 +118,12 @@ class ImageFiltersViewController: UIViewController, UIPickerViewDataSource, UIPi
         }
         
         indicator.startAnimating()
-        
+
+        let size = self.imageView.frame.size
+        let scale = UIScreen.main.scale
+
         DispatchQueue.global(qos: .default).async {
-            self.applyFilter(name: self.filters[row], handler: { (image) in
+            self.applyFilter(name: self.filters[row], size: size, scale: scale, handler: { (image) in
                 DispatchQueue.main.async(execute: {
                     self.imageView.image = image
                     self.indicator.stopAnimating()
