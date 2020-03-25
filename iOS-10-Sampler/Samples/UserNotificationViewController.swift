@@ -84,7 +84,10 @@ class UserNotificationViewController: UIViewController, UNUserNotificationCenter
             UNUserNotificationCenter.current().delegate = self
             if let error = error {
                 print("error:\(error)")
-            } else {
+                return
+            }
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
                 let alert = UIAlertController(
                     title: "Close this app",
                     message: "A local notification has been scheduled. Close this app and wait 10 sec.",
