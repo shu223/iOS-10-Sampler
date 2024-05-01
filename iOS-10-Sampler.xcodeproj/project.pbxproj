@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,7 +28,7 @@
 		8A1CC37F1D7AB10D00562709 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC37B1D7AB10D00562709 /* DrawView.swift */; };
 		8A1CC3891D7ABCE400562709 /* MNISTDeepCNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC3881D7ABCE400562709 /* MNISTDeepCNN.swift */; };
 		8A1CC38F1D7AC22E00562709 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A1CC38E1D7AC22E00562709 /* Stickers.xcassets */; };
-		8A1CC3931D7AC22E00562709 /* SamplerStickerPack.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8A1CC38C1D7AC22E00562709 /* SamplerStickerPack.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8A1CC3931D7AC22E00562709 /* SamplerStickerPack.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8A1CC38C1D7AC22E00562709 /* SamplerStickerPack.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8A1CC3991D7AC43C00562709 /* StickerPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CC3981D7AC43C00562709 /* StickerPackViewController.swift */; };
 		8A1CC39B1D7AC44A00562709 /* StickerPack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1CC39A1D7AC44A00562709 /* StickerPack.storyboard */; };
 		8A3CD9B01DA539F000039F36 /* bias_conv1.dat in Resources */ = {isa = PBXBuildFile; fileRef = 8A3CD9A81DA539F000039F36 /* bias_conv1.dat */; };
@@ -294,15 +294,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8A1CC3971D7AC22E00562709 /* Embed App Extensions */ = {
+		8A1CC3971D7AC22E00562709 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				8A1CC3931D7AC22E00562709 /* SamplerStickerPack.appex in Embed App Extensions */,
+				8A1CC3931D7AC22E00562709 /* SamplerStickerPack.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -1212,7 +1212,7 @@
 				8AB430511D7A6B4900A3BD98 /* Sources */,
 				8AB430521D7A6B4900A3BD98 /* Frameworks */,
 				8AB430531D7A6B4900A3BD98 /* Resources */,
-				8A1CC3971D7AC22E00562709 /* Embed App Extensions */,
+				8A1CC3971D7AC22E00562709 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -1248,8 +1248,9 @@
 		8AB4304D1D7A6B4900A3BD98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1530;
 				ORGANIZATIONNAME = "Shuichi Tsutsumi";
 				TargetAttributes = {
 					8A1CC38B1D7AC22E00562709 = {
@@ -1273,7 +1274,7 @@
 				};
 			};
 			buildConfigurationList = 8AB430501D7A6B4900A3BD98 /* Build configuration list for PBXProject "iOS-10-Sampler" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1693,6 +1694,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1753,6 +1755,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1764,7 +1767,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1775,7 +1779,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9Z86A4AWDE;
 				INFOPLIST_FILE = "iOS-10-Sampler/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-Sampler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS-10-Sampler/iOS10Sampler-Bridging-Header.h";
@@ -1789,7 +1796,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9Z86A4AWDE;
 				INFOPLIST_FILE = "iOS-10-Sampler/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-Sampler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS-10-Sampler/iOS10Sampler-Bridging-Header.h";
@@ -1804,7 +1814,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 9Z86A4AWDE;
 				INFOPLIST_FILE = "iOS-10-SamplerTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-SamplerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1819,7 +1833,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 9Z86A4AWDE;
 				INFOPLIST_FILE = "iOS-10-SamplerTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-SamplerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
